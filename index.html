@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@0.7.2"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font: Bricolage Grotesque -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Syne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="bg-[#000] font-sans px-10 md:px-20">
+
+    <!-- Header -->
+    <header class="flex justify-end py-4">
+      <div class="flex">
+        <button id="menuButton" class="text-xl focus:outline-none">
+          <!-- Hamburger icon -->
+          <span id="menuText" class="text-[#DAF7A6]">Menu</span>
+          <span class="fas fa-bars text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 width-[48px] height-[48px]" id="hamburgerIcon"></span>
+        </button>
+      </div>
+    </header> 
+  
+    <!-- Overlay Menu -->
+    <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-100 hidden z-20 px-10 md:px-20 text-white">
+        <!-- Bagian Header Overlay dengan tombol Close -->
+        <div class="w-full flex justify-end py-4">
+            <button id="closeButton" class="text-xl focus:outline-none hover:text-gray-300 text-[#DAF7A6] flex items-center space-x-2">
+            <span class="text-[#DAF7A6]">Close</span>
+            <span class="fas fa-bars text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 width-[48px] height-[48px]"></span>
+            </button>
+        </div>
+
+        <div class=" space-y-8">
+            <!-- Menu items in a 4-column grid layout -->
+            <div class="flex flex-col gap-4 text-lg font-semibold">
+            <a href="#about" class="hover:underline">About</a>
+            <a href="#artwork" class="hover:underline">Artwork</a>
+            <a href="#service" class="hover:underline">Service</a>
+            <a href="#contact" class="hover:underline">Contact</a>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex space-x-6 text-2xl">
+            <a href="#" class="hover:text-gray-300 text-[#DAF7A6]"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-gray-300 text-[#DAF7A6]"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="hover:text-gray-300 text-[#DAF7A6]"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="hover:text-gray-300 text-[#DAF7A6]"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero-section flex items-center justify-center bg-[#000]">
+        <h1 class="text-5xl md:text-7xl font-bold text-[#DAF7A6] bricolage-grotesque">TEKADVERSE</h1>
+    </section>
+
+        <!-- Wrapper div with center alignment -->
+        <section class="flex items-center justify-center min-h-screen bricolage-grotesque">
+            <div class="text-center max-w-3xl px-5">
+            <!-- Paragraph -->
+            <p class="text-[32px] font-medium leading-[1.5] tracking-[0.02em] mb-10 text-white bricolage-grotesque">
+                We are a digital comic studio, where imagination runs wild and every page bursts with color! Our talented team of quirky artists and storytellers crafts a delightful mix of action, humor, and heartwarming tales. With the latest digital tools, we bring fantastical worlds to life, inviting you to dive into a universe of fun and creativity on every page!
+            </p>
+            
+            <!-- Button with image icon -->
+                <div class="flex items-center justify-center ">
+                    <button class="button-about flex items-center justify-center w-[480px] h-[80px] bg-[#DAF7A6] text-black font-semibold text-[40px] ">
+                        <span>About</span>
+                        <img src="assets/Icon.svg" alt="Icon" class="ml-4 w-[32px] h-[32px]">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="flex flex-col items-center text-white py-20 bricolage-grotesque bg-[#F8EFE0]">
+            <!-- Title "Services" -->
+            <h2 class="text-[32px] text-black font-extrabold tracking-[-0.04em] mb-10">
+            Services
+            </h2>
+
+            <!-- Services List -->
+            <div class="text-black">
+                <!-- Service Item 1 -->
+                <div class="relative text-center">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
+                    Script Writing
+                    </h3>
+                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
+                    01
+                    </span>
+                </div>
+
+                <!-- Service Item 2 -->
+                <div class="relative text-center">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
+                    Character Design
+                    </h3>
+                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
+                    02
+                    </span>
+                </div>
+
+                <!-- Service Item 3 -->
+                <div class="relative text-center">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
+                    Story-boarding
+                    </h3>
+                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
+                    03
+                    </span>
+                </div>
+                
+                <!-- Service Item 4 -->
+                <div class="relative text-center">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
+                    Manga
+                    </h3>
+                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
+                    04
+                    </span>
+                </div>
+
+                <!-- Service Item 5 -->
+                <div class="relative text-center">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
+                    Silent Manga
+                    </h3>
+                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
+                    05
+                    </span>
+                </div>
+
+                <!-- Service Item 6 -->
+                <div class="relative text-center">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
+                    Web-comic
+                    </h3>
+                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
+                    06
+                    </span>
+                </div>
+
+                <!-- Service Item 7 -->
+                <div class="relative text-center">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
+                    3D Assets
+                    </h3>
+                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
+                    07
+                    </span>
+                </div>
+
+                <!-- Service Item 8 -->
+                <div class="relative text-center">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
+                    Video Story-boarding
+                    </h3>
+                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
+                    08
+                    </span>
+                </div>
+
+            <!-- Add more services as needed -->
+
+            </div>
+        </section>
+
+        <section class="flex items-center justify-center min-h-screen mt-10 mb-20">
+            <!-- Container Let's Chat -->
+            <div class="flex flex-col gap-[31px] w-full px-5">
+                <h1 class="bricolage-extra-bold text-center">
+                    Let’s Create Comic with Us!
+                </h1>
+              
+              <!-- Container Form -->
+              <form class="flex flex-col gap-4">
+                <div class="input">
+                    <label for="name" class="syne text-xl text-white">your name please *</label>
+                    <input id="name" type="text" placeholder="type here" class="p-3 mt-2">
+                </div>
+                
+                <div class="input">
+                    <label for="email" class="syne text-xl text-white">your email of course *</label>
+                    <input id="email" type="email" placeholder="type here" class="p-3 mt-2">
+                </div>
+                
+                <div class="input">
+                    <label for="project" class="syne text-xl text-white">the cool project *</label>
+                    <input id="project" type="text" placeholder="type here" class="p-3 mt-2">
+                </div>
+            
+                <div class="relative">
+                    <label for="budget" class="syne text-xl text-white">your best budget *</label><br>
+                    <label for="budget" class="label-2 syne text-xl text-[#DAF7A6] opacity-50">please do not lie!!! basic design projects start at minimum of $700</label>
+                    <select id="budget" class="custom-dropdown p-3 w-full appearance-none mt-2">
+                        <option>choose the range</option>
+                        <option value="500-1000">$700 - $1,000</option>
+                        <option value="1000-5000">$1,000 - $5,000</option>
+                        <option value="5000-10000">$5,000 - $10,000</option>
+                        <option value="10000+">Above $10,000</option>
+                    </select>
+                </div>
+            
+                <div class="relative">
+                    <label for="date" class="syne text-xl text-white">preferred date to start project *</label>
+                    <input id="date" type="date" class="custom-date p-3 w-full mt-2">
+                </div>
+            
+                <div class="input">
+                    <label for="comment" class="syne text-xl text-white">why do you want work together?</label>
+                    <textarea id="comment" placeholder="type here" class="p-3 h-32 mt-2"></textarea>
+                </div>              
+            
+                <div class="btn-send flex justify-center items-center bg-[#DAF7A6]">
+                    <button type="submit" class="py-3 px-6 text-black font-bold bricolage-grotesque text-[20px]">Send</button>
+                </div>
+            </form>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section class="flex flex-col justify-center items-center">
+            <h1 class="text-center text-4xl font-bold text-white mb-8">
+            You are an Artist?<br>
+            and want to join the team as ...
+            </h1>
+
+            <!-- Button Container -->
+            <div class="flex flex-col gap-4 items-center">
+            <!-- Button 1 -->
+            <button class="w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center">
+                <span class="text-left">Script Writer</span>
+                <i class="fas fa-paint-brush text-xl"></i>
+            </button>
+
+            <!-- Button 2 -->
+            <button class="w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center">
+                <span class="text-left">Outline Artist</span>
+                <i class="fas fa-pen text-xl"></i>
+            </button>
+
+            <!-- Button 3 -->
+            <button class="w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center">
+                <span class="text-left">Colorist</span>
+                <i class="fas fa-edit text-xl"></i>
+            </button>
+
+            <!-- Button 4 -->
+            <button class="w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center">
+                <span class="text-left">Background Artist</span>
+                <i class="fas fa-film text-xl"></i>
+            </button>
+            
+            <!-- Button 5 -->
+            <button class="w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center">
+                <span class="text-left">3D Background & Sets Modeler (.SKP)</span>
+                <i class="fas fa-film text-xl"></i>
+            </button>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="bg-[#DAF7A6] py-10 mt-10">
+            <div class="flex justify-between items-center px-10">
+            <!-- Left Text -->
+            <div class="text-left text-xl font-medium">
+                <p>Your best friend on creating digital comic</p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex space-x-6 text-2xl">
+                <a href="#" class="text-[#000000] hover:text-gray-700">
+                <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-[#000000] hover:text-gray-700">
+                <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" class="text-[#000000] hover:text-gray-700">
+                <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="text-[#000000] hover:text-gray-700">
+                <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            </div>
+
+            <!-- Image Below -->
+            <div class="flex justify-center mt-8">
+            <img src="assets/footer.png" alt="Footer Image" class="w-72 h-auto">
+            </div>
+        </footer>
+    <script>
+      // JavaScript for toggle menu
+      const menuButton = document.getElementById('menuButton');
+      const menuOverlay = document.getElementById('menuOverlay');
+      const menuText = document.getElementById('menuText');
+      const hamburgerIcon = document.getElementById('hamburgerIcon');
+      const closeButton = document.getElementById('closeButton');
+  
+      function toggleMenu() {
+        menuOverlay.classList.toggle('hidden');
+        menuText.textContent = menuOverlay.classList.contains('hidden') ? 'Menu' : 'Close';
+        hamburgerIcon.classList.toggle('fa-bars');
+        hamburgerIcon.classList.toggle('fa-times');
+      }
+  
+      menuButton.addEventListener('click', toggleMenu);
+      closeButton.addEventListener('click', toggleMenu);
+    </script>
+  
+  </body>
+</html>

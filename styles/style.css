@@ -1,0 +1,136 @@
+ /* Mengatur font default dan batas maksimal lebar konten */
+body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    margin: 0 auto;
+    background-color: #f4f4f9;
+}
+
+
+.hero-section {
+    height: calc(100vh - 80px);
+}
+
+.bricolage-grotesque{
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+      "wdth" 100;
+}
+
+.bricolage-extra-bold {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800; /* Extra Bold */
+    font-size: 100px;
+    line-height: 0.9; /* 90% */
+    letter-spacing: -0.04em; /* -4% */
+    color: #ffffff;
+  }
+
+.syne {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Dropdown Styling */
+.custom-dropdown {
+    background-color: var(--color-third); /* Set background color to #F5F3E9 */
+    color: var(--color-bean); /* Text color */
+    background-image: url('assets/arrow-down.svg'); /* Custom icon for dropdown */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 20px;
+    padding-right: 2.5rem; /* Adjust padding to fit icon */
+    -webkit-appearance: none; /* Remove default dropdown arrow */
+    -moz-appearance: none;
+    appearance: none;
+}
+.custom-dropdown.selected {
+    color: var(--color-coal); /* Change text color to black when an option is selected */
+}
+
+/* Date Picker Styling */
+.custom-date {
+    background-color: transparent; 
+    color: #DAF7A6; 
+    background-image: url('assets/plus.svg'); /* Custom icon for date picker */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 20px;
+    padding-right: 2.5rem; /* Adjust padding to fit icon */
+    -webkit-appearance: none; /* Remove default icon in Webkit browsers */
+    -moz-appearance: none; /* Remove default icon in Firefox */
+    appearance: none;
+}
+
+.custom-date.selected {
+    color: var(--color-coal); /* Change text color to black when a date is selected */
+}
+
+/* Hide default calendar icon in Webkit browsers */
+.custom-date::-webkit-calendar-picker-indicator {
+    opacity: 0; /* Hides the default calendar icon */
+}
+
+/* Ensure custom icon doesn’t block clicks */
+.custom-date::after {
+    content: '';
+    pointer-events: none; /* Prevents the icon from blocking clicks */
+}
+
+
+/* General Styling for Form Inputs, Dropdown, and Date Picker */
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+    background-color: #000;
+    border: 1px solid #DAF7A6; 
+    border-radius: 0; /* No border radius */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    width: 100%; /* Full width for consistency */
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #DAF7A6;
+
+}
+
+/* Change Border Color on Focus for Input, Dropdown, and Date Picker */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+    background-color: #DAF7A6;
+    color: #000; /* Text color */
+}
+
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form input[type="date"]::placeholder,
+form select::placeholder,
+form textarea::placeholder {
+    color: #DAF7A6; /* Warna untuk placeholder */
+    opacity: 0.5; /* Atur opacity jika ingin placeholder terlihat lebih redup */
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* Change placeholder color on focus */
+form input[type="text"]:focus::placeholder,
+form input[type="email"]:focus::placeholder,
+form input[type="date"]:focus::placeholder,
+form select:focus::placeholder,
+form textarea:focus::placeholder {
+    color: #DAF7A6; /* Warna untuk placeholder */
+    opacity: 0.5; /* Atur opacity jika ingin placeholder terlihat lebih redup */
+}
