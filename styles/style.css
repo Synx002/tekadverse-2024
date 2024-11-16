@@ -3,8 +3,55 @@ body {
     font-family: 'Bricolage Grotesque', sans-serif;
     margin: 0 auto;
     background-color: #f4f4f9;
+    cursor: none; /* Hide the default cursor */
 }
 
+.cursor-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Prevent interference with clicks */
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+  
+  .cursor {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  .circle-text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  
+  .cursor-span {
+    position: absolute;
+    transform-origin: 0 80px;
+    font-size: 14px;
+    color: white;
+  }
 
 .hero-section {
     height: calc(100vh - 80px);
@@ -35,9 +82,7 @@ body {
 
 /* Dropdown Styling */
 .custom-dropdown {
-    background-color: var(--color-third); /* Set background color to #F5F3E9 */
-    color: var(--color-bean); /* Text color */
-    background-image: url('assets/arrow-down.svg'); /* Custom icon for dropdown */
+    background-image: url('assets/arrow-down-green.svg'); /* Custom icon for dropdown */
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 20px;
@@ -52,9 +97,7 @@ body {
 
 /* Date Picker Styling */
 .custom-date {
-    background-color: transparent; 
-    color: #DAF7A6; 
-    background-image: url('assets/plus.svg'); /* Custom icon for date picker */
+    background-image: url('assets/arrow.svg'); /* Custom icon for date picker */
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 20px;
@@ -97,8 +140,7 @@ form textarea {
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    color: #DAF7A6;
-
+    color: rgba(218, 247, 166, 0.5); /* Opacity hanya untuk teks */
 }
 
 /* Change Border Color on Focus for Input, Dropdown, and Date Picker */

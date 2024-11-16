@@ -12,20 +12,25 @@
   <!-- Google Font: Bricolage Grotesque -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Syne&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Syne:wght@400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="styles/style.css">
 </head>
-<body class="bg-[#000] font-sans px-10 md:px-20">
+<body>
+    <div class="cursor-wrapper">
+        <div class="cursor circle-text" id="text-cursor">
+          SCROLL DOWN TO DISCOVER
+        </div>
+    </div>
 
     <!-- Header -->
-    <header class="flex justify-end py-4">
+    <header class="flex justify-end py-4 bg-[#000] px-10 md:px-20">
       <div class="flex">
         <button id="menuButton" class="text-xl focus:outline-none">
           <!-- Hamburger icon -->
           <span id="menuText" class="text-[#DAF7A6]">Menu</span>
-          <span class="fas fa-bars text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 width-[48px] height-[48px]" id="hamburgerIcon"></span>
+          <span class="fas fa-bars text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 w-[48px] h-[48px]" id="hamburgerIcon"></span>
         </button>
       </div>
     </header> 
@@ -35,26 +40,34 @@
         <!-- Bagian Header Overlay dengan tombol Close -->
         <div class="w-full flex justify-end py-4">
             <button id="closeButton" class="text-xl focus:outline-none hover:text-gray-300 text-[#DAF7A6] flex items-center space-x-2">
-            <span class="text-[#DAF7A6]">Close</span>
-            <span class="fas fa-bars text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 width-[48px] height-[48px]"></span>
+                <span class="text-[#DAF7A6]">Close</span>
+                <span class="fa-solid fa-xmark text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 w-[48px] h-[48px]"></span>
             </button>
         </div>
 
-        <div class=" space-y-8">
+        <div class="flex flex-col gap-20">
             <!-- Menu items in a 4-column grid layout -->
-            <div class="flex flex-col gap-4 text-lg font-semibold">
-            <a href="#about" class="hover:underline">About</a>
-            <a href="#artwork" class="hover:underline">Artwork</a>
-            <a href="#service" class="hover:underline">Service</a>
-            <a href="#contact" class="hover:underline">Contact</a>
+            <div class="flex flex-col gap-10 text-lg font-semibold">
+            <a href="#about" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">About</a>
+            <a href="#artwork" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Artwork</a>
+            <a href="#service" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Service</a>
+            <a href="#contact" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Contact</a>
             </div>
 
             <!-- Social Media Icons -->
-            <div class="flex space-x-6 text-2xl">
-            <a href="#" class="hover:text-gray-300 text-[#DAF7A6]"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="hover:text-gray-300 text-[#DAF7A6]"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="hover:text-gray-300 text-[#DAF7A6]"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="hover:text-gray-300 text-[#DAF7A6]"><i class="fab fa-whatsapp"></i></a>
+            <div class="flex space-x-12">
+                <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -64,7 +77,7 @@
     </section>
 
         <!-- Wrapper div with center alignment -->
-        <section class="flex items-center justify-center min-h-screen bricolage-grotesque">
+        <section class="flex items-center justify-center min-h-screen bricolage-grotesque bg-[#000] px-10 md:px-20">
             <div class="text-center max-w-3xl px-5">
             <!-- Paragraph -->
             <p class="text-[32px] font-medium leading-[1.5] tracking-[0.02em] mb-10 text-white bricolage-grotesque">
@@ -73,9 +86,9 @@
             
             <!-- Button with image icon -->
                 <div class="flex items-center justify-center ">
-                    <button class="button-about flex items-center justify-center w-[480px] h-[80px] bg-[#DAF7A6] text-black font-semibold text-[40px] ">
-                        <span>About</span>
-                        <img src="assets/Icon.svg" alt="Icon" class="ml-4 w-[32px] h-[32px]">
+                    <button class="button-about flex items-center justify-center w-[480px] h-[80px] bg-[#DAF7A6]">
+                        <span class="text-black font-semibold text-[32px] ">About</span>
+                        <img src="assets/arrow-black.svg" alt="arrow" class="ml-[10px]">
                     </button>
                 </div>
             </div>
@@ -85,238 +98,225 @@
         <section class="flex flex-col items-center text-white py-20 bricolage-grotesque bg-[#F8EFE0]">
             <!-- Title "Services" -->
             <h2 class="text-[32px] text-black font-extrabold tracking-[-0.04em] mb-10">
-            Services
+                Services
             </h2>
-
+        
             <!-- Services List -->
-            <div class="text-black">
+            <div class="text-black w-full flex flex-col items-center">
                 <!-- Service Item 1 -->
-                <div class="relative text-center">
-                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
-                    Script Writing
+                <div class="relative inline-block">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
+                        Script Writing
                     </h3>
-                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
-                    01
+                    <span class="absolute top-5 right-0 translate-x-full -translate-y-1/2 text-[32px] font-light tracking-[-0.04em]">
+                        01
                     </span>
                 </div>
-
+        
                 <!-- Service Item 2 -->
-                <div class="relative text-center">
-                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
-                    Character Design
+                <div class="relative inline-block">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
+                        Character Design
                     </h3>
-                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
-                    02
+                    <span class="absolute top-5 right-0 translate-x-full -translate-y-1/2 text-[32px] font-light tracking-[-0.04em]">
+                        02
                     </span>
                 </div>
-
+        
                 <!-- Service Item 3 -->
-                <div class="relative text-center">
-                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
-                    Story-boarding
+                <div class="relative inline-block">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
+                        Story-boarding
                     </h3>
-                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
-                    03
+                    <span class="absolute top-5 right-0 translate-x-full -translate-y-1/2 text-[32px] font-light tracking-[-0.04em]">
+                        03
                     </span>
                 </div>
-                
+        
                 <!-- Service Item 4 -->
-                <div class="relative text-center">
-                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
-                    Manga
+                <div class="relative inline-block">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
+                        Manga
                     </h3>
-                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
-                    04
+                    <span class="absolute top-5 right-0 translate-x-full -translate-y-1/2 text-[32px] font-light tracking-[-0.04em]">
+                        04
                     </span>
                 </div>
-
+        
                 <!-- Service Item 5 -->
-                <div class="relative text-center">
-                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
-                    Silent Manga
+                <div class="relative inline-block">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
+                        Silent Manga
                     </h3>
-                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
-                    05
+                    <span class="absolute top-5 right-0 translate-x-full -translate-y-1/2 text-[32px] font-light tracking-[-0.04em]">
+                        05
                     </span>
                 </div>
-
+        
                 <!-- Service Item 6 -->
-                <div class="relative text-center">
-                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
-                    Web-comic
+                <div class="relative inline-block">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
+                        Web-comic
                     </h3>
-                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
-                    06
+                    <span class="absolute top-5 right-0 translate-x-full -translate-y-1/2 text-[32px] font-light tracking-[-0.04em]">
+                        06
                     </span>
                 </div>
-
+        
                 <!-- Service Item 7 -->
-                <div class="relative text-center">
-                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
-                    3D Assets
+                <div class="relative inline-block">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
+                        3D Assets
                     </h3>
-                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
-                    07
+                    <span class="absolute top-5 right-0 translate-x-full -translate-y-1/2 text-[32px] font-light tracking-[-0.04em]">
+                        07
                     </span>
                 </div>
-
+        
                 <!-- Service Item 8 -->
-                <div class="relative text-center">
-                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%]">
-                    Video Story-boarding
+                <div class="relative inline-block">
+                    <h3 class="text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
+                        Video Story-boarding
                     </h3>
-                    <span class="absolute top-0 right-0 text-[32px] font-light tracking-[-0.04em]">
-                    08
+                    <span class="absolute top-5 right-0 translate-x-full -translate-y-1/2 text-[32px] font-light tracking-[-0.04em]">
+                        08
                     </span>
                 </div>
-
-            <!-- Add more services as needed -->
-
             </div>
         </section>
+        
 
-        <section class="flex items-center justify-center min-h-screen mt-10 mb-20">
+        <section class="flex items-center justify-center min-h-screen bg-[#000] pt-32 px-10 md:px-20">
             <!-- Container Let's Chat -->
             <div class="flex flex-col gap-[31px] w-full px-5">
-                <h1 class="bricolage-extra-bold text-center">
-                    Let’s Create Comic with Us!
+                <h1 class="bricolage-grotesque text-white text-[40px] font-extrabold md:text-[100px] text-center leading-[90%] tracking-[-4%]">
+                    Let’s Create Comic <br> with Us!
                 </h1>
               
               <!-- Container Form -->
-              <form class="flex flex-col gap-4">
-                <div class="input">
-                    <label for="name" class="syne text-xl text-white">your name please *</label>
-                    <input id="name" type="text" placeholder="type here" class="p-3 mt-2">
-                </div>
+                <form class="flex flex-col justify-center gap-4 items-center">
+                    <div class="input w-[320px] md:w-[724px]">
+                        <label for="name" class="syne text-xl text-white">your name please *</label>
+                        <input id="name" type="text" placeholder="type here" class="p-3 mt-2">
+                    </div>
+                    
+                    <div class="input w-[320px] md:w-[724px]">
+                        <label for="email" class="syne text-xl text-white">your email of course *</label>
+                        <input id="email" type="email" placeholder="type here" class="p-3 mt-2">
+                    </div>
+                    
+                    <div class="input w-[320px] md:w-[724px]">
+                        <label for="project" class="syne text-xl text-white">the cool project *</label>
+                        <input id="project" type="text" placeholder="type here" class="p-3 mt-2">
+                    </div>
                 
-                <div class="input">
-                    <label for="email" class="syne text-xl text-white">your email of course *</label>
-                    <input id="email" type="email" placeholder="type here" class="p-3 mt-2">
-                </div>
+                    <div class="relative w-[320px] md:w-[724px]">
+                        <label for="budget" class="syne text-xl text-white">your best budget *</label><br>
+                        <label for="budget" class="label-2 syne text-xl text-[#DAF7A6] opacity-50">please do not lie!!! basic design projects start at minimum of $700</label>
+                        <select id="budget" class="custom-dropdown p-3 w-full appearance-none mt-2">
+                            <option>choose the range</option>
+                            <option value="500-1000">$700 - $1,000</option>
+                            <option value="1000-5000">$1,000 - $5,000</option>
+                            <option value="5000-10000">$5,000 - $10,000</option>
+                            <option value="10000+">Above $10,000</option>
+                        </select>
+                    </div>
                 
-                <div class="input">
-                    <label for="project" class="syne text-xl text-white">the cool project *</label>
-                    <input id="project" type="text" placeholder="type here" class="p-3 mt-2">
-                </div>
-            
-                <div class="relative">
-                    <label for="budget" class="syne text-xl text-white">your best budget *</label><br>
-                    <label for="budget" class="label-2 syne text-xl text-[#DAF7A6] opacity-50">please do not lie!!! basic design projects start at minimum of $700</label>
-                    <select id="budget" class="custom-dropdown p-3 w-full appearance-none mt-2">
-                        <option>choose the range</option>
-                        <option value="500-1000">$700 - $1,000</option>
-                        <option value="1000-5000">$1,000 - $5,000</option>
-                        <option value="5000-10000">$5,000 - $10,000</option>
-                        <option value="10000+">Above $10,000</option>
-                    </select>
-                </div>
-            
-                <div class="relative">
-                    <label for="date" class="syne text-xl text-white">preferred date to start project *</label>
-                    <input id="date" type="date" class="custom-date p-3 w-full mt-2">
-                </div>
-            
-                <div class="input">
-                    <label for="comment" class="syne text-xl text-white">why do you want work together?</label>
-                    <textarea id="comment" placeholder="type here" class="p-3 h-32 mt-2"></textarea>
-                </div>              
-            
-                <div class="btn-send flex justify-center items-center bg-[#DAF7A6]">
-                    <button type="submit" class="py-3 px-6 text-black font-bold bricolage-grotesque text-[20px]">Send</button>
-                </div>
-            </form>
+                    <div class="relative w-[320px] md:w-[724px]">
+                        <label for="date" class="syne text-xl text-white">preferred date to start project *</label>
+                        <input id="date" type="date" class="custom-date p-3 w-full mt-2">
+                    </div>
+                
+                    <div class="input w-[320px] md:w-[724px]">
+                        <label for="comment" class="syne text-xl text-white">why do you want work together?</label>
+                        <textarea id="comment" placeholder="type here" class="p-3 h-32 mt-2"></textarea>
+                    </div>              
+                
+                    <div class="btn-send flex justify-center items-center bg-[#DAF7A6] w-[200px] md:w-[369px]">
+                        <button type="submit" class="py-3 px-6 text-black font-bold bricolage-grotesque text-[20px]">Send</button>
+                    </div>
+                </form>
             </div>
         </section>
 
         <!-- Section -->
-        <section class="flex flex-col justify-center items-center">
-            <h1 class="text-center text-4xl font-bold text-white mb-8">
+        <section class="flex flex-col justify-center items-center bg-[#000] pt-40 pb-20 px-10 md:px-20">
+            <h1 class="text-center text-[34px] md:text-[64px] font-semibold text-white mb-8 leading-[100%]">
             You are an Artist?<br>
-            and want to join the team as ...
+            and want to join <br> the team as ...
             </h1>
 
             <!-- Button Container -->
             <div class="flex flex-col gap-4 items-center">
             <!-- Button 1 -->
-            <button class="w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center">
+            <button class="w-[320px] md:w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center group">
                 <span class="text-left">Script Writer</span>
-                <i class="fas fa-paint-brush text-xl"></i>
+                <img src="assets/arrow.svg" alt="" class="group-hover:hidden">
+                <img src="assets/arrow-black.svg" alt="" class="hidden group-hover:inline">
             </button>
 
             <!-- Button 2 -->
-            <button class="w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center">
+            <button class="w-[320px] md:w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center group">
                 <span class="text-left">Outline Artist</span>
-                <i class="fas fa-pen text-xl"></i>
+                <img src="assets/arrow.svg" alt="" class="group-hover:hidden">
+                <img src="assets/arrow-black.svg" alt="" class="hidden group-hover:inline">
             </button>
 
             <!-- Button 3 -->
-            <button class="w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center">
+            <button class="w-[320px] md:w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center group">
                 <span class="text-left">Colorist</span>
-                <i class="fas fa-edit text-xl"></i>
+                <img src="assets/arrow.svg" alt="" class="group-hover:hidden">
+                <img src="assets/arrow-black.svg" alt="" class="hidden group-hover:inline">
             </button>
 
             <!-- Button 4 -->
-            <button class="w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center">
+            <button class="w-[320px] md:w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center group">
                 <span class="text-left">Background Artist</span>
-                <i class="fas fa-film text-xl"></i>
+                <img src="assets/arrow.svg" alt="" class="group-hover:hidden">
+                <img src="assets/arrow-black.svg" alt="" class="hidden group-hover:inline">
             </button>
             
             <!-- Button 5 -->
-            <button class="w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center">
+            <button class="w-[320px] md:w-[553px] p-4 text-[#DAF7A6] bg-transparent hover:text-black hover:bg-[#DAF7A6] flex justify-between items-center group">
                 <span class="text-left">3D Background & Sets Modeler (.SKP)</span>
-                <i class="fas fa-film text-xl"></i>
+                <img src="assets/arrow.svg" alt="" class="group-hover:hidden">
+                <img src="assets/arrow-black.svg" alt="" class="hidden group-hover:inline">
             </button>
             </div>
         </section>
 
         <!-- Footer Section -->
-        <footer class="bg-[#DAF7A6] py-10 mt-10">
-            <div class="flex justify-between items-center px-10">
-            <!-- Left Text -->
-            <div class="text-left text-xl font-medium">
-                <p>Your best friend on creating digital comic</p>
-            </div>
+        <footer class="bg-[#DAF7A6] pt-40 px-10">
+            <div class="flex justify-between items-center max-w-[1376px] mx-auto h-full">
+                <!-- Left Text -->
+                <div class="text-left text-xl font-medium">
+                    <p>Your best friend on creating digital comic</p>
+                </div>
 
-            <!-- Social Media Icons -->
-            <div class="flex space-x-6 text-2xl">
-                <a href="#" class="text-[#000000] hover:text-gray-700">
-                <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="text-[#000000] hover:text-gray-700">
-                <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="#" class="text-[#000000] hover:text-gray-700">
-                <i class="fab fa-youtube"></i>
-                </a>
-                <a href="#" class="text-[#000000] hover:text-gray-700">
-                <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
+                <!-- Social Media Icons -->
+                <div class="flex space-x-6 text-2xl">
+                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
 
             <!-- Image Below -->
-            <div class="flex justify-center mt-8">
-            <img src="assets/footer.png" alt="Footer Image" class="w-72 h-auto">
+            <div class="flex justify-center mt-10">
+            <img src="assets/footer.png" alt="Footer Image" class="w-[1376px] h-auto">
             </div>
         </footer>
-    <script>
-      // JavaScript for toggle menu
-      const menuButton = document.getElementById('menuButton');
-      const menuOverlay = document.getElementById('menuOverlay');
-      const menuText = document.getElementById('menuText');
-      const hamburgerIcon = document.getElementById('hamburgerIcon');
-      const closeButton = document.getElementById('closeButton');
-  
-      function toggleMenu() {
-        menuOverlay.classList.toggle('hidden');
-        menuText.textContent = menuOverlay.classList.contains('hidden') ? 'Menu' : 'Close';
-        hamburgerIcon.classList.toggle('fa-bars');
-        hamburgerIcon.classList.toggle('fa-times');
-      }
-  
-      menuButton.addEventListener('click', toggleMenu);
-      closeButton.addEventListener('click', toggleMenu);
-    </script>
+    
+    <script src="js/script.js"></script>
   
   </body>
 </html>
