@@ -3,55 +3,124 @@ body {
     font-family: 'Bricolage Grotesque', sans-serif;
     margin: 0 auto;
     background-color: #f4f4f9;
-    cursor: none; /* Hide the default cursor */
 }
 
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  height: 100vh; /* Menyesuaikan tinggi area */
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 661px; /* Perbesar lebar kontainer */
+  height: 376px; /* Perbesar tinggi kontainer */
+}
+
+.main-logo {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%; /* Mengisi seluruh lebar kontainer */
+  height: 100%; /* Mengisi seluruh tinggi kontainer */
+}
+
+.shadow{
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  width: 100%; /* Mengisi seluruh lebar kontainer */
+  height: 100%; /* Mengisi seluruh tinggi kontainer */
+}
+
+.marquee {
+  overflow: hidden;
+  width: 99.9%; /* Pastikan marquee sesuai lebar viewport */
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: flex;
+  padding: 10px 0;
+  transform: rotate(-2deg);
+  box-sizing: border-box; /* Pastikan padding termasuk dalam width */
+  position: relative;
+  box-sizing: border-box;
+}
+
+.marquee h1 {
+  font-size: 2em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Bricolage Grotesque", serif;
+}
+
+
+.shadow {
+  z-index: 1; /* Bayangan di bawah gambar utama */
+}
+
+.main-logo {
+  z-index: 2; /* Gambar utama di atas bayangan */
+}
+
+.title-artwork{
+  transform: translateY(-80px); /* Geser elemen ke atas */
+}
+
+.artwork-container {
+  position: relative;
+  overflow: hidden; /* Sembunyikan artwork yang keluar dari container */
+}
+
+.artwork {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0; /* Default tersembunyi */
+  transform: translateY(100px); /* Efek masuk */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.artwork.active {
+  opacity: 1; /* Aktifkan artwork */
+  transform: translateY(0); /* Kembali ke posisi normal */
+}
+
+
+
 .cursor-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none; /* Prevent interference with clicks */
-    transform: translate(-50%, -50%);
-    z-index: 1000; /* Ensure it appears above other elements */
-  }
-  
-  .cursor {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    border-radius: 50%;
-    animation: rotate 5s linear infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  @keyframes rotate {
-    from {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Prevent cursor from blocking interactions */
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensure it's above other elements */
+  transition: transform 0.1s ease-out;
+}
+
+.curved-text {
+  width: 150px; /* Adjust size if necessary */
+  height: 150px;
+}
+
+@keyframes rotateInfinite {
+  from {
       transform: rotate(0deg);
-    }
-    to {
+  }
+  to {
       transform: rotate(360deg);
-    }
   }
-  
-  
-  .circle-text {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-  }
-  
-  .cursor-span {
-    position: absolute;
-    transform-origin: 0 80px;
-    font-size: 14px;
-    color: white;
-  }
+}
+
+.curved-text svg {
+  animation: rotateInfinite 10s linear infinite; /* 10s adalah durasi animasi */
+}
+
+
+
 
 .hero-section {
     height: calc(100vh - 80px);

@@ -18,11 +18,21 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="cursor-wrapper">
-        <div class="cursor circle-text" id="text-cursor">
-          SCROLL DOWN TO DISCOVER
+    <!-- <div class="cursor-wrapper">
+        <div class="absolute text-center curved-text">
+            <svg width="150" height="150" viewBox="0 0 550 550" class="transform -rotate-90">
+                <defs>
+                    <path id="circlePath" d="M 275, 275 m -230, 0 a 230,230 0 1,0 460,0 a 230,230 0 1,0 -460,0" />
+                </defs>
+                <text font-size="38" letter-spacing="15" fill="#fff" style="color: #151515;">
+                    <textPath href="#circlePath" text-anchor="middle" startOffset="50%">
+                        SCROLL DOWN TO DISCOVER
+                    </textPath>
+                </text>
+            </svg>
         </div>
-    </div>
+    </div> -->
+    
 
     <!-- Header -->
     <header class="flex justify-end py-4 bg-[#000] px-10 md:px-20">
@@ -72,10 +82,32 @@
         </div>
     </div>
 
-    <section class="hero-section flex items-center justify-center bg-[#000]">
-        <h1 class="text-5xl md:text-7xl font-bold text-[#DAF7A6] bricolage-grotesque">TEKADVERSE</h1>
-    </section>
+    <section class="hero-section flex flex-col items-center justify-center bg-[#000]">
+        <!-- Container untuk menumpuk gambar logo dan bayangan -->
+        <div class="image-container">
+            <!-- Gambar utama (logo) -->
+            <img src="assets/logo.svg" alt="Logo without shadow" class="main-logo">
+            <!-- Gambar bayangan (diletakkan di bawah gambar utama) -->
+            <img src="assets/logo-shadow.svg" class="shadow" alt="Logo with shadow">
+        </div>
 
+        <div class="flex marquee bg-[#FF5733] mt-10">
+            <h1 class="bricolage-grotesque font-extrabold px-10">DIGITAL ARTIST</h1>
+            <img src="assets/star.svg" alt="" class="w-[15px]">
+            <h1 class="bricolage-grotesque font-extrabold px-10">STORY WRITER</h1>
+            <img src="assets/star.svg" alt="" class="w-[15px]">
+            <h1 class="bricolage-grotesque font-extrabold px-10">COMIC LOVERS</h1>
+            <img src="assets/star.svg" alt="" class="w-[15px]">
+            <h1 class="bricolage-grotesque font-extrabold px-10">ILLUSTRATOR</h1>
+            <img src="assets/star.svg" alt="" class="w-[15px]">
+            <h1 class="bricolage-grotesque font-extrabold px-10">MANGA ARTIST</h1>
+            <img src="assets/star.svg" alt="" class="w-[15px]">
+            <h1 class="bricolage-grotesque font-extrabold px-10">3D ARTIST</h1>
+        </div>
+    </section>
+    
+    
+    
         <!-- Wrapper div with center alignment -->
         <section class="flex items-center justify-center min-h-screen bricolage-grotesque bg-[#000] px-10 md:px-20">
             <div class="text-center max-w-3xl px-5">
@@ -185,6 +217,40 @@
             </div>
         </section>
         
+        <section class="artwork-section flex flex-col items-center text-white bg-[#000] bricolage-grotesque h-screen gap-4">
+            <div class="flex justify-center items-center py-10">
+                <!-- Teks utama tetap -->
+                <h1 class="text-[240px] font-extrabold leading-[90%] tracking-[-4%]">Artwork</h1>
+            </div>
+        
+            <!-- Artwork Cards -->
+            <div class="artwork-container relative w-full h-[70vh] flex items-center justify-center">
+                <div class="artwork flex flex-col items-center">
+                    <img src="assets/artwork.png" alt="">
+                    <h1 class="title-artwork text-center text-[72px] font-extrabold leading-[100%] tracking-[-4%]">
+                        Webcomic Series <br> with MoSidik
+                    </h1>
+                </div>
+                <div class="artwork flex flex-col items-center">
+                    <img src="assets/artwork.png" alt="">
+                    <h1 class="title-artwork text-center text-[72px] font-extrabold leading-[100%] tracking-[-4%]">
+                        KABO Comic <br> Series
+                    </h1>
+                </div>
+                <div class="artwork flex flex-col items-center">
+                    <img src="assets/artwork.png" alt="">
+                    <h1 class="title-artwork text-center text-[72px] font-extrabold leading-[100%] tracking-[-4%]">
+                        Kitchen Lady One- <br> Shot Manga
+                    </h1>
+                </div>
+                <div class="artwork flex flex-col items-center">
+                    <img src="assets/artwork.png" alt="">
+                    <h1 class="title-artwork text-center text-[72px] font-extrabold leading-[100%] tracking-[-4%]">
+                        Bravy Comic Strip
+                    </h1>
+                </div>
+            </div>
+        </section>
 
         <section class="flex items-center justify-center min-h-screen bg-[#000] pt-32 px-10 md:px-20">
             <!-- Container Let's Chat -->
@@ -315,7 +381,9 @@
             <img src="assets/footer.png" alt="Footer Image" class="w-[1376px] h-auto">
             </div>
         </footer>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
   
   </body>
