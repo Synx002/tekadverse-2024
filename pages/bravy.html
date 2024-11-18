@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tekadverse</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@0.7.2"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font: Bricolage Grotesque -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon untuk browser -->
+  <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- Favicon untuk iOS (Apple) -->
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+
+  <!-- Favicon untuk Android/Windows -->
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <!-- <div class="cursor-wrapper">
+        <div class="absolute text-center curved-text">
+            <svg width="150" height="150" viewBox="0 0 550 550" class="transform -rotate-90">
+                <defs>
+                    <path id="circlePath" d="M 275, 275 m -230, 0 a 230,230 0 1,0 460,0 a 230,230 0 1,0 -460,0" />
+                </defs>
+                <text font-size="38" letter-spacing="15" fill="#fff" style="color: #151515;">
+                    <textPath href="#circlePath" text-anchor="middle" startOffset="50%">
+                        SCROLL DOWN TO DISCOVER
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+    </div> -->
+    
+
+    <!-- Header -->
+    <header class="relative flex flex-col h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('../assets/melin.png');">
+    <!-- Hamburger Button -->
+    <div class="absolute top-4 right-10 md:right-20 z-10">
+      <button id="menuButton" class="text-xl focus:outline-none">
+        <span id="menuText" class="text-[#DAF7A6]">Menu</span>
+        <span class="fas fa-bars bg-[#000] text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 w-[48px] h-[48px]" id="hamburgerIcon"></span>
+      </button>
+    </div>
+    </header>
+  
+    <!-- Overlay Menu -->
+    <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-100 hidden z-20 px-10 md:px-20 text-white">
+        <!-- Header Overlay dengan tombol Close -->
+        <div class="w-full flex justify-end py-4">
+        <button id="closeButton" class="text-xl focus:outline-none hover:text-gray-300 text-[#DAF7A6] flex items-center space-x-2">
+            <span class="text-[#DAF7A6]">Close</span>
+            <span class="fa-solid fa-xmark text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 w-[48px] h-[48px]"></span>
+        </button>
+        </div>
+    
+        <!-- Menu Items -->
+        <div class="flex flex-col gap-20">
+        <div class="flex flex-col gap-10 text-lg font-semibold">
+            <a href="#about" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">About</a>
+            <a href="#artwork" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Artwork</a>
+            <a href="#service" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Service</a>
+            <a href="#contact" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Contact</a>
+        </div>
+    
+        <!-- Social Media Icons -->
+        <div class="flex space-x-12">
+            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        </div>
+    </div>
+
+    <!-- Description -->
+    <section class="flex flex-col px-10 md:px-20 bg-[#F8EFE0] py-[80px]">
+        <div class="flex flex-col pb-[80px] border-b-2 border-black">
+            <h1 class="bricolage-grotesque font-extrabold text-[72px] leading-[100%] tracking-[-4%] pb-[32px]">Melin</h1>
+            <div class="flex flex-row justify-between info">
+                <div class="flex flex-col des-info gap-[24px] max-w-[512px]">
+                    <div class="description">
+                        <h1 class="bricolage-grotesque text-[32px] leading-[110%] tracking-[-4%]">Webcomic series production with Indonesian Senior Stand-Up Comedian Mo Sidik</h1>
+                    </div>
+                    <div class="tags flex flex-wrap gap-2">
+                        <span class="bricolage-grotesque border border-black rounded-full px-[24px] py-[8px] text-[16px]">#webcomic</span>
+                        <span class="bricolage-grotesque border border-black rounded-full px-[24px] py-[8px] text-[16px]">#series</span>
+                        <span class="bricolage-grotesque border border-black rounded-full px-[24px] py-[8px] text-[16px]">#manwhastyle</span>
+                        <span class="bricolage-grotesque border border-black rounded-full px-[24px] py-[8px] text-[16px]">#visualdevelopment</span>
+                        <span class="bricolage-grotesque border border-black rounded-full px-[24px] py-[8px] text-[16px]">#webtoon</span>
+                    </div>                    
+                </div>
+                <div class="teble-info bricolage-grotesque">
+                    <table class="table-auto text-left w-full">
+                        <tbody>
+                            <tr class="align-top">
+                                <td class="pr-4">Client</td>
+                                <td class="pr-2">:</td>
+                                <td>Person 3</td>
+                            </tr>
+                            <tr class="align-top">
+                                <td class="pr-4">Scope</td>
+                                <td class="pr-2">:</td>
+                                <td>
+                                    <ul class="leading-[130%] list-disc pl-6">
+                                        <li>Visual Development</li>
+                                        <li>Webcomic Production</li>
+                                        <li>Comic Posters</li>
+                                        <li>Digital Comic Distribution</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="align-top">
+                                <td class="pr-4">Release</td>
+                                <td class="pr-2">:</td>
+                                <td>work in progress</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="content flex flex-col justify-center items-center px-10 md:px-20 bg-[#F8EFE0] py-[80px]">
+        <div class="flex flex-col gap-[48px] justify-center items-center max-w-[848px]">
+            <div class="flex">
+                <p class="bricolage-grotesque font-bold text-[20px] leading-[130%]">We are working on Malin comic production, transforming Mo Sidik screenplays into visually engaging comic narratives. By collaborating closely with him, we ensure that their storytelling vision is brought to life through dynamic artwork and compelling  comic panels layouts.</p>
+            </div>
+            <div class="flex">
+                <p class="bricolage-grotesque text-[32px] leading-[130%] tracking-[0%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus orci vel pellentesque ornare. Integer rutrum ut mi vitae condimentum.</p>
+            </div>
+            <div class="flex">
+                <img src="../assets/melin-content-1.png" alt="" class="object-cover">
+            </div>
+            <div class="flex flex-row gap-[74px]">
+                <img src="../assets/melin-content-2.png" alt="" class="object-cover">
+                <p class="bricolage-grotesque text-[16px] leading-[130%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus orci vel pellentesque ornare. Integer rutrum ut mi vitae condimentum. Vestibulum nec sapien et metus mattis consequat vitae et purus. Proin id erat nec libero dapibus cursus. Proin volutpat facilisis nibh, et fermentum sem congue sed. Vivamus scelerisque purus ullamcorper ullamcorper pharetra. Cras at ex quis nisl faucibus suscipit. Praesent vel libero est. Aenean in purus nisi. Mauris bibendum velit iaculis nisl tempus ornare. Sed vel orci arcu. <br>
+                    Vestibulum varius condimentum justo, ut finibus ipsum porta vel. Vivamus luctus ex ex. Mauris gravida posuere risus egestas vestibulum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer sed tellus a ligula ullamcorper varius ut in mi. Aliquam erat volutpat. Praesent mollis, tortor eget tincidunt auctor, mauris purus tristique tellus, nec luctus erat sem a dui. Suspendisse in consequat ex. Praesent nec erat sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus commodo lectus in blandit tristique. Suspendisse viverra sem ac mollis sagittis. </p>
+            </div>
+            <div class="flex">
+                <p class="bricolage-grotesque text-[16px] leading-[130%]">We are working on Malin comic production, transforming Mo Sidik screenplays into visually engaging comic narratives. By collaborating closely with him, we ensure that their storytelling vision is brought to life through dynamic artwork and compelling  comic panels layouts.</p>
+            </div>
+            <div class="flex">
+                <img src="../assets/melin-content-1.png" alt="" class="object-cover">
+            </div>
+            <div class="flex">
+                <p class="bricolage-grotesque text-[16px] leading-[130%]">We are working on Malin comic production, transforming Mo Sidik screenplays into visually engaging comic narratives. By collaborating closely with him, we ensure that their storytelling vision is brought to life through dynamic artwork and compelling  comic panels layouts.</p>
+            </div>
+            <div class="flex">
+                <img src="../assets/melin-content-1.png" alt="" class="object-cover">
+            </div>
+            <div class="flex">
+                <p class="bricolage-grotesque text-[16px] leading-[130%]">We are working on Malin comic production, transforming Mo Sidik screenplays into visually engaging comic narratives. By collaborating closely with him, we ensure that their storytelling vision is brought to life through dynamic artwork and compelling  comic panels layouts.</p>
+            </div>
+        </div>
+    </section>
+  
+    <section class="flex h-[431px]">
+        <!-- Warna Kiri -->
+        <div class="w-1/2 bg-[#DAF7A6]"></div>
+        <!-- Warna Kanan -->
+        <div class="w-1/2 bg-[#FF5733]"></div>
+    </section>
+
+    <section class="bg-[#000]">
+        <div class="flex items-center justify-center py-[80px]">
+            <a class="button-about flex items-center justify-center w-[480px] h-[80px] bg-[#DAF7A6]" href="../index.html">
+                <span class="text-black font-semibold text-[32px] ">Back to home</span>
+                <img src="../assets/arrow-black.svg" alt="arrow" class="ml-[10px]">
+            </a>
+        </div>
+    </section>
+    
+        
+
+    <section class="flex items-center justify-center min-h-screen bg-[#000] p-32 px-10 md:px-20">
+            <!-- Container Let's Chat -->
+            <div class="flex flex-col gap-[31px] w-full px-5">
+                <h1 class="bricolage-grotesque text-white text-[40px] font-extrabold md:text-[100px] text-center leading-[90%] tracking-[-4%]">
+                    Let’s Create Comic <br> with Us!
+                </h1>
+              
+              <!-- Container Form -->
+                <form class="flex flex-col justify-center gap-4 items-center">
+                    <div class="input w-[320px] md:w-[724px]">
+                        <label for="name" class="syne text-xl text-white">your name please *</label>
+                        <input id="name" type="text" placeholder="type here" class="p-3 mt-2">
+                    </div>
+                    
+                    <div class="input w-[320px] md:w-[724px]">
+                        <label for="email" class="syne text-xl text-white">your email of course *</label>
+                        <input id="email" type="email" placeholder="type here" class="p-3 mt-2">
+                    </div>
+                    
+                    <div class="input w-[320px] md:w-[724px]">
+                        <label for="project" class="syne text-xl text-white">the cool project *</label>
+                        <input id="project" type="text" placeholder="type here" class="p-3 mt-2">
+                    </div>
+                
+                    <div class="relative w-[320px] md:w-[724px]">
+                        <label for="budget" class="syne text-xl text-white">your best budget *</label><br>
+                        <label for="budget" class="label-2 syne text-xl text-[#DAF7A6] opacity-50">please do not lie!!! basic design projects start at minimum of $700</label>
+                        <select id="budget" class="custom-dropdown p-3 w-full appearance-none mt-2">
+                            <option>choose the range</option>
+                            <option value="500-1000">$700 - $1,000</option>
+                            <option value="1000-5000">$1,000 - $5,000</option>
+                            <option value="5000-10000">$5,000 - $10,000</option>
+                            <option value="10000+">Above $10,000</option>
+                        </select>
+                    </div>
+                
+                    <div class="relative w-[320px] md:w-[724px]">
+                        <label for="date" class="syne text-xl text-white">preferred date to start project *</label>
+                        <input id="date" type="date" class="custom-date p-3 w-full mt-2">
+                    </div>
+                
+                    <div class="input w-[320px] md:w-[724px]">
+                        <label for="comment" class="syne text-xl text-white">why do you want work together?</label>
+                        <textarea id="comment" placeholder="type here" class="p-3 h-32 mt-2"></textarea>
+                    </div>              
+                
+                    <div class="btn-send flex justify-center items-center bg-[#DAF7A6] w-[200px] md:w-[369px]">
+                        <button type="submit" class="py-3 px-6 text-black font-bold bricolage-grotesque text-[20px]">Send</button>
+                    </div>
+                </form>
+            </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#DAF7A6] pt-40 px-10">
+            <div class="flex justify-between items-center max-w-[1376px] mx-auto h-full">
+                <!-- Left Text -->
+                <div class="text-left text-xl font-medium">
+                    <p>Your best friend on creating digital comic</p>
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-6 text-2xl">
+                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image Below -->
+            <div class="flex justify-center mt-10">
+            <img src="../assets/footer.png" alt="Footer Image" class="w-[1376px] h-auto">
+            </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../js/script.js"></script>
+  
+  </body>
+</html>
