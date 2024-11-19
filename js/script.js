@@ -87,7 +87,7 @@ function Marquee(selector, speed) {
 }
 
 // Jalankan marquee setelah semua konten dimuat
-window.addEventListener('load', () => Marquee('.marquee', 0.2));
+window.addEventListener('load', () => Marquee('.marquee', 1));
 
 
 gsap.registerPlugin(ScrollTrigger);

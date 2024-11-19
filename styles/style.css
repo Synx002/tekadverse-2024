@@ -56,6 +56,42 @@ body {
   font-family: "Bricolage Grotesque", serif;
 }
 
+.stock-ticker{
+  padding-block: 10px;
+  border-block: 1px solid;
+  overflow: hidden;
+  user-select: none;
+  background-color: #FF5733;
+  transform: rotate(-2deg);
+
+  --gap: 5px;
+  display: flex;
+  gap: var(--gap);
+}
+
+.stock-ticker ul{
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+
+  animation: scroll 20s linear infinite;
+}
+
+.stock-ticker:hover ul {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+
 
 .shadow {
   z-index: 1; /* Bayangan di bawah gambar utama */
