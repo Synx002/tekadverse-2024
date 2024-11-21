@@ -57,7 +57,7 @@ body {
 }
 
 .stock-ticker{
-  padding-block: 10px;
+  padding-block: 20px;
   border-block: 1px solid;
   overflow: hidden;
   user-select: none;
@@ -74,7 +74,7 @@ body {
   flex-shrink: 0;
   min-width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: var(--gap);
 
@@ -280,4 +280,41 @@ form select:focus::placeholder,
 form textarea:focus::placeholder {
     color: #DAF7A6; /* Warna untuk placeholder */
     opacity: 0.5; /* Atur opacity jika ingin placeholder terlihat lebih redup */
+}
+
+/* Tooltip Styling */
+.tooltip {
+  position: absolute;
+  bottom: 120%; /* Posisikan di atas icon */
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  background-color: #000;
+  color: #fff;
+  padding: 0px 10px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  pointer-events: none; /* Agar tidak mengganggu klik */
+}
+
+/* Tooltip Arrow */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Posisikan di bawah tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+
+/* Show Tooltip on Hover */
+.group:hover .tooltip {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
 }
