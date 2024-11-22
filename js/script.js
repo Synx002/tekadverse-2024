@@ -129,3 +129,29 @@ function updateActiveArtwork(index) {
 
 // Inisialisasi: Aktifkan artwork pertama
 updateActiveArtwork(0);
+
+// Select all parallax-text elements
+const texts = document.querySelectorAll('.parallax-text');
+
+// Add a scroll event listener
+window.addEventListener('scroll', () => {
+  texts.forEach((text) => {
+    const section = text.parentElement.parentElement; // Parent section
+    const sectionTop = section.offsetTop; // Top of the section
+    const sectionHeight = section.offsetHeight;
+    const scrollOffset = window.pageYOffset - sectionTop; // Scroll offset relative to the section
+
+    // Calculate movement based on scroll direction
+    if (scrollOffset >= 0 && scrollOffset <= sectionHeight) {
+      const pullStrength = scrollOffset * 0.1; // Adjust pull strength
+      gsap.to(text, {
+        y: scrollOffset > 0 ? pullStrength : -pullStrength, // Move up or down
+        duration: 0.3,
+        ease: 'power2.out',
+      });
+    }
+  });
+});
+
+
+

@@ -187,7 +187,7 @@ body {
 
 /* Dropdown Styling */
 .custom-dropdown {
-    background-image: url('assets/arrow-down-green.svg'); /* Custom icon for dropdown */
+    background-image: url('../assets/arrow-down-green.svg'); /* Custom icon for dropdown */
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 20px;
@@ -202,7 +202,7 @@ body {
 
 /* Date Picker Styling */
 .custom-date {
-    background-image: url('assets/arrow.svg'); /* Custom icon for date picker */
+    background-image: url('../assets/plus.svg'); /* Custom icon for date picker */
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 20px;
@@ -317,4 +317,30 @@ form textarea:focus::placeholder {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
   visibility: visible;
+}
+
+
+.parallax {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.parallax-text {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(0); /* Default position */
+  will-change: transform; /* Optimizes rendering for animations */
 }
