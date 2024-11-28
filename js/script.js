@@ -1,39 +1,5 @@
 
-  // JavaScript for toggle menu
-  const menuButton = document.getElementById('menuButton');
-  const menuOverlay = document.getElementById('menuOverlay');
-  const menuText = document.getElementById('menuText');
-  const hamburgerIcon = document.getElementById('hamburgerIcon');
-  const closeButton = document.getElementById('closeButton');
 
-  function toggleMenu() {
-    menuOverlay.classList.toggle('hidden');
-    menuText.textContent = menuOverlay.classList.contains('hidden') ? 'Menu' : 'Close';
-    hamburgerIcon.classList.toggle('fa-bars');
-    hamburgerIcon.classList.toggle('fa-times');
-  }
-
-  menuButton.addEventListener('click', toggleMenu);
-  closeButton.addEventListener('click', toggleMenu);
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const dropdown = document.querySelector('.custom-dropdown');
-  
-    dropdown.addEventListener('change', () => {
-            dropdown.classList.add('selected'); // Tambahkan class 'selected' ketika ada pilihan
-        });
-    });
-  
-    document.addEventListener('DOMContentLoaded', () => {
-    const dateInput = document.querySelector('.custom-date');
-  
-    dateInput.addEventListener('change', () => {
-            dateInput.classList.add('selected'); // Tambahkan class 'selected' saat tanggal dipilih
-        });
-    });
-
-
-  // Select the cursor wrapper eleme
 // Select the cursor wrapper
 const cursorWrapper = document.querySelector('.cursor-wrapper');
 
@@ -61,10 +27,10 @@ heroSection.addEventListener('mousemove', (e) => {
     shadow.style.transform = `translate3d(${-offsetX / 15}px, ${-offsetY / 15}px, 0)`;
 });
 
-heroSection.addEventListener('mouseleave', () => {
-    // Reset transformasi saat kursor keluar dari hero-section
-    shadow.style.transform = 'translate3d(0, 0, 0)';
-});
+// heroSection.addEventListener('mouseleave', () => {
+//     // Reset transformasi saat kursor keluar dari hero-section
+//     shadow.style.transform = 'translate3d(0, 0, 0)';
+// });
 
 function Marquee(selector, speed) {
   const parentSelector = document.querySelector(selector);
@@ -90,68 +56,47 @@ function Marquee(selector, speed) {
 window.addEventListener('load', () => Marquee('.marquee', 1));
 
 
-gsap.registerPlugin(ScrollTrigger);
+const menuButton = document.getElementById('menuButton');
+const menuOverlay = document.getElementById('menuOverlay');
+const hamburgerIcon = document.getElementById('hamburgerIcon');
+const closeButton = document.getElementById('closeButton');
+const menuText = document.getElementById('menuText');
+const header = document.querySelector('header'); // Mengambil elemen header
 
-const artworks = document.querySelectorAll(".artwork");
+function toggleMenu() {
+  // Toggle visibility of the overlay menu
+  menuOverlay.classList.toggle('hidden');
+  menuOverlay.classList.toggle('show'); // Show the overlay when active
+  
+  // Toggle the menu text between "Menu" and "Close"
+  menuText.textContent = menuOverlay.classList.contains('show') ? 'Close' : 'Menu';
 
-// GSAP ScrollTrigger untuk membuat section tetap stay
-ScrollTrigger.create({
-  trigger: ".artwork-section", // Elemen yang diamati
-  start: "top top", // Mulai saat section mencapai atas viewport
-  end: "+=300%", // Section tetap stay selama 300% tinggi viewport
-  pin: true, // Section tetap stay
-  scrub: true, // Animasi smooth saat scroll
-});
-
-// GSAP untuk mengganti artwork berdasarkan scroll
-gsap.to({}, {
-  scrollTrigger: {
-    trigger: ".artwork-section",
-    start: "top top",
-    end: "+=300%", // Selama scroll section ini
-    scrub: true,
-    onUpdate: (self) => {
-      const index = Math.floor(self.progress * artworks.length); // Hitung index berdasarkan progress
-      updateActiveArtwork(index);
-    },
-  },
-});
-
-function updateActiveArtwork(index) {
-  // Reset semua artwork
-  artworks.forEach((art, i) => {
-    art.classList.remove("active");
-  });
-
-  // Aktifkan artwork berdasarkan index
-  artworks[index].classList.add("active");
+  // Toggle active class for the hamburger icon (to trigger animation)
+  menuButton.classList.toggle('active');
+  
+  // Adjust z-index of the hamburger icon based on the menu overlay visibility
+  if (menuOverlay.classList.contains('show')) {
+    menuButton.style.zIndex = '30'; // Hamburger icon above the overlay
+    header.classList.add('sticky'); // Make header sticky when overlay is active
+  } else {
+    menuButton.style.zIndex = 'auto'; // Reset z-index when overlay is hidden
+    header.classList.remove('sticky'); // Remove sticky class when overlay is hidden
+  }
 }
 
-// Inisialisasi: Aktifkan artwork pertama
-updateActiveArtwork(0);
+menuButton.addEventListener('click', toggleMenu);
+closeButton.addEventListener('click', toggleMenu);
 
-// Select all parallax-text elements
-const texts = document.querySelectorAll('.parallax-text');
-
-// Add a scroll event listener
-window.addEventListener('scroll', () => {
-  texts.forEach((text) => {
-    const section = text.parentElement.parentElement; // Parent section
-    const sectionTop = section.offsetTop; // Top of the section
-    const sectionHeight = section.offsetHeight;
-    const scrollOffset = window.pageYOffset - sectionTop; // Scroll offset relative to the section
-
-    // Calculate movement based on scroll direction
-    if (scrollOffset >= 0 && scrollOffset <= sectionHeight) {
-      const pullStrength = scrollOffset * 0.1; // Adjust pull strength
-      gsap.to(text, {
-        y: scrollOffset > 0 ? pullStrength : -pullStrength, // Move up or down
-        duration: 0.3,
-        ease: 'power2.out',
-      });
-    }
-  });
+$('#flipto').on("click", function(event) {
+  event.preventDefault();
+  
+  var face = $(this).data("face");
+  
+  if ( face == "bottom" ) {
+    $(".cube").removeClass("flip-to-top").addClass("flip-to-bottom");
+    $(this).data("face", "top").text("Flip: to top");
+  } else {
+    $(".cube").removeClass("flip-to-bottom").addClass("flip-to-top");
+    $(this).data("face", "bottom").text("Flip: to bottom");
+  }
 });
-
-
-

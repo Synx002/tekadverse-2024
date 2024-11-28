@@ -42,55 +42,74 @@
             </svg>
         </div>
     </div> -->
-    
+    <h1 class="counter">0</h1>
+
+    <div class="overlay">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
 
     <!-- Header -->
-    <header class="flex justify-end py-4 bg-[#000] px-10 md:px-20">
-      <div class="flex">
-        <button id="menuButton" class="text-xl focus:outline-none">
-          <!-- Hamburger icon -->
-          <span id="menuText" class="text-[#DAF7A6]">Menu</span>
-          <span class="fas fa-bars text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 w-[48px] h-[48px]" id="hamburgerIcon"></span>
-        </button>
-      </div>
-    </header> 
-  
-    <!-- Overlay Menu -->
-    <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-100 hidden z-20 px-10 md:px-20 text-white">
-        <!-- Bagian Header Overlay dengan tombol Close -->
-        <div class="w-full flex justify-end py-4">
-            <button id="closeButton" class="text-xl focus:outline-none hover:text-gray-300 text-[#DAF7A6] flex items-center space-x-2">
-                <span class="text-[#DAF7A6]">Close</span>
-                <span class="fa-solid fa-xmark text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 w-[48px] h-[48px]"></span>
-            </button>
+  <header class="flex justify-end py-4 bg-[#000] px-10 md:px-20">
+    <div class="flex">
+      <button id="menuButton" class="flex flex-row text-xl focus:outline-none">
+        <!-- Menu Button (Hamburger) -->
+        <span id="menuText" class="text-[#DAF7A6]">Menu</span>
+        <div id="hamburgerIcon" class="hamburger-icon">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
         </div>
-
-        <div class="flex flex-col gap-20">
-            <!-- Menu items in a 4-column grid layout -->
-            <div class="flex flex-col gap-10 text-lg font-semibold">
-            <a href="#about" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">About</a>
-            <a href="#artwork" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Artwork</a>
-            <a href="#service" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Service</a>
-            <a href="#contact" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Contact</a>
-            </div>
-
-            <!-- Social Media Icons -->
-            <div class="flex space-x-12">
-                <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
-        </div>
+      </button>
     </div>
+  </header>
+  
+  <!-- Overlay Menu -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-100 hidden z-20 px-10 md:px-20 text-white">
+    <!-- Bagian Header Overlay dengan tombol Close -->
+    <!-- <div class="w-full flex justify-end py-4">
+      <button id="closeButton" class="text-xl focus:outline-none hover:text-gray-300 text-[#DAF7A6] flex items-center space-x-2">
+        <span class="text-[#DAF7A6]">Close</span>
+        <div class="close-icon">
+          <div class="close-line close-line-1"></div>
+          <div class="close-line close-line-2"></div>
+        </div>
+      </button>
+    </div> -->
+  
+    <div class="flex flex-col gap-20">
+      <div class="flex flex-col gap-10 text-lg font-semibold mt-28">
+        <a href="#about" class="text-[56px] text-white hover:text-[#DAF7A6]">About</a>
+        <a href="#artwork" class="text-[56px] text-white hover:text-[#DAF7A6]">Artwork</a>
+        <a href="#service" class="text-[56px] text-white hover:text-[#DAF7A6]">Service</a>
+        <a href="#contact" class="text-[56px] text-white hover:text-[#DAF7A6]">Contact</a>
+      </div>
+  
+      <div class="flex space-x-12">
+        <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
 
     <section class="hero-section flex flex-col items-center justify-center bg-[#000]">
         <!-- Container untuk menumpuk gambar logo dan bayangan -->
@@ -199,20 +218,12 @@
     
     
         <!-- Wrapper div with center alignment -->
-        <section class="flex items-center justify-center min-h-screen bricolage-grotesque bg-[#000] px-10 md:px-20">
-            <div class="text-center max-w-3xl px-5">
-            <!-- Paragraph -->
-            <p class="text-[32px] font-medium leading-[1.5] tracking-[0.02em] mb-10 text-white bricolage-grotesque">
-                We are a digital comic studio, where imagination runs wild and every page bursts with color! Our talented team of quirky artists and storytellers crafts a delightful mix of action, humor, and heartwarming tales. With the latest digital tools, we bring fantastical worlds to life, inviting you to dive into a universe of fun and creativity on every page!
-            </p>
-            
-            <!-- Button with image icon -->
-                <div class="flex items-center justify-center ">
-                    <button class="button-about flex items-center justify-center w-[480px] h-[80px] bg-[#DAF7A6]">
-                        <span class="text-black font-semibold text-[32px] ">About</span>
-                        <img src="assets/arrow-black.svg" alt="arrow" class="ml-[10px]">
-                    </button>
-                </div>
+        <section class="flex items-center min-h-screen bricolage-grotesque bg-[#000] px-10 md:px-20">
+            <div class="px-5">
+                <!-- Paragraph -->
+                <p class="text-[40px] font-medium leading-[140%] tracking-[2%] mb-10 text-white bricolage-grotesque">
+                    We are a <span class="text-[#DAF7A6]">digital comic studio</span>, where imagination runs wild and every page bursts with color! Our talented team of quirky artists and storytellers crafts a delightful mix of action, humor, and heartwarming tales. With the latest digital tools, <span class="text-[#DAF7A6]">we bring fantastical worlds to life, inviting you to dive into a universe of fun and creativity on every page!</span>
+                </p>
             </div>
         </section>
 
@@ -304,6 +315,26 @@
                         08
                     </span>
                 </div>
+
+                <!-- Button with image icon -->
+                <div class="flex items-center justify-center mt-20">
+                    <!-- <button class="button-about items-center justify-center">
+                        <div class="btn-cube flex flex-row">
+                            <span class="text-black font-semibold text-[32px]">Learn more</span>
+                            <img src="assets/arrow-black.svg" alt="arrow" class="ml-[10px]">
+                        </div>
+                    </button> -->
+                    <a href="#" class="cube flip-to-top">
+                        <div class="default-state">
+                          <span>Learn more</span>
+                          <img src="assets/arrow-black.svg" alt="Icon" class="state-icon ml-[10px]">
+                        </div>
+                        <div class="active-state">
+                          <span>Learn more</span>
+                          <img src="assets/arrow-black.svg" alt="Icon" class="state-icon ml-[10px]">
+                        </div>
+                    </a>                      
+                </div>
             </div>
         </section>
         <!--         
@@ -347,27 +378,29 @@
                 </div>
             </div>
         </section> -->
-        <div class="flex justify-center items-center py-10 bg-[#000]">
-            <h1 class="text-[240px] font-extrabold leading-[90%] tracking-[-4%] text-white">Artworks</h1>
-        </div>
-        <section class="parallax" style="background-image: url('assets/artwork.png');">
-            <div class="content">
-                <h1 class="parallax-text bricolage-grotesque leading-[100%] text-center">Webcomic Series <br> with MoSidik</h1>
+        <section>
+            <div class="flex justify-center items-center h-screen bg-[#000]">
+                <h1 class="text-[240px] font-extrabold leading-[90%] tracking-[-4%] text-white">Artworks</h1>
             </div>
-        </section>
-        <section class="parallax" style="background-image: url('assets/kabo-header.png');">
-            <div class="content">
-                <h1 class="parallax-text bricolage-grotesque leading-[100%] text-center">KABO Comic <br> Series</h1>
+            <div class="parallax" style="background-image: url('assets/artwork.png');">
+                <div class="content">
+                    <h1 class="parallax-text bricolage-grotesque leading-[100%] text-center">Webcomic Series <br> with MoSidik</h1>
+                </div>
             </div>
-        </section>
-        <section class="parallax" style="background-image: url('assets/kitchen-lady-header.png');">
-            <div class="content">
-                <h1 class="parallax-text bricolage-grotesque leading-[100%] text-center">Kitchen Lady One- <br> Shot Manga</h1>
+            <div class="parallax" style="background-image: url('assets/KABO.png');">
+                <div class="content">
+                    <h1 class="parallax-text bricolage-grotesque leading-[100%] text-center">KABO Comic <br> Series</h1>
+                </div>
             </div>
-        </section>
-        <section class="parallax" style="background-image: url('assets/artwork.png');">
-            <div class="content">
-                <h1 class="parallax-text bricolage-grotesque leading-[100%] text-center">Bravy Comic Strip</h1>
+            <div class="parallax" style="background-image: url('assets/KIT.png');">
+                <div class="content">
+                    <h1 class="parallax-text bricolage-grotesque leading-[100%] text-center">Kitchen Lady One- <br> Shot Manga</h1>
+                </div>
+            </div>
+            <div class="parallax" style="background-image: url('assets/barvy.png');">
+                <div class="content">
+                    <h1 class="parallax-text bricolage-grotesque leading-[100%] text-center">Bravy Comic Strip</h1>
+                </div>
             </div>
         </section>
 
@@ -512,6 +545,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/loader.js"></script>
   
   </body>
 </html>

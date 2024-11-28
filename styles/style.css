@@ -3,7 +3,150 @@ body {
     font-family: 'Bricolage Grotesque', sans-serif;
     margin: 0 auto;
     background-color: #f4f4f9;
+    overflow-x: hidden;
 }
+
+.overlay{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+}
+
+.bar{
+  width: 10vw;
+  height: 105vh;
+  background: #DAF7A6;
+}
+
+.counter{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 4;
+  color: #000;
+  padding: 0em 0.2em;
+  font-size: 20vw;
+  line-height: 100%;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+/* Header Styles */
+header {
+  transition: position 0.3s ease, top 0.3s ease;
+  background-color: #000; /* Optional, depending on your design */
+  padding: 20px;
+  z-index: 10;
+}
+
+/* Sticky Header Styles */
+header.sticky {
+  position: sticky;
+  top: 0; /* Menjaga header tetap di atas */
+  z-index: 100; /* Pastikan header berada di atas overlay */
+}
+
+/* Hamburger Icon Style */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+  pointer-events: none; /* Prevent interaction with icon while animating */
+}
+
+.line {
+  height: 4px;
+  width: 100%;
+  background-color: #DAF7A6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hamburger to Cross Animation */
+#menuButton.active #hamburgerIcon .line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menuButton.active #hamburgerIcon .line-2 {
+  opacity: 0;
+}
+
+#menuButton.active #hamburgerIcon .line-3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Overlay Menu Styles */
+#menuOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  background-opacity: 0.8;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: visibility 0s 0.3s, opacity 0.3s ease;
+}
+
+#menuOverlay.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0s;
+}
+
+/* Optional: Add space between icon and text */
+#menuButton {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  gap: 20px; /* Space between the icon and text */
+}
+
+/* Close Icon Style */
+.close-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.close-line {
+  height: 4px;
+  width: 100%;
+  background-color: #DAF7A6;
+  border-radius: 2px;
+}
+
+.close-line-1 {
+  transform: rotate(45deg);
+}
+
+.close-line-2 {
+  transform: rotate(-45deg);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Overlay Menu Style */
+#menuOverlay {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#menuOverlay.show {
+  display: block;
+}
+
 
 .hero-section {
   display: flex;
@@ -155,9 +298,6 @@ body {
   animation: rotateInfinite 10s linear infinite; /* 10s adalah durasi animasi */
 }
 
-
-
-
 .hero-section {
     height: calc(100vh - 80px);
 }
@@ -187,7 +327,7 @@ body {
 
 /* Dropdown Styling */
 .custom-dropdown {
-    background-image: url('../assets/arrow-down-green.svg'); /* Custom icon for dropdown */
+    background-image: url('../assets/allow.svg'); /* Custom icon for dropdown */
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 20px;
@@ -202,10 +342,10 @@ body {
 
 /* Date Picker Styling */
 .custom-date {
-    background-image: url('../assets/plus.svg'); /* Custom icon for date picker */
+    background-image: url('../assets/plhus.svg'); /* Custom icon for date picker */
     background-repeat: no-repeat;
     background-position: right 1rem center;
-    background-size: 20px;
+    background-size: 24px;
     padding-right: 2.5rem; /* Adjust padding to fit icon */
     -webkit-appearance: none; /* Remove default icon in Webkit browsers */
     -moz-appearance: none; /* Remove default icon in Firefox */
@@ -319,7 +459,6 @@ form textarea:focus::placeholder {
   visibility: visible;
 }
 
-
 .parallax {
   position: relative;
   height: 100vh;
@@ -343,4 +482,103 @@ form textarea:focus::placeholder {
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transform: translateY(0); /* Default position */
   will-change: transform; /* Optimizes rendering for animations */
+}
+
+.cube {
+  width: 331px;
+  height: 64px;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  text-align: center;
+  margin: 0 auto;
+}
+/* The two faces of the cube */
+.default-state,
+.active-state {
+  height: 100px;
+}
+/* Position the faces */
+.default-state {
+  -webkit-transform: translateZ(50px);
+  -moz-transform: translateZ(50px);
+  -o-transform: translateZ(50px);
+  -ms-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+.flip-to-top .active-state {
+  -webkit-transform: rotateX(90deg) translateZ(150px);
+  -moz-transform: rotateX(90deg) translateZ(150px);
+  -o-transform: rotateX(90deg) translateZ(150px);
+  -ms-transform: rotateX(90deg) translateZ(150px);
+  transform: rotateX(90deg) translateZ(150px);
+}
+.flip-to-bottom .active-state {
+  -webkit-transform: rotateX(-90deg) translateZ(-50px);
+  -moz-transform: rotateX(-90deg) translateZ(-50px);
+  -o-transform: rotateX(-90deg) translateZ(-50px);
+  -ms-transform: rotateX(-90deg) translateZ(-50px);
+  transform: rotateX(-90deg) translateZ(-50px);
+}
+/* Rotate the cube */
+.cube.flip-to-top:hover {
+  -webkit-transform: rotateX(-89deg);
+  -moz-transform: rotateX(-89deg);
+  -o-transform: rotateX(-89deg);
+  -ms-transform: rotateX(-89deg);
+  transform: rotateX(-89deg);
+}
+.cube.flip-to-bottom:hover {
+  -webkit-transform: rotateX(89deg);
+  -moz-transform: rotateX(89deg);
+  -o-transform: rotateX(89deg);
+  -ms-transform: rotateX(89deg);
+  transform: rotateX(89deg);
+}
+
+.cube {
+  text-align: center;
+  margin: 0 auto;
+}
+/* Modifikasi elemen default-state dan active-state untuk menambahkan gambar */
+.default-state,
+.active-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  font-size: 32px;
+  font-weight: 900;
+  color: #000;
+  -webkit-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -o-transition: background 250ms ease;
+  transition: background 250ms ease;
+}
+
+/* Styling untuk gambar */
+.state-icon {
+  width: 24px; /* Atur ukuran sesuai kebutuhan */
+  height: 24px;
+  object-fit: contain;
+}
+
+.cube:hover .default-state {
+  background: transparent;
+}
+.active-state {
+  background: #DAF7A6;
+}
+#flipto {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+  color: #ccc;
 }
