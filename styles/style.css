@@ -459,31 +459,6 @@ form textarea:focus::placeholder {
   visibility: visible;
 }
 
-.parallax {
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content {
-  position: relative;
-  z-index: 2;
-}
-
-.parallax-text {
-  font-size: 4rem;
-  color: white;
-  font-weight: bold;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transform: translateY(0); /* Default position */
-  will-change: transform; /* Optimizes rendering for animations */
-}
-
 .cube {
   width: 331px;
   height: 64px;
@@ -573,7 +548,8 @@ form textarea:focus::placeholder {
   background: transparent;
 }
 .active-state {
-  background: #DAF7A6;
+  background: #000;
+  color: #F8EFE0;
 }
 #flipto {
   display: block;
@@ -581,4 +557,31 @@ form textarea:focus::placeholder {
   text-decoration: none;
   margin-top: 20px;
   color: #ccc;
+}
+
+.parallax {
+  position: relative;
+  height: 100vh; /* Mengambil tinggi layar penuh */
+  background-size: cover;
+  background-attachment: fixed; /* Membantu efek parallax */
+  background-position: center;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center
+}
+
+.parallax-section-text {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(0); /* Default position */
+  will-change: transform; /* Optimizes rendering for animations */
 }

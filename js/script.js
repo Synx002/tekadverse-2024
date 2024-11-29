@@ -1,4 +1,17 @@
+gsap.registerPlugin(ScrollTrigger);
 
+  document.querySelectorAll('.parallax').forEach((section) => {
+    gsap.to(section, {
+      backgroundPosition: "50% 100%", // Menggerakkan latar belakang dari atas ke bawah
+      ease: "none", // Linear movement
+      scrollTrigger: {
+        trigger: section,
+        start: "top bottom", // Mulai saat bagian atas elemen mencapai bagian bawah viewport
+        end: "bottom top", // Selesai saat bagian bawah elemen mencapai bagian atas viewport
+        scrub: true, // Sinkronisasi animasi dengan scroll
+      },
+    });
+  });
 
 // Select the cursor wrapper
 const cursorWrapper = document.querySelector('.cursor-wrapper');
