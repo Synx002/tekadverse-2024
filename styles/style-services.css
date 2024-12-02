@@ -1,0 +1,890 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Bricolage Grotesque", sans-serif;
+    background: rgb(248, 239, 224);
+}
+
+.bricolage-grotesque{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+  }
+
+.hero {
+    display: flex;
+    height: auto;
+    border-bottom: 1px solid #194785;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0px 32px 32px;
+    height: auto;
+}
+
+.logo-container {
+    width: 100%;
+    max-width: 110px;
+    margin-bottom: auto;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+.hero-title {
+    font-size: 90px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 80%;
+    latter-spacing: -4%;
+    color: #DAF7A6;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+    background-image: url('../img/arrow.svg');
+    background-repeat: no-repeat;
+    padding: 0 0 0 25px; /* Menyesuaikan dengan ukuran gambar */
+    background-size: 20px 20px; /* Menyesuaikan ukuran gambar jika perlu */
+    background-position: left center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #194785;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav ul li a:hover{
+    color: #FD652c;
+    text-decoration: underline;
+}
+
+
+.list-con ul {
+    list-style-type: none; /* Menghapus titik default pada list */
+    padding: 0;
+}
+
+.list-con ul li {
+    background-image: url('../img/star.png');
+    background-repeat: no-repeat;
+    padding: 0 0 0 25px; /* Menyesuaikan dengan ukuran gambar */
+    background-size: 20px 20px; /* Menyesuaikan ukuran gambar jika perlu */
+}
+
+/* Default untuk list satu baris */
+.single-line {
+    background-position: left center;
+}
+
+/* Untuk list dengan dua baris atau lebih */
+.multi-line {
+    background-position: 0% 7%;
+}
+
+.hero-image {
+    width: 80%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 100vh; /* Prevents image from exceeding viewport height */
+}
+
+/* SECTION 2*/
+
+.about {
+    display: flex;
+    height: 100vh;
+    border-bottom: 1px solid #194785;
+    gap: 96px;
+    align-items: center; 
+}
+
+.title-about{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.title-about h1{
+    font-size: 72px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: #FD652c;
+}
+
+.img-container-about {
+    width: 67%;
+
+}
+.img-container-about img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 100vh; /* Prevents image from exceeding viewport height */
+}
+
+.tittle-about{
+    font-size: 72px;
+}
+
+.des-about{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4em;
+    letter-spacing: 0.002em;
+}
+
+.des-about-org{
+    font-size: 18px;
+    color: #FD652c;
+    font-weight: 500;
+    line-height: 1.4em;
+    letter-spacing: 0.002em;
+}
+
+.our-works {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+    padding: 80px 0;
+
+}
+
+.title-works h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FD652c;
+    font-weight: 800;
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(270px * 14);
+    animation: scroll 20s linear infinite;
+}
+
+.slide {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px; /* Adding margin to create space between slides */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7)); }
+}
+
+/* WORKS */
+
+.works {
+    display: flex;
+    height: 100vh;
+    border-bottom: 1px solid #194785;
+    border-top: 1px solid #194785;
+    align-items: center;
+    background-color: #f8efe0;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 32px;
+    position: relative;
+    width: 100%;
+}
+
+.title-works-characterdesign{
+    width: 35%;
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: 1 0 0px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 24px;
+    height: min-content;
+    justify-content: flex-start;
+    max-width: 400px;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+}
+
+.title-works-characterdesign h1{
+    font-size: 72px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: #FD652c;
+    line-height: 90%;
+}
+
+.img-container-characterdesign {
+    width: 65%;
+
+}
+
+.title-works-characterdesign ul li{
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+    line-height: 1.2em;
+    gap: 9px;
+}
+
+.title-works-characterdesign p{
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: 0.002em;
+}
+
+.img-container-characterdesign img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 100vh; /* Prevents image from exceeding viewport height */
+}
+/* Script Writing*/
+.title-works-scriptwriting{
+    width: 35%;
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: 1 0 0px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 24px;
+    height: min-content;
+    justify-content: flex-start;
+    max-width: 400px;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+}
+
+.title-works-scriptwriting h1{
+    font-size: 72px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: #FD652c;
+    line-height: 90%;
+}
+
+.img-container-scriptwriting {
+    width: 65%;
+    display: flex;
+    align-items: center;      /* Centers the image vertically */
+    height: 100vh;     
+}
+
+.img1 {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    height: auto;
+}
+
+.img2 {
+    position: absolute;
+    top: 50px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+    left: 540px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+    z-index: 2;
+    width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+    height: auto;
+}
+
+.title-works-scriptwriting ul li{
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+.title-works-scriptwriting p{
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: 0.002em;
+}
+
+
+
+
+/* Manga*/
+.title-works-manga{
+    width: 35%;
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: 1 0 0px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 24px;
+    height: min-content;
+    justify-content: flex-start;
+    max-width: 400px;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+}
+
+.img-pad{
+    padding: 100px 0;
+}
+
+.title-works-manga h1{
+    font-size: 72px;
+    font-weight: 800;
+    color: #FD652c;
+    line-height: 90%;
+}
+
+.img-container-manga {
+    display: grid;
+    flex: none;
+    gap: 0px;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, min-content);
+    height: min-content;
+    justify-content: center;
+    overflow: visible;
+    position: relative;
+    width: 65%;   
+}
+
+.title-works-manga ul li{
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+.title-works-manga p{
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: 0.002em;
+}
+
+.img-container-webcomic {
+    width: 65%;
+}
+
+.img-container-webcomic img{
+    width: 100%;
+    height: auto;
+    object-fit: scale-down;
+    max-height: 100vh; /* Prevents image from exceeding viewport height */
+    padding: 100px 0 100px 0;
+}
+
+
+/* Dropdown Styling */
+.custom-dropdown {
+    background-image: url('../assets/allow.svg'); /* Custom icon for dropdown */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 20px;
+    padding-right: 2.5rem; /* Adjust padding to fit icon */
+    -webkit-appearance: none; /* Remove default dropdown arrow */
+    -moz-appearance: none;
+    appearance: none;
+}
+.custom-dropdown.selected {
+    color: var(--color-coal); /* Change text color to black when an option is selected */
+}
+
+/* Date Picker Styling */
+.custom-date {
+    background-image: url('../assets/plhus.svg'); /* Custom icon for date picker */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 24px;
+    padding-right: 2.5rem; /* Adjust padding to fit icon */
+    -webkit-appearance: none; /* Remove default icon in Webkit browsers */
+    -moz-appearance: none; /* Remove default icon in Firefox */
+    appearance: none;
+}
+
+.custom-date.selected {
+    color: var(--color-coal); /* Change text color to black when a date is selected */
+}
+
+/* Hide default calendar icon in Webkit browsers */
+.custom-date::-webkit-calendar-picker-indicator {
+    opacity: 0; /* Hides the default calendar icon */
+}
+
+/* Ensure custom icon doesn’t block clicks */
+.custom-date::after {
+    content: '';
+    pointer-events: none; /* Prevents the icon from blocking clicks */
+}
+
+
+/* General Styling for Form Inputs, Dropdown, and Date Picker */
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+    background-color: #000;
+    border: 1px solid #DAF7A6; 
+    border-radius: 0; /* No border radius */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    width: 100%; /* Full width for consistency */
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: rgba(218, 247, 166, 0.5); /* Opacity hanya untuk teks */
+}
+
+/* Change Border Color on Focus for Input, Dropdown, and Date Picker */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+    background-color: #DAF7A6;
+    color: #000; /* Text color */
+}
+
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form input[type="date"]::placeholder,
+form select::placeholder,
+form textarea::placeholder {
+    color: #DAF7A6; /* Warna untuk placeholder */
+    opacity: 0.5; /* Atur opacity jika ingin placeholder terlihat lebih redup */
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* Change placeholder color on focus */
+form input[type="text"]:focus::placeholder,
+form input[type="email"]:focus::placeholder,
+form input[type="date"]:focus::placeholder,
+form select:focus::placeholder,
+form textarea:focus::placeholder {
+    color: #DAF7A6; /* Warna untuk placeholder */
+    opacity: 0.5; /* Atur opacity jika ingin placeholder terlihat lebih redup */
+}
+
+
+/* Tooltip Styling */
+.tooltip {
+    position: absolute;
+    bottom: 120%; /* Posisikan di atas icon */
+    left: 50%;
+    transform: translateX(-50%) translateY(30px);
+    background-color: #000;
+    color: #fff;
+    padding: 0px 10px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+    pointer-events: none; /* Agar tidak mengganggu klik */
+  }
+  
+/* Tooltip Arrow */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Posisikan di bawah tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+}
+  
+/* Show Tooltip on Hover */
+.group:hover .tooltip {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 1507px) {
+    
+    .img2 {
+        position: absolute;
+        top: 50px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        left: 370px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        z-index: 2;
+        width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+        height: auto;
+    }
+}
+@media (max-width: 1280px) {
+    .img1 {
+        position: relative;
+        z-index: 1;
+        width: 50%;
+        height: auto;
+    }
+    
+    .img2 {
+        position: absolute;
+        top: 50px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        left: 370px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        z-index: 2;
+        width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+        height: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .img1 {
+        position: relative;
+        z-index: 1;
+        width: 50%;
+        height: auto;
+    }
+    
+    .img2 {
+        position: absolute;
+        top: 50px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        left: 290px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        z-index: 2;
+        width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+        height: auto;
+    }
+
+}
+
+@media (max-width: 920px){
+    .hero-title{
+        font-size: 40px;
+    }
+
+    nav ul li a{
+        font-size: 10px;
+    }
+    .img1 {
+        position: relative;
+        z-index: 1;
+        width: 50%;
+        height: auto;
+    }
+    
+    .img2 {
+        position: absolute;
+        top: 450px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        left: 230px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        z-index: 2;
+        width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+        height: auto;
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        gap: 50px;
+        height: auto;
+    }
+
+    .logo{
+        width: 55px;
+        padding-bottom: 16px;
+    }
+
+    .sidebar {
+        padding: 16px;
+        width: 100%;
+        height: auto;
+        order: 2;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        order: 1;
+    }
+    
+    .hero-title{
+        line-height: 90%;
+        margin: 0;
+        font-size: 56px;
+    }
+
+    nav{
+        padding-top: 16px;
+    }
+
+    nav ul li{
+        font-size: 10px;
+        background-size: 15px 15px; /* Menyesuaikan ukuran gambar menjadi lebih kecil */
+        padding: 0 0 0 20px;
+    }
+
+    .about {
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 32px;
+        height: min-content;
+        justify-content: center;
+        order: 1;
+        padding: 64px 16px 0;
+    }
+
+    .title-about{
+        padding: 16px;
+        width: 100%;
+        height: auto;
+    }
+
+    .img-container-about {
+        width: 100%;
+        height: auto;
+    }
+    
+    .our-works {
+        padding: 16px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .works {
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 32px;
+        height: min-content;
+        justify-content: center;
+        order: 1;
+        padding: 80px 16px;
+    }
+
+    .title-works-characterdesign{
+        width: 100%;
+        height: auto;
+    }
+
+    .title-works-characterdesign h1{
+        font-size: 40px;
+        margin: 0;
+    }
+    
+    .title-works-characterdesign ul{
+        margin: 0;
+    }
+
+    .title-works-characterdesign ul li{
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .title-works-characterdesign p{
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .img-container-characterdesign {
+        width: 100%;
+        height: auto;
+    }
+    /*script writing*/
+    .title-works-scriptwriting{
+        width: 100%;
+        height: auto;
+    }
+
+    .title-works-scriptwriting h1{
+        font-size: 40px;
+        margin: 0;
+    }
+    
+    .title-works-scriptwriting ul{
+        margin: 0;
+    }
+
+    .title-works-scriptwriting ul li{
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .title-works-scriptwriting p{
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .img-container-scriptwriting{
+        width: 100%;
+        height: auto;
+        padding-bottom: 50px;
+    }
+    
+    /*manga*/
+    .title-works-manga{
+        width: 100%;
+        height: auto;
+    }
+
+    .title-works-manga h1{
+        font-size: 40px;
+        margin: 0;
+    }
+    
+    .title-works-manga ul{
+        margin: 0;
+    }
+
+    .title-works-manga ul li{
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .title-works-manga p{
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .img-container-manga{
+        width: 100%;
+        height: auto;
+    }
+
+    .img-container-webcomic {
+        width: 100%;
+    }
+    
+    .img-container-webcomic img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 100vh; /* Prevents image from exceeding viewport height */
+        padding: 0;
+    }
+
+    .contact{
+        flex-direction: column;
+        gap: 120px;
+        justify-content: center;
+        order: 11;
+        padding: 80px 16px;
+    }
+
+    .title-cta p{
+        line-height: 95%;
+    }
+
+    .form{
+        width: 100%;
+    }
+
+    .join{
+        width: 100%;
+    }
+
+    .form-h1{
+        font-size: 40px;
+    }
+
+    .container-footer{
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 361px;
+        order: 12;
+        gap: 20px;
+        padding: 80px 16px;
+    }
+
+    .footer-logo-container{
+        gap: 4px;
+        order: 1;
+    }
+
+    .bringmetotop{
+        order: 0;
+        width: 100%;
+    }
+
+    .info{
+        align-content: flex-start;
+        align-items: flex-start;
+        gap: 4px;
+        order: 2;
+    }
+
+    .img1 {
+        position: relative;
+        z-index: 1;
+        width: 50%;
+        height: auto;
+    }
+
+    .img2 {
+        position: absolute;
+        top: -50px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        left: 160px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        z-index: 2;
+        width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+        height: auto;
+    }
+
+}
