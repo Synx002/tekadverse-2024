@@ -380,7 +380,6 @@ form textarea {
     outline: none; /* Remove default outline */
     transition: border-color 0.3s ease; /* Smooth transition for border color */
     width: 100%; /* Full width for consistency */
-    font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -585,3 +584,49 @@ form textarea:focus::placeholder {
   transform: translateY(0); /* Default position */
   will-change: transform; /* Optimizes rendering for animations */
 }
+
+@media only screen and (max-width: 768px) {
+  .image-container {
+    position: relative;
+    width: 330px; /* Ukuran tetap untuk mobile */
+    height: 174px; /* 360 / 1.76 */
+  }
+
+  .stock-ticker{
+    transform: rotate(-1deg);
+  }
+
+  .default-state,
+  .active-state {
+    font-size: 22px;
+  }
+
+  .state-icon {
+    width: 14px; /* Atur ukuran sesuai kebutuhan */
+    height: 14px;
+  }
+
+  .footer-content {
+    flex-direction: column; /* Ubah jadi kolom */
+    align-items: center; /* Pusatkan semua elemen */
+    text-align: center; /* Text menjadi rata tengah */
+  }
+
+  .social-icons {
+      margin-top: 20px; /* Tambahkan jarak antar kolom */
+      flex-wrap: wrap; /* Bungkus ikon jika terlalu panjang */
+      justify-content: center; /* Pusatkan ikon */
+      gap: 15px; /* Tambahkan spasi antar ikon */
+  }
+
+  .social-icons a {
+      display: inline-block;
+  }
+
+  /* Gambar pada mobile */
+  footer img {
+      max-width: 100%;
+      height: auto;
+  }
+}
+
