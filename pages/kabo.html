@@ -27,7 +27,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
   <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
+<body class="bg-[#F8EFE0]">
     <!-- <div class="cursor-wrapper">
         <div class="absolute text-center curved-text">
             <svg width="150" height="150" viewBox="0 0 550 550" class="transform -rotate-90">
@@ -49,8 +49,8 @@
     <!-- Hamburger Button -->
     <div class="absolute top-4 right-10 md:right-20 z-10">
       <button id="menuButton" class="text-xl focus:outline-none">
-        <span id="menuText" class="text-[#DAF7A6]">Menu</span>
-        <span class="fas fa-bars bg-[#000] text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 w-[48px] h-[48px]" id="hamburgerIcon"></span>
+        <span id="menuText" class="text-[#fff]">Menu</span>
+        <span class="fas fa-bars text-[#fff] border-2 border-[#fff] rounded-[99px] p-3 w-[48px] h-[48px]" id="hamburgerIcon"></span>
       </button>
     </div>
     </header>
@@ -85,13 +85,13 @@
     </div>
 
     <!-- Description -->
-    <section class="flex flex-col px-10 md:px-20 bg-[#F8EFE0] py-[80px]">
+    <section class="container mx-auto flex flex-col px-10 md:px-20 bg-[#F8EFE0] py-[80px]">   
         <div class="flex flex-col pb-[80px] border-b-2 border-black">
             <h1 class="bricolage-grotesque font-extrabold text-[72px] leading-[100%] tracking-[-4%] pb-[32px]">Kabo</h1>
             <div class="flex flex-row justify-between info">
                 <div class="flex flex-col des-info gap-[24px] max-w-[512px]">
                     <div class="description">
-                        <h1 class="bricolage-grotesque text-[32px] leading-[110%] tracking-[-4%]">Webcomic series production with Indonesian Senior Stand-Up Comedian Mo Sidik</h1>
+                        <h1 class="bricolage-grotesque text-[32px] leading-[110%] tracking-[-4%]">Instagram comic series production for a meal replacement product</h1>
                     </div>
                     <div class="tags flex flex-wrap gap-2">
                         <span class="bricolage-grotesque border border-black rounded-full px-[24px] py-[8px] text-[16px]">#comic</span>
@@ -102,17 +102,15 @@
                     </div>                    
                 </div>
                 <div class="teble-info bricolage-grotesque">
-                    <table class="table-auto text-left w-full">
+                    <table class="table-auto text-left w-full border border-black border-collapse">
                         <tbody>
-                            <tr class="align-top">
-                                <td class="pr-4">Client</td>
-                                <td class="pr-2">:</td>
-                                <td>PT.Kreasi Sehat Indonesia</td>
+                            <tr class="align-top bg-[#000] text-white border-b border-black">
+                                <th class="border-r border-black py-2 pl-2 pr-10">Client</th>
+                                <th class="py-2 pl-2 pr-10">PT. Kreasi Sehat Indonesia</th>
                             </tr>
-                            <tr class="align-top">
-                                <td class="pr-4">Scope</td>
-                                <td class="pr-2">:</td>
-                                <td>
+                            <tr class="align-top border-b border-black">
+                                <td class="border-r border-black py-2 pl-2 pr-10">Scope</td>
+                                <td class="py-2 pl-2 pr-10">
                                     <ul class="leading-[130%] list-disc pl-6">
                                         <li>Visual Development</li>
                                         <li>Story Development</li>
@@ -121,17 +119,87 @@
                                     </ul>
                                 </td>
                             </tr>
-                            <tr class="align-top">
-                                <td class="pr-4">Release</td>
-                                <td class="pr-2">:</td>
-                                <td>work in progress</td>
+                            <tr class="align-top border-b border-black">
+                                <td class="border-r border-black py-2 pl-2 pr-10">Release</td>
+                                <td class="py-2 pl-2 pr-10">work in progress</td>
                             </tr>
                         </tbody>
-                    </table>
-                </div>
-                
+                    </table>                    
+                </div>                
             </div>
         </div>
+    </section>
+
+    <section class="container mx-auto flex flex-col px-10 md:px-20 bg-[#F8EFE0] pb-[80px]">   
+        <div class="textnquote flex flex-row">
+            <div class="leftcon flex w-full md:w-1/2 pr-32">
+                <p class="bricolage-grotesque text-[32px] leading-[110%] tracking-[-4%]">
+                    See how we taking a fresh spin on introducing a meal replacement drink — by bringing it to life through an exciting, adventure-packed comic series! 
+                </p>
+            </div>
+            <div class="quote flex w-full md:w-1/2">
+                <p class="bricolage-grotesque text-base leading-[130%] tracking-[0%]">
+                    The strategy is all about creating an engaging, story-driven experience to introduce the meal replacement drink. By using an adventure-themed comic series, the product is presented in a fun, narrative format that draws readers in and keeps them hooked. Instead of traditional advertising, the comic makes the product feel like a part of an exciting journey, blending entertainment with education. This approach not only captures attention but also builds a connection with the audience, making the product feel more relatable and memorable.
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-10 items-stretch">
+            <!-- Kolom 1 -->
+            <div class="flex-1 flex flex-col justify-between">
+                <p class="bricolage-grotesque text-[24px] leading-[130%] tracking-[-4%]">
+                    We are transforming Kreasi Sehat’s Pumpkin-based product into a vibrant, visually captivating character. 
+                    By collaborating closely with the team, we’re bringing their creative vision to life, using dynamic artwork 
+                    and engaging comic layouts to tell a story that resonates with the audience while showcasing the product 
+                    in a fun, memorable way.
+                </p>
+                <p class="bricolage-grotesque text-[16px] leading-[130%] tracking-[0%] mt-6">
+                    We’ve poured our heart and soul into this series, and we hope it resonates with you as much as it has with us. 
+                    Every character, every scene, and every panel was created with love and passion, and we’re excited to share it with you. 
+                    If you enjoy the story, the characters, and the adventure, don’t forget to show some love! Your support means the world 
+                    to us and helps bring this journey to even more fans. Stay tuned, and let's make this story one you’ll never forget! <br>
+                    <a href="#" class="text-blue-600 font-semibold underline">Read the comic here!</a>
+                </p>
+            </div>
+        
+            <!-- Kolom 2 -->
+            <div class="flex-1 flex">
+                <img src="../assets/kabo-mid-content.png" 
+                     alt="Pumpkin-based product character" 
+                     class="w-full h-full object-cover rounded-lg shadow-lg"
+                     height="416px">
+            </div>
+        
+            <!-- Kolom 3 -->
+            <div class="flex-1 flex flex-col justify-between">
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <img src="../assets/star-black.svg" alt="Dot icon" class="w-4 h-4 mt-1 mr-4">
+                        <span>
+                            Comic Script ⎯ we start by developing the story from scratch, working closely with our clients to shape a unique narrative that resonates with their vision. We focus on crafting compelling characters, intriguing plots, and meaningful themes that capture the audience's attention from the very first page.
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <img src="../assets/star-black.svg" alt="Dot icon" class="w-4 h-4 mt-1 mr-4">
+                        <span>
+                            Character Design ⎯ bringing the story's personalities to life with distinct, visually appealing designs. Each character is thoughtfully created to reflect their role in the story, ensuring they feel authentic and engaging. From the quirky details to the overall look, we make sure the designs match the tone and style of the narrative.
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <img src="../assets/star-black.svg" alt="Dot icon" class="w-4 h-4 mt-1 mr-4">
+                        <span>
+                            Setting/ Background Design ⎯ We also focus on setting development and design, where we build immersive environments that support the story’s world that enhance the storytelling.
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <img src="../assets/star-black.svg" alt="Dot icon" class="w-4 h-4 mt-1 mr-4">
+                        <span>
+                            Comic Creation ⎯ Finally, we move into comic creation, translating the narrative and visuals into engaging comic panels, ensuring the pacing, dialogue, and artwork come together seamlessly to tell a captivating story.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
     </section>
 
     <section class="content flex flex-col justify-center items-center px-10 md:px-20 bg-[#F8EFE0] py-[80px]">
