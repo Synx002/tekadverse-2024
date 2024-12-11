@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const overlay = document.querySelector('.overlay');
 
     gsap.to(overlay, {
-        delay: 5,  // Lebih cepat
+        delay: 3,  // Lebih cepat
         duration: 0.2,  // Durasi lebih pendek
         opacity: 0,
         onComplete: function () {
