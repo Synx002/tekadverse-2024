@@ -69,13 +69,16 @@ function Marquee(selector, speed) {
 window.addEventListener('load', () => Marquee('.marquee', 1));
 
 
+// Elemen HTML yang digunakan
 const menuButton = document.getElementById('menuButton');
 const menuOverlay = document.getElementById('menuOverlay');
 const hamburgerIcon = document.getElementById('hamburgerIcon');
 const closeButton = document.getElementById('closeButton');
 const menuText = document.getElementById('menuText');
 const header = document.querySelector('header'); // Mengambil elemen header
+const menuLinks = document.querySelectorAll(".menu-link"); // Semua tautan dalam overlay
 
+// Fungsi untuk toggle menu
 function toggleMenu() {
   // Toggle visibility of the overlay menu
   menuOverlay.classList.toggle('hidden');
@@ -97,15 +100,32 @@ function toggleMenu() {
   }
 }
 
+// Tambahkan event listener untuk tombol menu dan tombol close
 menuButton.addEventListener('click', toggleMenu);
-closeButton.addEventListener('click', toggleMenu);
+if (closeButton) closeButton.addEventListener('click', toggleMenu);
 
+// Fungsi untuk menutup menu saat tautan diklik
+function closeMenuOnClick() {
+  menuOverlay.classList.add('hidden'); // Sembunyikan overlay
+  menuOverlay.classList.remove('show'); // Hapus kelas show
+  menuButton.classList.remove('active'); // Reset tombol menu
+  menuText.textContent = 'Menu'; // Ubah teks kembali ke "Menu"
+  header.classList.remove('sticky'); // Hapus sticky header
+  menuButton.style.zIndex = 'auto'; // Reset z-index tombol menu
+}
+
+// Tambahkan event listener ke setiap tautan dalam menu overlay
+menuLinks.forEach(link => {
+  link.addEventListener('click', closeMenuOnClick);
+});
+
+// Animasi flipping menggunakan jQuery
 $('#flipto').on("click", function(event) {
   event.preventDefault();
   
   var face = $(this).data("face");
   
-  if ( face == "bottom" ) {
+  if (face == "bottom") {
     $(".cube").removeClass("flip-to-top").addClass("flip-to-bottom");
     $(this).data("face", "top").text("Flip: to top");
   } else {
