@@ -27,7 +27,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
   <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
+<body class="bg-[#F8EFE0]">
     <!-- <div class="cursor-wrapper">
         <div class="absolute text-center curved-text">
             <svg width="150" height="150" viewBox="0 0 550 550" class="transform -rotate-90">
@@ -84,35 +84,55 @@
         </div>
     </div>
 
-    <!-- Description -->
-    <section class="flex flex-col px-10 md:px-20 bg-[#F8EFE0] py-[80px]">
+     <!-- Description -->
+     <section class="container mx-auto flex flex-col px-6 md:px-20 bg-[#F8EFE0] pt-[80px]">
         <div class="flex flex-col pb-[80px] border-b-2 border-black">
-            <h1 class="bricolage-grotesque font-extrabold text-[72px] leading-[100%] tracking-[-4%] pb-[32px]">Melin</h1>
-            <div class="flex flex-row justify-between info">
-                <div class="flex flex-col des-info gap-[24px] max-w-[512px]">
+            <h1 class="bricolage-grotesque font-extrabold text-[48px] md:text-[72px] leading-[100%] tracking-[-4%] pb-[32px]">
+                Melin
+            </h1>
+            <div class="flex flex-col lg:flex-row justify-between info gap-[32px]">
+                <!-- Informasi Deskripsi -->
+                <div class="flex flex-col des-info gap-[24px] max-w-full lg:max-w-[512px]">
                     <div class="description">
-                        <h1 class="bricolage-grotesque text-[32px] leading-[110%] tracking-[-4%]">Webcomic series production with Indonesian Senior Stand-Up Comedian Mo Sidik</h1>
+                        <h1 class="bricolage-grotesque text-[24px] md:text-[32px] leading-[110%] tracking-[-4%]">
+                            Webcomic series production with Indonesian Senior Stand-Up Comedian Mo Sidik
+                        </h1>
                     </div>
                     <div class="tags flex flex-wrap gap-2">
-                        <span class="bricolage-grotesque border border-black rounded-full px-[24px] py-[8px] text-[16px]">#webcomic</span>
-                        <span class="bricolage-grotesque border border-black rounded-full px-[24px] py-[8px] text-[16px]">#series</span>
-                        <span class="bricolage-grotesque border border-black rounded-full px-[24px] py-[8px] text-[16px]">#manwhastyle</span>
-                        <span class="bricolage-grotesque border border-black rounded-full px-[24px] py-[8px] text-[16px]">#visualdevelopment</span>
-                        <span class="bricolage-grotesque border border-black rounded-full px-[24px] py-[8px] text-[16px]">#webtoon</span>
-                    </div>                    
+                        <span class="bricolage-grotesque border border-black rounded-full px-[16px] md:px-[24px] py-[8px] text-[14px] md:text-[16px]">
+                            #webcomic
+                        </span>
+                        <span class="bricolage-grotesque border border-black rounded-full px-[16px] md:px-[24px] py-[8px] text-[14px] md:text-[16px]">
+                            #series
+                        </span>
+                        <span class="bricolage-grotesque border border-black rounded-full px-[16px] md:px-[24px] py-[8px] text-[14px] md:text-[16px]">
+                            #animestyle
+                        </span>
+                        <span class="bricolage-grotesque border border-black rounded-full px-[16px] md:px-[24px] py-[8px] text-[14px] md:text-[16px]">
+                            #visualdevelopment
+                        </span>
+                        <span class="bricolage-grotesque border border-black rounded-full px-[16px] md:px-[24px] py-[8px] text-[14px] md:text-[16px]">
+                            #webtoon
+                        </span>
+                    </div>
                 </div>
-                <div class="teble-info bricolage-grotesque">
-                    <table class="table-auto text-left w-full">
+                <!-- Informasi Table -->
+                <div class="table-info bricolage-grotesque w-full lg:w-auto">
+                    <table class="table-auto text-left w-full border border-black border-collapse">
                         <tbody>
-                            <tr class="align-top">
-                                <td class="pr-4">Client</td>
-                                <td class="pr-2">:</td>
-                                <td>Mo Sidik</td>
+                            <tr class="align-top bg-[#000] text-white border-b border-black">
+                                <th class="border-r border-black py-2 pl-2 pr-10 text-[14px] md:text-[16px]">
+                                    Client
+                                </th>
+                                <td class="py-2 pl-2 pr-10 text-[14px] md:text-[16px]">
+                                    Mo Sidik
+                                </td>
                             </tr>
-                            <tr class="align-top">
-                                <td class="pr-4">Scope</td>
-                                <td class="pr-2">:</td>
-                                <td>
+                            <tr class="align-top border-b border-black">
+                                <td class="border-r border-black py-2 pl-2 pr-10 text-[14px] md:text-[16px]">
+                                    Scope
+                                </td>
+                                <td class="py-2 pl-2 pr-10 text-[14px] md:text-[16px]">
                                     <ul class="leading-[130%] list-disc pl-6">
                                         <li>Visual Development</li>
                                         <li>Webcomic Production</li>
@@ -121,15 +141,17 @@
                                     </ul>
                                 </td>
                             </tr>
-                            <tr class="align-top">
-                                <td class="pr-4">Release</td>
-                                <td class="pr-2">:</td>
-                                <td>work in progress</td>
+                            <tr class="align-top border-b border-black">
+                                <td class="border-r border-black py-2 pl-2 pr-10 text-[14px] md:text-[16px]">
+                                    Release
+                                </td>
+                                <td class="py-2 pl-2 pr-10 text-[14px] md:text-[16px]">
+                                    work in progress
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                
             </div>
         </div>
     </section>
