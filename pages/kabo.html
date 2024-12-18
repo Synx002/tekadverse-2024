@@ -42,47 +42,24 @@
             </svg>
         </div>
     </div> -->
-    
 
-    <!-- Header -->
-    <header class="relative flex flex-col h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('../assets/kabo-cover-landscpae.png'); object-fit: cover;">
-    <!-- Hamburger Button -->
-    <div class="absolute top-4 right-10 md:right-20 z-10">
-      <button id="menuButton" class="text-xl focus:outline-none">
-        <span id="menuText" class="text-[#fff]">Menu</span>
-        <span class="fas fa-bars text-[#fff] border-2 border-[#fff] rounded-[99px] p-3 w-[48px] h-[48px]" id="hamburgerIcon"></span>
-      </button>
-    </div>
+
+    <header class="relative flex flex-col h-screen w-full bg-cover bg-center bg-no-repeat" style="background-image: url('../assets/kabo-cover-landscpae.png');">
+        <!-- Hamburger Button -->
+        <div class="fixed top-4 right-10 md:right-20 z-10">
+            <button id="menuButton" class="text-xl focus:outline-none">
+                <a href="../index.html" id="menuText" class="text-white mix-blend-difference">Home</a>
+            </button>
+        </div>
     </header>
+    
+    
+    
+    
+    
+    
   
-    <!-- Overlay Menu -->
-    <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-100 hidden z-20 px-10 md:px-20 text-white">
-        <!-- Header Overlay dengan tombol Close -->
-        <div class="w-full flex justify-end py-4">
-        <button id="closeButton" class="text-xl focus:outline-none hover:text-gray-300 text-[#DAF7A6] flex items-center space-x-2">
-            <span class="text-[#DAF7A6]">Close</span>
-            <span class="fa-solid fa-xmark text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 w-[48px] h-[48px]"></span>
-        </button>
-        </div>
-    
-        <!-- Menu Items -->
-        <div class="flex flex-col gap-20">
-        <div class="flex flex-col gap-10 text-lg font-semibold">
-            <a href="#about" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">About</a>
-            <a href="#artwork" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Artwork</a>
-            <a href="#service" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Service</a>
-            <a href="#contact" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Contact</a>
-        </div>
-    
-        <!-- Social Media Icons -->
-        <div class="flex space-x-12">
-            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        </div>
-    </div>
+ 
 
     <!-- Description -->
     <section class="container mx-auto flex flex-col px-6 md:px-20 bg-[#F8EFE0] pt-[80px]">
@@ -299,57 +276,57 @@
         </div>
     </section>        
 
-    <section class="flex items-center justify-center min-h-screen bg-[#000] p-32 px-10 md:px-20">
-            <!-- Container Let's Chat -->
-            <div class="flex flex-col gap-[31px] w-full px-5">
-                <h1 class="bricolage-grotesque text-white text-[40px] font-extrabold md:text-[100px] text-center leading-[90%] tracking-[-4%]">
-                    Let’s Create Comic <br> with Us!
-                </h1>
-              
-              <!-- Container Form -->
-                <form class="flex flex-col justify-center gap-4 items-center">
-                    <div class="input w-[320px] md:w-[724px]">
-                        <label for="name" class="syne text-xl text-white">your name please *</label>
-                        <input id="name" type="text" placeholder="type here" class="p-3 mt-2">
-                    </div>
-                    
-                    <div class="input w-[320px] md:w-[724px]">
-                        <label for="email" class="syne text-xl text-white">your email of course *</label>
-                        <input id="email" type="email" placeholder="type here" class="p-3 mt-2">
-                    </div>
-                    
-                    <div class="input w-[320px] md:w-[724px]">
-                        <label for="project" class="syne text-xl text-white">the cool project *</label>
-                        <input id="project" type="text" placeholder="type here" class="p-3 mt-2">
-                    </div>
+    <section id="contact" class="flex items-center justify-center min-h-screen bg-[#000] pt-32 px-10 pb-[80px] md:px-20">
+        <!-- Container Let's Chat -->
+        <div class="flex flex-col gap-[31px] w-full px-5">
+            <h1 class="bricolage-grotesque text-white text-[40px] font-extrabold text-[30px] md:text-[100px] text-center leading-[90%] tracking-[-4%]">
+                Let’s Create Comic <br> with Us!
+            </h1>
+            
+            <!-- Container Form -->
+            <form class="flex flex-col justify-center gap-4 items-center">
+                <div class="input w-[320px] md:w-[724px]">
+                    <label for="name" class="bricolage-grotesque text-xl text-white">your name please *</label>
+                    <input id="name" type="text" placeholder="type here" class="p-3 mt-2">
+                </div>
                 
-                    <div class="relative w-[320px] md:w-[724px]">
-                        <label for="budget" class="syne text-xl text-white">your best budget *</label><br>
-                        <label for="budget" class="label-2 syne text-xl text-[#DAF7A6] opacity-50">please do not lie!!! basic design projects start at minimum of $700</label>
-                        <select id="budget" class="custom-dropdown p-3 w-full appearance-none mt-2">
-                            <option>choose the range</option>
-                            <option value="500-1000">$700 - $1,000</option>
-                            <option value="1000-5000">$1,000 - $5,000</option>
-                            <option value="5000-10000">$5,000 - $10,000</option>
-                            <option value="10000+">Above $10,000</option>
-                        </select>
-                    </div>
+                <div class="input w-[320px] md:w-[724px]">
+                    <label for="email" class="bricolage-grotesque text-xl text-white">your email of course :)*</label>
+                    <input id="email" type="email" placeholder="type here" class="p-3 mt-2">
+                </div>
                 
-                    <div class="relative w-[320px] md:w-[724px]">
-                        <label for="date" class="syne text-xl text-white">preferred date to start project *</label>
-                        <input id="date" type="date" class="custom-date p-3 w-full mt-2">
-                    </div>
-                
-                    <div class="input w-[320px] md:w-[724px]">
-                        <label for="comment" class="syne text-xl text-white">why do you want work together?</label>
-                        <textarea id="comment" placeholder="type here" class="p-3 h-32 mt-2"></textarea>
-                    </div>              
-                
-                    <div class="btn-send flex justify-center items-center bg-[#DAF7A6] w-[200px] md:w-[369px]">
-                        <button type="submit" class="py-3 px-6 text-black font-bold bricolage-grotesque text-[20px]">Send</button>
-                    </div>
-                </form>
-            </div>
+                <div class="input w-[320px] md:w-[724px]">
+                    <label for="project" class="bricolage-grotesque text-xl text-white">the cool comic title *</label>
+                    <input id="project" type="text" placeholder="type here" class="p-3 mt-2">
+                </div>
+            
+                <div class="relative w-[320px] md:w-[724px]">
+                    <label for="budget" class="bricolage-grotesque text-xl text-white">your best budget *</label><br>
+                    <label for="budget" class="label-2 bricolage-grotesque text-xl text-[#DAF7A6] opacity-50">yea.... we know, comic projects start at a minimum of $1500 <br> but if you have another interesting budget just let us know</label>
+                    <select id="budget" class="custom-dropdown p-3 w-full appearance-none mt-2">
+                        <option>choose the range</option>
+                        <option value="500-1000">$700 - $1,000</option>
+                        <option value="1000-5000">$1,000 - $5,000</option>
+                        <option value="5000-10000">$5,000 - $10,000</option>
+                        <option value="10000+">Above $10,000</option>
+                    </select>
+                </div>
+            
+                <div class="relative w-[320px] md:w-[724px]">
+                    <label for="date" class="bricolage-grotesque text-xl text-white">preferred date to start project *</label>
+                    <input id="date" type="date" class="custom-date p-3 w-full mt-2">
+                </div>
+            
+                <div class="input w-[320px] md:w-[724px]">
+                    <label for="comment" class="bricolage-grotesque text-xl text-white">why do you want work together?</label>
+                    <textarea id="comment" placeholder="type here" class="p-3 h-32 mt-2"></textarea>
+                </div>              
+            
+                <div class="btn-send flex justify-center items-center bg-[#DAF7A6] w-[200px] md:w-[369px]">
+                    <button type="submit" class="py-3 px-6 text-black font-bold bricolage-grotesque text-[20px]">Send</button>
+                </div>
+            </form>
+        </div>
     </section>
 
     <!-- Footer Section -->

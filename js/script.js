@@ -1,3 +1,4 @@
+console.log("helloWorld");
 gsap.registerPlugin(ScrollTrigger);
 
   document.querySelectorAll('.parallax').forEach((section) => {
@@ -133,3 +134,4 @@ $('#flipto').on("click", function(event) {
     $(this).data("face", "bottom").text("Flip: to bottom");
   }
 });
+
