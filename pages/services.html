@@ -14,48 +14,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" rel="stylesheet">
-    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="favicon/favicon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="favicon/favicon.png" type="image/svg+xml">
+    <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/favicon/favicon.ico" type="image/svg+xml">
 </head>
   <body>
-
+    <!-- Header -->
+    <!-- <div class="hero" style="background: url(../assets/melin.png); background-size: cover; background-repeat: no-repeat;">
+        <div class="container mx-auto flex flex-col justify-center items-end px-6 md:px-20 pt-[50px]">
+            <a href="../index.html">Home</a>
+        </div>
+    </div> -->
     <header class="hero" id="hero" style="background-color: #000;">
-        <div class="sidebar">
-            <div class="logo-container">
-                <img 
-                    decoding="async" 
-                    sizes="110px" 
-                    srcset="../assets/nav-logo.svg 512w,
-                            ../assets/nav-logo.svg 903w" 
-                    src="../assets/nav-logo.png" 
-                    alt="Logo" 
-                    class="logo">
-            </div>
-            <p class="hero-title">dis-
+        <div class="sidebar flex justify-between">
+            <a href="../index.html" class="text-white bricolage-grotesque text-[32px]">Home</a>
+            <p class="hero-title">dis- <br>
                 cover what we can do for you</p>
         </div>
         <div class="hero-image">
             <img src="../assets/hero.png" alt="Hero Image">
         </div>
     </header>
-    <div class="about">
-        <div class="title-about" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-            <h1>Hello~</h1>
-            <p class="des-about">We are a digital comic studio based in Indonesia. Our team has professional experience creating and developing comics in manga or webcomic/ webtoon format. We have a well-rounded skill set and experience in developing comic IP.</p>
-            <p class="des-about">We are well-organized, well-managed, efficient, and attentive to detail. We take joy in crafting original & visually stunning comics that resonate with your unique story ideas and bring your artistic imagination to life.</p>
-            <p class="des-about-org">Along our journey of creating comics, we believe that producing <b>meaningful comics</b> represents the next level beyond merely focusing on high quality one. The story itself is the world we aim to draw all audiences into, and our art serving as the key to captivate and immerse them.</p>
-        </div>
-        <div class="img-container-about" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-            <img src="../assets/about.png" alt="image-about">
-        </div>
-    </div>
+    
     <div class="our-works">
-        <div class="title-works">
-            <h1>WHAT OUR TEAM DO</h1>
-        </div>
+
         <div class="slider">
             <div class="slide-track">
                 <div class="slide">
@@ -251,10 +235,10 @@
            </div>
     </div>
     
-    <section class="flex items-center justify-center min-h-screen bg-[#000] pt-32 pb-20 px-10 md:px-20">
+    <section id="contact" class="flex items-center justify-center min-h-screen bg-[#000] pt-32 pb-20 px-6 md:px-20">
         <!-- Container Let's Chat -->
         <div class="flex flex-col gap-[31px] w-full px-5">
-            <h1 class="bricolage-grotesque text-white text-[40px] font-extrabold md:text-[100px] text-center leading-[90%] tracking-[-4%]">
+            <h1 class="bricolage-grotesque text-white text-[40px] font-extrabold text-[30px] md:text-[100px] text-center leading-[90%] tracking-[-4%]">
                 Let’s Create Comic <br> with Us!
             </h1>
             
@@ -266,18 +250,18 @@
                 </div>
                 
                 <div class="input w-[320px] md:w-[724px]">
-                    <label for="email" class="bricolage-grotesque text-xl text-white">your email of course *</label>
+                    <label for="email" class="bricolage-grotesque text-xl text-white">your email of course :)*</label>
                     <input id="email" type="email" placeholder="type here" class="p-3 mt-2">
                 </div>
                 
                 <div class="input w-[320px] md:w-[724px]">
-                    <label for="project" class="bricolage-grotesque text-xl text-white">the cool project *</label>
+                    <label for="project" class="bricolage-grotesque text-xl text-white">the cool comic title *</label>
                     <input id="project" type="text" placeholder="type here" class="p-3 mt-2">
                 </div>
             
                 <div class="relative w-[320px] md:w-[724px]">
                     <label for="budget" class="bricolage-grotesque text-xl text-white">your best budget *</label><br>
-                    <label for="budget" class="label-2 bricolage-grotesque text-xl text-[#DAF7A6] opacity-50">please do not lie!!! basic design projects start at minimum of $700</label>
+                    <label for="budget" class="label-2 bricolage-grotesque text-xl text-[#DAF7A6] opacity-50">yea.... we know, comic projects start at a minimum of $1500 <br> but if you have another interesting budget just let us know</label>
                     <select id="budget" class="custom-dropdown p-3 w-full appearance-none mt-2">
                         <option>choose the range</option>
                         <option value="500-1000">$700 - $1,000</option>
@@ -303,29 +287,30 @@
             </form>
         </div>
     </section>
+
     <!-- Footer Section -->
-    <footer class="bg-[#DAF7A6] pt-40 px-10">
-        <div class="flex justify-between items-center max-w-[1376px] mx-auto h-full">
+    <footer class="bg-[#DAF7A6] pt-10 md:pt-40 px-6 md:px-20">
+        <div class="flex flex-col md:flex-row md:justify-between items-center max-w-[1376px] mx-auto h-full">
             <!-- Left Text -->
-            <div class="text-left text-xl font-medium">
+            <div class="text-center md:text-left text-[16px] md:text-[20px] font-medium pb-[30px] md:pb-[0px]">
                 <p>Your best friend on creating digital comic</p>
             </div>
 
             <!-- Social Media Icons -->
             <div class="flex space-x-6 text-2xl">
-                <a href="#" class="relative group text-[#000000]">
+                <a href="https://www.instagram.com/tekadverse?igsh=djR2Mmg5YmFjdW9i" class="relative group text-[#000000]">
                     <i class="fab fa-instagram"></i>
                     <span class="tooltip bricolage-grotesque text-[#DAF7A6]">Instagram</span>
                 </a>
-                <a href="#" class="relative group text-[#000000]">
+                <!-- <a href="#" class="relative group text-[#000000]">
                     <i class="fab fa-tiktok"></i>
                     <span class="tooltip bricolage-grotesque text-[#DAF7A6]">TikTok</span>
-                </a>
-                <a href="#" class="relative group text-[#000000]">
+                </a> -->
+                <a href="https://youtube.com/@tekadverse3915?si=GuJVX-W8cEc50km-" class="relative group text-[#000000]">
                     <i class="fab fa-youtube"></i>
                     <span class="tooltip bricolage-grotesque text-[#DAF7A6]">YouTube</span>
                 </a>
-                <a href="#" class="relative group text-[#000000]">
+                <a href="https://wa.me/6285155353365" class="relative group text-[#000000]">
                     <i class="fab fa-whatsapp"></i>
                     <span class="tooltip bricolage-grotesque text-[#DAF7A6]">WhatsApp</span>
                 </a>
