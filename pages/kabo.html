@@ -43,20 +43,13 @@
         </div>
     </div> -->
 
-
-    <header class="relative flex flex-col h-screen w-full bg-cover bg-center bg-no-repeat" style="background-image: url('../assets/kabo-cover-landscpae.png');">
-        <!-- Hamburger Button -->
-        <div class="fixed top-4 right-10 md:right-20 z-10">
-            <button id="menuButton" class="text-xl focus:outline-none">
-                <a href="../index.html" id="menuText" class="text-white mix-blend-difference">Home</a>
-            </button>
+    <!-- Header -->
+    <div class="hero" style="background: url(../assets/kabo-cover-landscpae.png); background-size: cover; background-repeat: no-repeat; background-position: bottom;">
+        <div class="container mx-auto flex flex-col justify-center items-end px-6 md:px-20 pt-[50px]">
+            <a href="../index.html">Home</a>
         </div>
-    </header>
-    
-    
-    
-    
-    
+    </div>
+
     
   
  
@@ -133,7 +126,7 @@
         </div>
     </section>
 
-    <section class="container mx-auto flex flex-col px-10 md:px-20 bg-[#F8EFE0]">   
+    <section class="container mx-auto flex flex-col px-6 md:px-20 bg-[#F8EFE0]">   
         <div class="textnquote flex flex-col md:flex-row py-[80px] gap-8">
             <div class="leftcon flex w-full md:w-1/2 md:pr-28">
                 <p class="bricolage-grotesque text-[24px] md:text-[32px] leading-[130%] tracking-[-4%]">
@@ -257,7 +250,7 @@
     </section>
 
     <section class="otherworks flex bg-[#000] py-[120px]">
-        <div class="container mx-auto px-10 md:px-20 grid gap-y-[64px]">
+        <div class="container mx-auto px-6 md:px-20 grid gap-y-[64px]">
             <!-- Baris 1 -->
             <div class="flex flex-col md:flex-row text-white justify-between items-center">
                 <span class="bricolage-grotesque text-[48px] font-bold leading-[100%] tracking-[-4%] mb-6 md:mb-0">
@@ -276,7 +269,7 @@
         </div>
     </section>        
 
-    <section id="contact" class="flex items-center justify-center min-h-screen bg-[#000] pt-32 px-10 pb-[80px] md:px-20">
+    <section id="contact" class="flex items-center justify-center min-h-screen bg-[#000] pt-32 px-6 pb-[80px] md:px-20">
         <!-- Container Let's Chat -->
         <div class="flex flex-col gap-[31px] w-full px-5">
             <h1 class="bricolage-grotesque text-white text-[40px] font-extrabold text-[30px] md:text-[100px] text-center leading-[90%] tracking-[-4%]">
@@ -330,34 +323,38 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-[#DAF7A6] pt-40 px-10">
-            <div class="flex justify-between items-center max-w-[1376px] mx-auto h-full">
-                <!-- Left Text -->
-                <div class="text-left text-xl font-medium">
-                    <p>Your best friend on creating digital comic</p>
-                </div>
+    <footer class="bg-[#DAF7A6] pt-10 md:pt-40 px-6 md:px-20">
+        <div class="flex flex-col md:flex-row md:justify-between items-center max-w-[1376px] mx-auto h-full">
+            <!-- Left Text -->
+            <div class="text-center md:text-left text-[16px] md:text-[20px] font-medium pb-[30px] md:pb-[0px]">
+                <p>Your best friend on creating digital comic</p>
+            </div>
 
-                <!-- Social Media Icons -->
-                <div class="flex space-x-6 text-2xl">
-                    <a href="#" class="text-[#000000] hover:text-gray-700">
+            <!-- Social Media Icons -->
+            <div class="flex space-x-6 text-2xl">
+                <a href="https://www.instagram.com/tekadverse?igsh=djR2Mmg5YmFjdW9i" class="relative group text-[#000000]">
                     <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <span class="tooltip bricolage-grotesque text-[#DAF7A6]">Instagram</span>
+                </a>
+                <!-- <a href="#" class="relative group text-[#000000]">
                     <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <span class="tooltip bricolage-grotesque text-[#DAF7A6]">TikTok</span>
+                </a> -->
+                <a href="https://youtube.com/@tekadverse3915?si=GuJVX-W8cEc50km-" class="relative group text-[#000000]">
                     <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <span class="tooltip bricolage-grotesque text-[#DAF7A6]">YouTube</span>
+                </a>
+                <a href="https://wa.me/6285155353365" class="relative group text-[#000000]">
                     <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
+                    <span class="tooltip bricolage-grotesque text-[#DAF7A6]">WhatsApp</span>
+                </a>
+            </div>                
+        </div>
 
-            <!-- Image Below -->
-            <div class="flex justify-center mt-10">
-            <img src="../assets/footer.png" alt="Footer Image" class="w-[1376px] h-auto">
-            </div>
+        <!-- Image Below -->
+        <div class="flex justify-center mt-10">
+        <img src="../assets/footer.png" alt="Footer Image" class="w-[1376px] h-auto">
+        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

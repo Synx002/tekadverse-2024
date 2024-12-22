@@ -45,42 +45,9 @@
     
 
     <!-- Header -->
-    <header class="relative flex flex-col h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('../assets/kitchen-lady-header.png');">
-    <!-- Hamburger Button -->
-    <div class="absolute top-4 right-10 md:right-20 z-10">
-      <button id="menuButton" class="text-xl focus:outline-none">
-        <span id="menuText" class="text-[#DAF7A6]">Menu</span>
-        <span class="fas fa-bars bg-[#000] text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 w-[48px] h-[48px]" id="hamburgerIcon"></span>
-      </button>
-    </div>
-    </header>
-  
-    <!-- Overlay Menu -->
-    <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-100 hidden z-20 px-10 md:px-20 text-white">
-        <!-- Header Overlay dengan tombol Close -->
-        <div class="w-full flex justify-end py-4">
-        <button id="closeButton" class="text-xl focus:outline-none hover:text-gray-300 text-[#DAF7A6] flex items-center space-x-2">
-            <span class="text-[#DAF7A6]">Close</span>
-            <span class="fa-solid fa-xmark text-[#DAF7A6] border-2 border-[#DAF7A6] rounded-[99px] p-3 w-[48px] h-[48px]"></span>
-        </button>
-        </div>
-    
-        <!-- Menu Items -->
-        <div class="flex flex-col gap-20">
-        <div class="flex flex-col gap-10 text-lg font-semibold">
-            <a href="#about" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">About</a>
-            <a href="#artwork" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Artwork</a>
-            <a href="#service" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Service</a>
-            <a href="#contact" class="bricolage-grotesque leading-[100%] text-[56px] text-white hover:text-[#DAF7A6]">Contact</a>
-        </div>
-    
-        <!-- Social Media Icons -->
-        <div class="flex space-x-12">
-            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="hover:text-white text-[#DAF7A6] text-[26px]"><i class="fab fa-whatsapp"></i></a>
-        </div>
+    <div class="hero" style="background: url(../assets/kitchen-lady-header.png); background-size: cover; background-repeat: no-repeat;  background-position: center;">
+        <div class="container mx-auto flex flex-col justify-center items-end px-6 md:px-20 pt-[50px]">
+            <a href="../index.html">Home</a>
         </div>
     </div>
 
@@ -160,7 +127,7 @@
         </div>
     </section>
 
-    <section class="container mx-auto flex flex-col px-10 md:px-20 bg-[#F8EFE0]">   
+    <section class="container mx-auto flex flex-col px-6 md:px-20 md:px-20 bg-[#F8EFE0]">   
         <div class="textnquote flex flex-col md:flex-row py-[80px] gap-8">
             <div class="leftcon flex w-full md:w-1/2 md:pr-28">
                 <p class="bricolage-grotesque text-[24px] md:text-[32px] leading-[130%] tracking-[-4%]">
@@ -217,7 +184,7 @@
                     controls 
                     autoplay 
                     muted 
-                    style="height: auto;"
+                    style="height: 450px;"
                     loop>
                     <source src="../assets/kabo-cover-landscpae.mov" type="video/mp4">
                     Your browser does not support the video tag.
@@ -242,37 +209,86 @@
                 </ul>
             </div>
         </div>
-        <div class="flex flex-col w-full py-[80px]">
-            <!-- Grid untuk Gambar -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-              <!-- Gambar 1 -->
-              <div>
-                <img src="../assets/page-content-kabo-1.png" alt="Gambar 1" class="w-full h-auto rounded-md shadow-md">
-              </div>
-              <!-- Gambar 2 -->
-              <div>
-                <img src="../assets/page-content-kabo-2.png" alt="Gambar 2" class="w-full h-auto rounded-md shadow-md">
-              </div>
-              <!-- Gambar 3 -->
-              <div>
-                <img src="../assets/page-content-kabo-3.png" alt="Gambar 3" class="w-full h-auto rounded-md shadow-md">
-              </div>
+
+        <div class="sc-tones flex flex-col md:flex-row py-[20px] md:py-[80px] gap-8">
+            <div class="left-icon flex w-full md:w-1/2">
+                <img src="../assets/useofscreentones.png" alt="">
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 w-full">
-              <!-- Gambar 4 -->
-              <div>
-                <img src="../assets/page-content-kabo-4.png" alt="Gambar 4" class="w-full h-auto rounded-md shadow-md">
-              </div>
-              <!-- Gambar 5 -->
-              <div>
-                <img src="../assets/page-content-kabo-5.png" alt="Gambar 5" class="w-full h-auto rounded-md shadow-md">
-              </div>
+            <div class="des flex flex-col justify-end w-full md:w-1/2 gap-[16px]">
+                <h1 class="bricolage-grotesque font-extrabold text-[32px] leading-[110%] tracking-[-4%]">Use of Screen Tones </h1>
+                <p class="bricolage-grotesque text-[14px] md:text-base leading-[130%] tracking-[0%]">
+                    One of the standout features of manga is the use of screen tones (or halftones). These are pre-printed sheets with patterns like dots, lines, or textures that artists apply to their work to add shading and texture. Screen tones make it easy to create detailed effects like shadows, gradients, and textures, all while giving manga its iconic look. They can range from subtle gray tones to bold black areas, adding depth and making the visuals pop.
+                </p>
             </div>
+        </div>
+
+        <div class="sc-tones flex flex-col md:flex-row py-[20px] md:py-[80px] gap-8">
+            <div class="des flex flex-col justify-end w-full md:w-1/2 gap-[16px]">
+                <h1 class="bricolage-grotesque font-extrabold text-[32px] leading-[110%] tracking-[-4%]">Expressive Inking Techniques</h1>
+                <p class="bricolage-grotesque text-[14px] md:text-base leading-[130%] tracking-[0%]">
+                    Manga inking tends to be more fluid and expressive compared to the clean, controlled lines often seen in Western comics. Manga artists love using bold, dynamic strokes to create strong contrasts and emphasize movement. The mix of thick and thin lines adds emotion—thicker lines bring intensity or power, while finer lines are perfect for softer, more delicate moments.
+                </p>
+            </div>
+            <div class="right-icon flex w-full md:w-1/2">
+                <img src="../assets/expressiveinking.png" alt="">
+            </div>
+        </div>
+
+        <div class="sc-tones flex flex-col md:flex-row py-[20px] md:py-[80px] gap-8">
+            <div class="left-icon flex w-full md:w-1/2">
+                <img src="../assets/shadingncontrast.png" alt="">
+            </div>
+            <div class="des flex flex-col justify-end w-full md:w-1/2 gap-[16px]">
+                <h1 class="bricolage-grotesque font-extrabold text-[32px] leading-[110%] tracking-[-4%]">Shading and Contrast</h1>
+                <p class="bricolage-grotesque text-[14px] md:text-base leading-[130%] tracking-[0%]">
+                    Toning and shading aren’t just about adding depth—they’re also great for setting the mood in a story. By playing around with how intense the black ink is or how screen tones are used, manga artists can create strong contrasts, like deep shadows or soft, light areas, to show changes in mood, action, or emotion. For example, dark shading works perfectly for tense or dramatic moments, while lighter tones give off a calm and peaceful vibe.
+                </p>
+            </div>
+        </div>
+
+        <div class="sc-tones flex flex-col md:flex-row py-[20px] md:py-[80px] gap-8">
+            <div class="des flex flex-col justify-end w-full md:w-1/2 gap-[16px]">
+                <h1 class="bricolage-grotesque font-extrabold text-[32px] leading-[110%] tracking-[-4%]">Minimalist Yet Detailed Background</h1>
+                <p class="bricolage-grotesque text-[14px] md:text-base leading-[130%] tracking-[0%]">
+                    The backgrounds in manga are often simpler compared to other comics, which lets the characters and their expressions really stand out. But toning still plays a big role in setting the mood—whether it’s through soft, light gradients or darker, textured areas. This simple yet effective approach to background toning creates a nice balance and keeps the focus on the story and character development.
+                </p>
+            </div>
+            <div class="right-icon flex w-full md:w-1/2">
+                <img src="../assets/minimalist.png" alt="">
+            </div>
+        </div>
+
+        <div class="sc-tones flex flex-col md:flex-row py-[20px] md:py-[80px] gap-8">
+            <div class="left-icon flex w-full md:w-1/2">
+                <img src="../assets/iconicsoudneff.png" alt="">
+            </div>
+            <div class="des flex flex-col justify-end w-full md:w-1/2 gap-[16px]">
+                <h1 class="bricolage-grotesque font-extrabold text-[32px] leading-[110%] tracking-[-4%]">Iconic Sound Effect (Onomatopoeia)</h1>
+                <p class="bricolage-grotesque text-[14px] md:text-base leading-[130%] tracking-[0%]">
+                    Sound effects, often written in Japanese kanji, are seamlessly blended into the artwork using bold, expressive fonts and unique inking techniques. Instead of just being added as text, they’re drawn right into the scene, becoming part of the art itself. The inking and toning help these sounds feel like a natural part of the story, giving key moments an extra punch.
+                </p>
+            </div>
+        </div>
+
+        <div class="sc-tones flex flex-col md:flex-row py-[20px] md:py-[80px] gap-8">
+            <div class="des flex flex-col justify-end w-full md:w-1/2 gap-[16px]">
+                <h1 class="bricolage-grotesque font-extrabold text-[32px] leading-[110%] tracking-[-4%]">Layered Visual Storytelling</h1>
+                <p class="bricolage-grotesque text-[14px] md:text-base leading-[130%] tracking-[0%]">
+                    The mix of inking, toning, and panel composition in manga creates a rich, layered way of telling a story. By balancing light and dark areas and using screen tones and ink to set the pacing, artists can guide the reader's eye across the page and control the flow of the narrative. These techniques can turn even a simple scene into something tense, calm, or dramatic—all without relying on too much dialogue.
+                </p>
+            </div>
+            <div class="right-icon flex w-full md:w-1/2">
+                <img src="../assets/layered.png" alt="">
+            </div>
+        </div>
+
+        <div class="flex content-kabo-comic py-[20px]">
+            <img src="../assets/one-content.png" alt="Comic Kabo Content" class="w-full h-auto">
         </div>
     </section>
 
     <section class="otherworks flex bg-[#000] py-[120px]">
-        <div class="container mx-auto px-10 md:px-20 grid gap-y-[64px]">
+        <div class="container mx-auto px-6 md:px-20 md:px-20 grid gap-y-[64px]">
             <!-- Baris 1 -->
             <div class="flex flex-col md:flex-row text-white justify-between items-center">
                 <span class="bricolage-grotesque text-[48px] font-bold leading-[100%] tracking-[-4%] mb-6 md:mb-0">
@@ -289,20 +305,9 @@
                 <img src="../assets/otherworks-2.png" alt="" class="w-full h-auto">
             </div>
         </div>
-    </section>      
+    </section>              
 
-    <section class="bg-[#000]">
-        <div class="flex items-center justify-center py-[80px]">
-            <a class="button-about flex items-center justify-center w-[480px] h-[80px] bg-[#DAF7A6]" href="../index.html">
-                <span class="text-black font-semibold text-[32px] ">Back to home</span>
-                <img src="../assets/arrow-black.svg" alt="arrow" class="ml-[10px]">
-            </a>
-        </div>
-    </section>
-    
-        
-
-    <section id="contact" class="flex items-center justify-center min-h-screen bg-[#000] pt-32 px-10 pb-[80px] md:px-20">
+    <section id="contact" class="flex items-center justify-center min-h-screen bg-[#000] pt-32 px-6 md:px-20 pb-[80px] md:px-20">
         <!-- Container Let's Chat -->
         <div class="flex flex-col gap-[31px] w-full px-5">
             <h1 class="bricolage-grotesque text-white text-[40px] font-extrabold text-[30px] md:text-[100px] text-center leading-[90%] tracking-[-4%]">
@@ -356,34 +361,38 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-[#DAF7A6] pt-40 px-10">
-            <div class="flex justify-between items-center max-w-[1376px] mx-auto h-full">
-                <!-- Left Text -->
-                <div class="text-left text-xl font-medium">
-                    <p>Your best friend on creating digital comic</p>
-                </div>
+    <footer class="bg-[#DAF7A6] pt-10 md:pt-40 px-6 md:px-20">
+        <div class="flex flex-col md:flex-row md:justify-between items-center max-w-[1376px] mx-auto h-full">
+            <!-- Left Text -->
+            <div class="text-center md:text-left text-[16px] md:text-[20px] font-medium pb-[30px] md:pb-[0px]">
+                <p>Your best friend on creating digital comic</p>
+            </div>
 
-                <!-- Social Media Icons -->
-                <div class="flex space-x-6 text-2xl">
-                    <a href="#" class="text-[#000000] hover:text-gray-700">
+            <!-- Social Media Icons -->
+            <div class="flex space-x-6 text-2xl">
+                <a href="https://www.instagram.com/tekadverse?igsh=djR2Mmg5YmFjdW9i" class="relative group text-[#000000]">
                     <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <span class="tooltip bricolage-grotesque text-[#DAF7A6]">Instagram</span>
+                </a>
+                <!-- <a href="#" class="relative group text-[#000000]">
                     <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <span class="tooltip bricolage-grotesque text-[#DAF7A6]">TikTok</span>
+                </a> -->
+                <a href="https://youtube.com/@tekadverse3915?si=GuJVX-W8cEc50km-" class="relative group text-[#000000]">
                     <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="#" class="text-[#000000] hover:text-gray-700">
+                    <span class="tooltip bricolage-grotesque text-[#DAF7A6]">YouTube</span>
+                </a>
+                <a href="https://wa.me/6285155353365" class="relative group text-[#000000]">
                     <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
+                    <span class="tooltip bricolage-grotesque text-[#DAF7A6]">WhatsApp</span>
+                </a>
+            </div>                
+        </div>
 
-            <!-- Image Below -->
-            <div class="flex justify-center mt-10">
-            <img src="../assets/footer.png" alt="Footer Image" class="w-[1376px] h-auto">
-            </div>
+        <!-- Image Below -->
+        <div class="flex justify-center mt-10">
+        <img src="../assets/footer.png" alt="Footer Image" class="w-[1376px] h-auto">
+        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

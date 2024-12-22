@@ -1,4 +1,4 @@
-console.log("helloWorld");
+
 gsap.registerPlugin(ScrollTrigger);
 
   document.querySelectorAll('.parallax').forEach((section) => {
