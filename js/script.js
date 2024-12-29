@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 
   document.querySelectorAll('.parallax').forEach((section) => {
     gsap.to(section, {
-      backgroundPosition: "10% 100%", // Menggerakkan latar belakang dari atas ke bawah
+      backgroundPosition: "100% 10%", // Menggerakkan latar belakang dari atas ke bawah
       ease: "none", // Linear movement
       scrollTrigger: {
         trigger: section,
