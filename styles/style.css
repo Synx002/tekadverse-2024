@@ -662,4 +662,20 @@ form textarea:focus::placeholder {
   z-index: 2;
 }
 
+/* Memberikan transisi pada gambar */
+.otherworks img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efek zoom-in saat hover */
+.otherworks a:hover img {
+  transform: scale(0.97 );
+  opacity: 0.8; /* Opsional: membuat gambar sedikit transparan */
+}
+
+/* Untuk mencegah konten di bawah bergeser */
+.otherworks img {
+  display: block;
+  object-fit: cover;
+}
 
