@@ -662,20 +662,45 @@ form textarea:focus::placeholder {
   z-index: 2;
 }
 
+.otherworks a {
+  position: relative;
+  display: block;
+}
+
 /* Memberikan transisi pada gambar */
 .otherworks img {
   transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Efek zoom-in saat hover */
-.otherworks a:hover img {
-  transform: scale(0.97 );
-  opacity: 0.8; /* Opsional: membuat gambar sedikit transparan */
-}
-
-/* Untuk mencegah konten di bawah bergeser */
-.otherworks img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
   display: block;
   object-fit: cover;
+}
+
+/* Gaya elemen teks yang akan muncul di hover */
+.otherworks a::before {
+  content: attr(data-hover-text); /* Mengambil teks dari atribut data-hover-text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /* Warna teks */
+  font-size: 110px; /* Ukuran teks */
+  font-weight: bold; /* Berat huruf */
+  text-align: center;
+  line-height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.9s ease, visibility 0.5s ease;
+  pointer-events: none; /* Menghindari teks terkena klik */
+}
+
+/* Efek hover */
+.otherworks a:hover img {
+  transform: scale(0.97);
+  opacity: 0.8;
+}
+
+.otherworks a:hover::before {
+  opacity: 1;
+  visibility: visible;
 }
 
