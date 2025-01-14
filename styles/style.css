@@ -662,45 +662,64 @@ form textarea:focus::placeholder {
   z-index: 2;
 }
 
+
 .otherworks a {
   position: relative;
   display: block;
+  overflow: hidden;
 }
 
 /* Memberikan transisi pada gambar */
 .otherworks img {
   transition: transform 0.3s ease, opacity 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease;
   display: block;
   object-fit: cover;
 }
 
-/* Gaya elemen teks yang akan muncul di hover */
+/* Elemen teks yang muncul di hover */
 .otherworks a::before {
   content: attr(data-hover-text); /* Mengambil teks dari atribut data-hover-text */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff; /* Warna teks */
-  font-size: 110px; /* Ukuran teks */
+  color: #f4f4f9; /* Warna teks */
+  font-size: 49px; /* Ukuran teks */
   font-weight: bold; /* Berat huruf */
-  text-align: center;
+  text-align: start;
   line-height: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.9s ease, visibility 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
   pointer-events: none; /* Menghindari teks terkena klik */
+  z-index: 2; /* Membawa teks di atas background */
+}
+
+/* Latar belakang solid di belakang teks */
+.otherworks a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Background semi-transparan */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 1; /* Latar berada di belakang teks */
 }
 
 /* Efek hover */
 .otherworks a:hover img {
   transform: scale(0.97);
-  opacity: 0.8;
+  opacity: 0.3;
 }
 
-.otherworks a:hover::before {
+.otherworks a:hover::before,
+.otherworks a:hover::after {
   opacity: 1;
   visibility: visible;
 }
+
 
