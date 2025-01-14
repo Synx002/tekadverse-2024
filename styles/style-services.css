@@ -888,3 +888,7 @@ form textarea:focus::placeholder {
     }
 
 }
+
+.text-broken-white{
+    color: #F8EFE0;
+  }
