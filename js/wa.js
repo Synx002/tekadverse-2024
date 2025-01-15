@@ -1,28 +1,49 @@
-document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault(); // Mencegah refresh halaman
-    
-    // Ambil nilai dari setiap input
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const project = document.getElementById("project").value;
-    const budget = document.getElementById("budget").value;
-    const date = document.getElementById("date").value;
-    const comment = document.getElementById("comment").value;
+const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Clear all previous error messages
+        const errorMessages = document.querySelectorAll('small');
+        errorMessages.forEach((error) => error.classList.add('hidden'));
 
-    // Susun pesan untuk WhatsApp
-    const message = `Hello, I'd like to create a comic with you! %0A
-    - Name: ${name} %0A
-    - Email: ${email} %0A
-    - Project Title: ${project} %0A
-    - Budget: ${budget} %0A
-    - Start Date: ${date} %0A
-    - Comments: ${comment}`;
+        let isValid = true;
 
-    // Format nomor telepon tujuan (tanpa tanda plus dan 0 di depan nomor)
-    const phone = "6285155353365"; // Ganti dengan nomor Anda
+        // Name
+        const name = document.getElementById('name');
+        if (name.value.trim() === '') {
+            document.getElementById('nameError').classList.remove('hidden');
+            isValid = false;
+        }
 
-    // Redirect ke URL WhatsApp
-    const whatsappURL = `https://wa.me/${phone}?text=${message}`;
-    window.open(whatsappURL, "_blank"); // Buka di tab baru
-});
+        // Email
+        const email = document.getElementById('email');
+        if (email.value.trim() === '') {
+            document.getElementById('emailError').classList.remove('hidden');
+            isValid = false;
+        }
 
+        // Project
+        const project = document.getElementById('project');
+        if (project.value.trim() === '') {
+            document.getElementById('projectError').classList.remove('hidden');
+            isValid = false;
+        }
+
+        // Budget
+        const budget = document.getElementById('budget');
+        if (budget.value === '') {
+            document.getElementById('budgetError').classList.remove('hidden');
+            isValid = false;
+        }
+
+        // Date
+        const date = document.getElementById('date');
+        if (date.value === '') {
+            document.getElementById('dateError').classList.remove('hidden');
+            isValid = false;
+        }
+
+        if (isValid) {
+            form.submit();  // Submit the form if valid
+        }
+    });
