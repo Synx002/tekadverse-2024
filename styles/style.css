@@ -338,6 +338,11 @@ header.sticky {
     -moz-appearance: none;
     appearance: none;
 }
+
+.custom-dropdown:focus {
+  background-image: url('../assets/arrow-down-active.svg'); /* Icon changes when focused */
+}
+
 .custom-dropdown.selected {
     color: var(--color-coal); /* Change text color to black when an option is selected */
 }
@@ -352,6 +357,11 @@ header.sticky {
     -webkit-appearance: none; /* Remove default icon in Webkit browsers */
     -moz-appearance: none; /* Remove default icon in Firefox */
     appearance: none;
+}
+
+.custom-date:focus {
+  background-image: url('../assets/plus-active.svg'); /* Icon changes when focused */
+
 }
 
 .custom-date.selected {
@@ -704,4 +714,8 @@ form textarea:focus::placeholder {
 
 .text-broken-white{
   color: #F8EFE0;
+}
+
+.hidden {
+  display: none;
 }
