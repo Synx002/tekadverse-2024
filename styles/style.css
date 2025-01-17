@@ -719,3 +719,16 @@ form textarea:focus::placeholder {
 .hidden {
   display: none;
 }
+
+@media (max-width: 768px) { /* Tablet */
+  .hero {
+      height: 35vh; /* Adjust height for tablet to fit landscape ratio */
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .hero {
+      height: 30vh; /* Smaller height for smaller screens while maintaining ratio */
+  }
+}
+
