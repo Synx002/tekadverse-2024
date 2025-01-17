@@ -18,11 +18,23 @@ body, html {
         "wdth" 100;
   }
 
-.hero {
+  .hero {
     display: flex;
     height: auto;
     border-bottom: 1px solid #194785;
 }
+
+.hero a {
+    font-size: 1rem;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+    mix-blend-mode: difference;
+    color: white; /* Warna teks default */
+    position: fixed;
+    z-index: 2;
+  }
 
 .sidebar {
     width: 25%;
