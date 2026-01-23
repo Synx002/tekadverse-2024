@@ -1,76 +1,827 @@
 @import "tailwindcss";
 
-
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
+/* Mengatur font default dan batas maksimal lebar konten */
 body {
-  margin: 0;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  margin: 0 auto;
+  background-color: #f4f4f9;
+  overflow-x: hidden;
+}
+
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.bar {
+  width: 10vw;
+  height: 105vh;
+  background: #DAF7A6;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.counter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 4;
+  color: #000;
+  padding: 0em 0.2em;
+  font-size: 20vw;
+  line-height: 100%;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
-button:hover {
-  border-color: #646cff;
+/* Header Styles */
+header {
+  transition: position 0.3s ease, top 0.3s ease;
+  padding: 20px;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Sticky Header Styles */
+header.sticky {
+  position: sticky;
+  top: 0;
+  /* Menjaga header tetap di atas */
+  z-index: 100;
+  /* Pastikan header berada di atas overlay */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Hamburger Icon Style */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+  /* Prevent interaction with icon while animating */
+}
+
+.line {
+  height: 4px;
+  width: 100%;
+  background-color: #DAF7A6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hamburger to Cross Animation */
+#menuButton.active #hamburgerIcon .line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menuButton.active #hamburgerIcon .line-2 {
+  opacity: 0;
+}
+
+#menuButton.active #hamburgerIcon .line-3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Overlay Menu Styles */
+#menuOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: visibility 0s 0.3s, opacity 0.3s ease;
+}
+
+#menuOverlay.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0s;
+}
+
+/* Optional: Add space between icon and text */
+#menuButton {
+  display: flex;
+  align-items: center;
+  /* Center content vertically */
+  gap: 20px;
+  /* Space between the icon and text */
+}
+
+/* Close Icon Style */
+.close-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.close-line {
+  height: 4px;
+  width: 100%;
+  background-color: #DAF7A6;
+  border-radius: 2px;
+}
+
+.close-line-1 {
+  transform: rotate(45deg);
+}
+
+.close-line-2 {
+  transform: rotate(-45deg);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Overlay Menu Style */
+#menuOverlay {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#menuOverlay.show {
+  display: block;
+}
+
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  height: 100vh;
+  /* Menyesuaikan tinggi area */
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 661px;
+  /* Perbesar lebar kontainer */
+  height: 376px;
+  /* Perbesar tinggi kontainer */
+}
+
+.main-logo {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  /* Mengisi seluruh lebar kontainer */
+  height: 100%;
+  /* Mengisi seluruh tinggi kontainer */
+}
+
+.shadow {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  width: 100%;
+  /* Mengisi seluruh lebar kontainer */
+  height: 100%;
+  /* Mengisi seluruh tinggi kontainer */
+}
+
+.marquee {
+  overflow: hidden;
+  width: 99.9%;
+  /* Pastikan marquee sesuai lebar viewport */
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: flex;
+  padding: 10px 0;
+  transform: rotate(-2deg);
+  box-sizing: border-box;
+  /* Pastikan padding termasuk dalam width */
+  position: relative;
+  box-sizing: border-box;
+}
+
+.marquee h1 {
+  font-size: 2em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Bricolage Grotesque", serif;
+}
+
+.stock-ticker {
+  padding-block: 20px;
+  border-block: 1px solid;
+  overflow: hidden;
+  user-select: none;
+  background-color: #FF5733;
+  transform: rotate(-2deg);
+
+  --gap: 5px;
+  display: flex;
+  gap: var(--gap);
+}
+
+.stock-ticker ul {
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--gap);
+
+  animation: scroll 20s linear infinite;
+}
+
+.stock-ticker:hover ul {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+
+
+.shadow {
+  z-index: 1;
+  /* Bayangan di bawah gambar utama */
+}
+
+.main-logo {
+  z-index: 2;
+  /* Gambar utama di atas bayangan */
+}
+
+.title-artwork {
+  transform: translateY(-80px);
+  /* Geser elemen ke atas */
+}
+
+.artwork-container {
+  position: relative;
+  overflow: hidden;
+  /* Sembunyikan artwork yang keluar dari container */
+}
+
+.artwork {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  /* Default tersembunyi */
+  transform: translateY(100px);
+  /* Efek masuk */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.artwork.active {
+  opacity: 1;
+  /* Aktifkan artwork */
+  transform: translateY(0);
+  /* Kembali ke posisi normal */
+}
+
+
+
+.cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  /* Prevent cursor from blocking interactions */
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  /* Ensure it's above other elements */
+  transition: transform 0.1s ease-out;
+}
+
+.curved-text {
+  width: 150px;
+  /* Adjust size if necessary */
+  height: 150px;
+}
+
+@keyframes rotateInfinite {
+  from {
+    transform: rotate(0deg);
   }
 
-  a:hover {
-    color: #747bff;
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.curved-text svg {
+  animation: rotateInfinite 10s linear infinite;
+  /* 10s adalah durasi animasi */
+}
+
+.hero-section {
+  height: calc(100vh - 80px);
+}
+
+.bricolage-grotesque {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.bricolage-extra-bold {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  /* Extra Bold */
+  font-size: 100px;
+  line-height: 0.9;
+  /* 90% */
+  letter-spacing: -0.04em;
+  /* -4% */
+  color: #ffffff;
+}
+
+.syne {
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Dropdown Styling */
+.custom-dropdown {
+  background-image: url('../assets/allow.svg');
+  /* Custom icon for dropdown */
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 20px;
+  padding-right: 2.5rem;
+  /* Adjust padding to fit icon */
+  -webkit-appearance: none;
+  /* Remove default dropdown arrow */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.custom-dropdown:focus {
+  background-image: url('../assets/arrow-down-active.svg');
+  /* Icon changes when focused */
+}
+
+.custom-dropdown.selected {
+  color: var(--color-coal);
+  /* Change text color to black when an option is selected */
+}
+
+/* Date Picker Styling */
+.custom-date {
+  background-image: url('../assets/plhus.svg');
+  /* Custom icon for date picker */
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 24px;
+  padding-right: 2.5rem;
+  /* Adjust padding to fit icon */
+  -webkit-appearance: none;
+  /* Remove default icon in Webkit browsers */
+  -moz-appearance: none;
+  /* Remove default icon in Firefox */
+  appearance: none;
+}
+
+.custom-date:focus {
+  background-image: url('../assets/plus-active.svg');
+  /* Icon changes when focused */
+
+}
+
+.custom-date.selected {
+  color: var(--color-coal);
+  /* Change text color to black when a date is selected */
+}
+
+/* Hide default calendar icon in Webkit browsers */
+.custom-date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  /* Hides the default calendar icon */
+}
+
+/* Ensure custom icon doesn’t block clicks */
+.custom-date::after {
+  content: '';
+  pointer-events: none;
+  /* Prevents the icon from blocking clicks */
+}
+
+
+/* General Styling for Form Inputs, Dropdown, and Date Picker */
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+  background-color: #000;
+  border: 1px solid #DAF7A6;
+  border-radius: 0;
+  /* No border radius */
+  outline: none;
+  /* Remove default outline */
+  transition: border-color 0.3s ease;
+  /* Smooth transition for border color */
+  width: 100%;
+  /* Full width for consistency */
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: rgba(218, 247, 166, 0.5);
+  /* Opacity hanya untuk teks */
+}
+
+/* Change Border Color on Focus for Input, Dropdown, and Date Picker */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+  background-color: #DAF7A6;
+  color: #000;
+  /* Text color */
+}
+
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form input[type="date"]::placeholder,
+form select::placeholder,
+form textarea::placeholder {
+  color: #DAF7A6;
+  /* Warna untuk placeholder */
+  opacity: 0.5;
+  /* Atur opacity jika ingin placeholder terlihat lebih redup */
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* Change placeholder color on focus */
+form input[type="text"]:focus::placeholder,
+form input[type="email"]:focus::placeholder,
+form input[type="date"]:focus::placeholder,
+form select:focus::placeholder,
+form textarea:focus::placeholder {
+  color: #DAF7A6;
+  /* Warna untuk placeholder */
+  opacity: 0.5;
+  /* Atur opacity jika ingin placeholder terlihat lebih redup */
+}
+
+/* Tooltip Styling */
+.tooltip {
+  position: absolute;
+  bottom: 120%;
+  /* Posisikan di atas icon */
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  background-color: #000;
+  color: #fff;
+  padding: 0px 10px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  pointer-events: none;
+  /* Agar tidak mengganggu klik */
+}
+
+/* Tooltip Arrow */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  /* Posisikan di bawah tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+
+/* Show Tooltip on Hover */
+.group:hover .tooltip {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.cube {
+  width: 331px;
+  height: 64px;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* The two faces of the cube */
+.default-state,
+.active-state {
+  height: 100px;
+}
+
+/* Position the faces */
+.default-state {
+  -webkit-transform: translateZ(50px);
+  -moz-transform: translateZ(50px);
+  -o-transform: translateZ(50px);
+  -ms-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+
+.flip-to-top .active-state {
+  -webkit-transform: rotateX(90deg) translateZ(150px);
+  -moz-transform: rotateX(90deg) translateZ(150px);
+  -o-transform: rotateX(90deg) translateZ(150px);
+  -ms-transform: rotateX(90deg) translateZ(150px);
+  transform: rotateX(90deg) translateZ(150px);
+}
+
+.flip-to-bottom .active-state {
+  -webkit-transform: rotateX(-90deg) translateZ(-50px);
+  -moz-transform: rotateX(-90deg) translateZ(-50px);
+  -o-transform: rotateX(-90deg) translateZ(-50px);
+  -ms-transform: rotateX(-90deg) translateZ(-50px);
+  transform: rotateX(-90deg) translateZ(-50px);
+}
+
+/* Rotate the cube */
+.cube.flip-to-top:hover {
+  -webkit-transform: rotateX(-89deg);
+  -moz-transform: rotateX(-89deg);
+  -o-transform: rotateX(-89deg);
+  -ms-transform: rotateX(-89deg);
+  transform: rotateX(-89deg);
+}
+
+.cube.flip-to-bottom:hover {
+  -webkit-transform: rotateX(89deg);
+  -moz-transform: rotateX(89deg);
+  -o-transform: rotateX(89deg);
+  -ms-transform: rotateX(89deg);
+  transform: rotateX(89deg);
+}
+
+.cube {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Modifikasi elemen default-state dan active-state untuk menambahkan gambar */
+.default-state,
+.active-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  font-size: 32px;
+  font-weight: 900;
+  color: #000;
+  -webkit-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -o-transition: background 250ms ease;
+  transition: background 250ms ease;
+}
+
+/* Styling untuk gambar */
+.state-icon {
+  width: 24px;
+  /* Atur ukuran sesuai kebutuhan */
+  height: 24px;
+  object-fit: contain;
+}
+
+.cube:hover .default-state {
+  background: transparent;
+}
+
+.active-state {
+  background: #000;
+  color: #F8EFE0;
+}
+
+#flipto {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+  color: #ccc;
+}
+
+.parallax {
+  position: relative;
+  height: 100vh;
+  /* Mengambil tinggi layar penuh */
+  background-size: cover;
+  background-attachment: fixed;
+  /* Membantu efek parallax */
+  background-position: center;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center
+}
+
+.parallax-section-text {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  /* Default position */
+  will-change: transform;
+  /* Optimizes rendering for animations */
+}
+
+@media only screen and (max-width: 768px) {
+  .image-container {
+    position: relative;
+    width: 330px;
+    /* Ukuran tetap untuk mobile */
+    height: 174px;
+    /* 360 / 1.76 */
   }
 
-  button {
-    background-color: #f9f9f9;
+  .stock-ticker {
+    transform: rotate(-1deg);
+  }
+
+  .default-state,
+  .active-state {
+    font-size: 22px;
+  }
+
+  .state-icon {
+    width: 14px;
+    /* Atur ukuran sesuai kebutuhan */
+    height: 14px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    /* Ubah jadi kolom */
+    align-items: center;
+    /* Pusatkan semua elemen */
+    text-align: center;
+    /* Text menjadi rata tengah */
+  }
+
+  .social-icons {
+    margin-top: 20px;
+    /* Tambahkan jarak antar kolom */
+    flex-wrap: wrap;
+    /* Bungkus ikon jika terlalu panjang */
+    justify-content: center;
+    /* Pusatkan ikon */
+    gap: 15px;
+    /* Tambahkan spasi antar ikon */
+  }
+
+  .social-icons a {
+    display: inline-block;
+  }
+
+  /* Gambar pada mobile */
+  footer img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.hero {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Tambahkan lapisan transparan */
+  mix-blend-mode: overlay;
+  z-index: 1;
+}
+
+.hero a {
+  font-size: 1rem;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  mix-blend-mode: difference;
+  color: white;
+  /* Warna teks default */
+  position: fixed;
+  z-index: 2;
+}
+
+.otherworks a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.otherworks img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: block;
+  object-fit: cover;
+}
+
+/* Teks Hover */
+.otherworks .hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F8EFE0;
+  font-size: 49px;
+  font-weight: bold;
+  line-height: 110%;
+  text-align: start;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  pointer-events: none;
+  /* Tidak bisa di-klik */
+  z-index: 2;
+}
+
+/* Efek Hover */
+.otherworks a:hover img {
+  transform: scale(0.97);
+  opacity: 0.4;
+}
+
+.otherworks a:hover .hover-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.text-broken-white {
+  color: #F8EFE0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* Tablet */
+  .hero {
+    height: 35vh;
+    /* Adjust height for tablet to fit landscape ratio */
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Mobile */
+  .hero {
+    height: 30vh;
+    /* Smaller height for smaller screens while maintaining ratio */
   }
 }
