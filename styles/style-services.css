@@ -4,21 +4,22 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     font-family: "Bricolage Grotesque", sans-serif;
     background: rgb(248, 239, 224);
 }
 
-.bricolage-grotesque{
+.bricolage-grotesque {
     font-family: "Bricolage Grotesque", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
-  }
+}
 
-  .hero {
+.hero {
     display: flex;
     height: auto;
     border-bottom: 1px solid #194785;
@@ -31,10 +32,11 @@ body, html {
     margin: 0;
     padding: 0;
     mix-blend-mode: difference;
-    color: white; /* Warna teks default */
+    color: white;
+    /* Warna teks default */
     position: fixed;
     z-index: 2;
-  }
+}
 
 .sidebar {
     width: 25%;
@@ -72,10 +74,12 @@ nav ul {
 
 nav ul li {
     margin-bottom: 10px;
-    background-image: url('../assets/star.png');
+    background-image: url('../assets/star.webp');
     background-repeat: no-repeat;
-    padding: 0 0 0 25px; /* Menyesuaikan dengan ukuran gambar */
-    background-size: 20px 20px; /* Menyesuaikan ukuran gambar jika perlu */
+    padding: 0 0 0 25px;
+    /* Menyesuaikan dengan ukuran gambar */
+    background-size: 20px 20px;
+    /* Menyesuaikan ukuran gambar jika perlu */
     background-position: left center;
 }
 
@@ -86,22 +90,25 @@ nav ul li a {
     font-weight: 700;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: #FD652c;
     text-decoration: underline;
 }
 
 
 .list-con ul {
-    list-style-type: none; /* Menghapus titik default pada list */
+    list-style-type: none;
+    /* Menghapus titik default pada list */
     padding: 0;
 }
 
 .list-con ul li {
-    background-image: url('../assets/star.png');
+    background-image: url('../assets/star.webp');
     background-repeat: no-repeat;
-    padding: 0 0 0 25px; /* Menyesuaikan dengan ukuran gambar */
-    background-size: 20px 20px; /* Menyesuaikan ukuran gambar jika perlu */
+    padding: 0 0 0 25px;
+    /* Menyesuaikan dengan ukuran gambar */
+    background-size: 20px 20px;
+    /* Menyesuaikan ukuran gambar jika perlu */
 }
 
 /* Default untuk list satu baris */
@@ -122,7 +129,8 @@ nav ul li a:hover{
     width: 100%;
     height: auto;
     object-fit: cover;
-    max-height: 100vh; /* Prevents image from exceeding viewport height */
+    max-height: 100vh;
+    /* Prevents image from exceeding viewport height */
 }
 
 /* SECTION 2*/
@@ -132,17 +140,17 @@ nav ul li a:hover{
     height: 100vh;
     border-bottom: 1px solid #194785;
     gap: 96px;
-    align-items: center; 
+    align-items: center;
 }
 
-.title-about{
+.title-about {
     width: 32%;
     display: flex;
     flex-direction: column;
     padding: 1rem;
 }
 
-.title-about h1{
+.title-about h1 {
     font-size: 72px;
     margin-bottom: 20px;
     font-weight: 800;
@@ -153,25 +161,27 @@ nav ul li a:hover{
     width: 67%;
 
 }
-.img-container-about img{
+
+.img-container-about img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    max-height: 100vh; /* Prevents image from exceeding viewport height */
+    max-height: 100vh;
+    /* Prevents image from exceeding viewport height */
 }
 
-.tittle-about{
+.tittle-about {
     font-size: 72px;
 }
 
-.des-about{
+.des-about {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.4em;
     letter-spacing: 0.002em;
 }
 
-.des-about-org{
+.des-about-org {
     font-size: 18px;
     color: #FD652c;
     font-weight: 500;
@@ -215,7 +225,8 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 20px; /* Adding margin to create space between slides */
+    margin: 0 20px;
+    /* Adding margin to create space between slides */
 }
 
 .slide img {
@@ -225,8 +236,13 @@ nav ul li a:hover{
 }
 
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-250px * 7)); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
 }
 
 /* WORKS */
@@ -249,7 +265,7 @@ nav ul li a:hover{
     width: 100%;
 }
 
-.title-works-characterdesign{
+.title-works-characterdesign {
     width: 35%;
     align-content: flex-start;
     align-items: flex-start;
@@ -266,7 +282,7 @@ nav ul li a:hover{
     position: relative;
 }
 
-.title-works-characterdesign h1{
+.title-works-characterdesign h1 {
     font-size: 72px;
     margin-bottom: 20px;
     font-weight: 800;
@@ -279,7 +295,7 @@ nav ul li a:hover{
 
 }
 
-.title-works-characterdesign ul li{
+.title-works-characterdesign ul li {
     font-size: 24px;
     color: #000;
     font-weight: 700;
@@ -287,7 +303,7 @@ nav ul li a:hover{
     gap: 9px;
 }
 
-.title-works-characterdesign p{
+.title-works-characterdesign p {
     font-size: 16px;
     color: #000;
     font-weight: 500;
@@ -295,14 +311,16 @@ nav ul li a:hover{
     letter-spacing: 0.002em;
 }
 
-.img-container-characterdesign img{
+.img-container-characterdesign img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    max-height: 100vh; /* Prevents image from exceeding viewport height */
+    max-height: 100vh;
+    /* Prevents image from exceeding viewport height */
 }
+
 /* Script Writing*/
-.title-works-scriptwriting{
+.title-works-scriptwriting {
     width: 35%;
     align-content: flex-start;
     align-items: flex-start;
@@ -319,7 +337,7 @@ nav ul li a:hover{
     position: relative;
 }
 
-.title-works-scriptwriting h1{
+.title-works-scriptwriting h1 {
     font-size: 72px;
     margin-bottom: 20px;
     font-weight: 800;
@@ -330,8 +348,9 @@ nav ul li a:hover{
 .img-container-scriptwriting {
     width: 65%;
     display: flex;
-    align-items: center;      /* Centers the image vertically */
-    height: 100vh;     
+    align-items: center;
+    /* Centers the image vertically */
+    height: 100vh;
 }
 
 .img1 {
@@ -343,21 +362,24 @@ nav ul li a:hover{
 
 .img2 {
     position: absolute;
-    top: 50px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
-    left: 540px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+    top: 50px;
+    /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+    left: 540px;
+    /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
     z-index: 2;
-    width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+    width: 50%;
+    /* Sesuaikan ukuran sesuai kebutuhan */
     height: auto;
 }
 
-.title-works-scriptwriting ul li{
+.title-works-scriptwriting ul li {
     font-size: 24px;
     color: #000;
     font-weight: 700;
     line-height: 100%;
 }
 
-.title-works-scriptwriting p{
+.title-works-scriptwriting p {
     font-size: 16px;
     color: #000;
     font-weight: 500;
@@ -369,7 +391,7 @@ nav ul li a:hover{
 
 
 /* Manga*/
-.title-works-manga{
+.title-works-manga {
     width: 35%;
     align-content: flex-start;
     align-items: flex-start;
@@ -386,11 +408,11 @@ nav ul li a:hover{
     position: relative;
 }
 
-.img-pad{
+.img-pad {
     padding: 100px 0;
 }
 
-.title-works-manga h1{
+.title-works-manga h1 {
     font-size: 72px;
     font-weight: 800;
     color: #000;
@@ -408,17 +430,17 @@ nav ul li a:hover{
     justify-content: center;
     overflow: visible;
     position: relative;
-    width: 65%;   
+    width: 65%;
 }
 
-.title-works-manga ul li{
+.title-works-manga ul li {
     font-size: 24px;
     color: #000;
     font-weight: 700;
     line-height: 100%;
 }
 
-.title-works-manga p{
+.title-works-manga p {
     font-size: 16px;
     color: #000;
     font-weight: 500;
@@ -430,55 +452,68 @@ nav ul li a:hover{
     width: 65%;
 }
 
-.img-container-webcomic img{
+.img-container-webcomic img {
     width: 100%;
     height: auto;
     object-fit: scale-down;
-    max-height: 100vh; /* Prevents image from exceeding viewport height */
+    max-height: 100vh;
+    /* Prevents image from exceeding viewport height */
     padding: 100px 0 100px 0;
 }
 
 
 /* Dropdown Styling */
 .custom-dropdown {
-    background-image: url('../assets/allow.svg'); /* Custom icon for dropdown */
+    background-image: url('../assets/allow.svg');
+    /* Custom icon for dropdown */
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 20px;
-    padding-right: 2.5rem; /* Adjust padding to fit icon */
-    -webkit-appearance: none; /* Remove default dropdown arrow */
+    padding-right: 2.5rem;
+    /* Adjust padding to fit icon */
+    -webkit-appearance: none;
+    /* Remove default dropdown arrow */
     -moz-appearance: none;
     appearance: none;
 }
+
 .custom-dropdown.selected {
-    color: var(--color-coal); /* Change text color to black when an option is selected */
+    color: var(--color-coal);
+    /* Change text color to black when an option is selected */
 }
 
 /* Date Picker Styling */
 .custom-date {
-    background-image: url('../assets/plhus.svg'); /* Custom icon for date picker */
+    background-image: url('../assets/plhus.svg');
+    /* Custom icon for date picker */
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 24px;
-    padding-right: 2.5rem; /* Adjust padding to fit icon */
-    -webkit-appearance: none; /* Remove default icon in Webkit browsers */
-    -moz-appearance: none; /* Remove default icon in Firefox */
+    padding-right: 2.5rem;
+    /* Adjust padding to fit icon */
+    -webkit-appearance: none;
+    /* Remove default icon in Webkit browsers */
+    -moz-appearance: none;
+    /* Remove default icon in Firefox */
     appearance: none;
 }
 
 .custom-date.selected {
-    color: var(--color-coal); /* Change text color to black when a date is selected */
+    color: var(--color-coal);
+    /* Change text color to black when a date is selected */
 }
 
 /* Hide default calendar icon in Webkit browsers */
 .custom-date::-webkit-calendar-picker-indicator {
-    opacity: 0; /* Hides the default calendar icon */
+    opacity: 0;
+    /* Hides the default calendar icon */
 }
 
 /* Ensure custom icon doesn’t block clicks */
 .custom-date::after {
     content: '';
-    pointer-events: none; /* Prevents the icon from blocking clicks */
+    pointer-events: none;
+    /* Prevents the icon from blocking clicks */
 }
 
 
@@ -489,17 +524,22 @@ form input[type="date"],
 form select,
 form textarea {
     background-color: #000;
-    border: 1px solid #DAF7A6; 
-    border-radius: 0; /* No border radius */
-    outline: none; /* Remove default outline */
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
-    width: 100%; /* Full width for consistency */
+    border: 1px solid #DAF7A6;
+    border-radius: 0;
+    /* No border radius */
+    outline: none;
+    /* Remove default outline */
+    transition: border-color 0.3s ease;
+    /* Smooth transition for border color */
+    width: 100%;
+    /* Full width for consistency */
     font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    color: rgba(218, 247, 166, 0.5); /* Opacity hanya untuk teks */
+    color: rgba(218, 247, 166, 0.5);
+    /* Opacity hanya untuk teks */
 }
 
 /* Change Border Color on Focus for Input, Dropdown, and Date Picker */
@@ -509,7 +549,8 @@ form input[type="date"]:focus,
 form select:focus,
 form textarea:focus {
     background-color: #DAF7A6;
-    color: #000; /* Text color */
+    color: #000;
+    /* Text color */
 }
 
 form input[type="text"]::placeholder,
@@ -517,8 +558,10 @@ form input[type="email"]::placeholder,
 form input[type="date"]::placeholder,
 form select::placeholder,
 form textarea::placeholder {
-    color: #DAF7A6; /* Warna untuk placeholder */
-    opacity: 0.5; /* Atur opacity jika ingin placeholder terlihat lebih redup */
+    color: #DAF7A6;
+    /* Warna untuk placeholder */
+    opacity: 0.5;
+    /* Atur opacity jika ingin placeholder terlihat lebih redup */
     font-family: "Bricolage Grotesque", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -532,15 +575,18 @@ form input[type="email"]:focus::placeholder,
 form input[type="date"]:focus::placeholder,
 form select:focus::placeholder,
 form textarea:focus::placeholder {
-    color: #DAF7A6; /* Warna untuk placeholder */
-    opacity: 0.5; /* Atur opacity jika ingin placeholder terlihat lebih redup */
+    color: #DAF7A6;
+    /* Warna untuk placeholder */
+    opacity: 0.5;
+    /* Atur opacity jika ingin placeholder terlihat lebih redup */
 }
 
 
 /* Tooltip Styling */
 .tooltip {
     position: absolute;
-    bottom: 120%; /* Posisikan di atas icon */
+    bottom: 120%;
+    /* Posisikan di atas icon */
     left: 50%;
     transform: translateX(-50%) translateY(30px);
     background-color: #000;
@@ -552,21 +598,23 @@ form textarea:focus::placeholder {
     visibility: hidden;
     transition: all 0.3s ease-in-out;
     z-index: 10;
-    pointer-events: none; /* Agar tidak mengganggu klik */
-  }
-  
+    pointer-events: none;
+    /* Agar tidak mengganggu klik */
+}
+
 /* Tooltip Arrow */
 .tooltip::after {
     content: '';
     position: absolute;
-    top: 100%; /* Posisikan di bawah tooltip */
+    top: 100%;
+    /* Posisikan di bawah tooltip */
     left: 50%;
     transform: translateX(-50%);
     border-width: 5px;
     border-style: solid;
     border-color: #000 transparent transparent transparent;
 }
-  
+
 /* Show Tooltip on Hover */
 .group:hover .tooltip {
     transform: translateX(-50%) translateY(0);
@@ -575,16 +623,20 @@ form textarea:focus::placeholder {
 }
 
 @media (max-width: 1507px) {
-    
+
     .img2 {
         position: absolute;
-        top: 50px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
-        left: 370px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        top: 50px;
+        /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        left: 370px;
+        /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
         z-index: 2;
-        width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+        width: 50%;
+        /* Sesuaikan ukuran sesuai kebutuhan */
         height: auto;
     }
 }
+
 @media (max-width: 1280px) {
     .img1 {
         position: relative;
@@ -592,13 +644,16 @@ form textarea:focus::placeholder {
         width: 50%;
         height: auto;
     }
-    
+
     .img2 {
         position: absolute;
-        top: 50px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
-        left: 370px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        top: 50px;
+        /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        left: 370px;
+        /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
         z-index: 2;
-        width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+        width: 50%;
+        /* Sesuaikan ukuran sesuai kebutuhan */
         height: auto;
     }
 }
@@ -614,42 +669,50 @@ form textarea:focus::placeholder {
         width: 50%;
         height: auto;
     }
-    
+
     .img2 {
         position: absolute;
-        top: 50px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
-        left: 290px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        top: 50px;
+        /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        left: 290px;
+        /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
         z-index: 2;
-        width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+        width: 50%;
+        /* Sesuaikan ukuran sesuai kebutuhan */
         height: auto;
     }
 
 }
 
-@media (max-width: 920px){
-    .hero-title{
+@media (max-width: 920px) {
+    .hero-title {
         font-size: 40px;
     }
 
-    nav ul li a{
+    nav ul li a {
         font-size: 10px;
     }
+
     .img1 {
         position: relative;
         z-index: 1;
         width: 50%;
         height: auto;
     }
-    
+
     .img2 {
         position: absolute;
-        top: 450px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
-        left: 230px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        top: 450px;
+        /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        left: 230px;
+        /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
         z-index: 2;
-        width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+        width: 50%;
+        /* Sesuaikan ukuran sesuai kebutuhan */
         height: auto;
     }
 }
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero {
@@ -658,7 +721,7 @@ form textarea:focus::placeholder {
         height: auto;
     }
 
-    .logo{
+    .logo {
         width: 55px;
         padding-bottom: 16px;
     }
@@ -675,20 +738,21 @@ form textarea:focus::placeholder {
         height: auto;
         order: 1;
     }
-    
-    .hero-title{
+
+    .hero-title {
         line-height: 90%;
         margin: 0;
         font-size: 56px;
     }
 
-    nav{
+    nav {
         padding-top: 16px;
     }
 
-    nav ul li{
+    nav ul li {
         font-size: 10px;
-        background-size: 15px 15px; /* Menyesuaikan ukuran gambar menjadi lebih kecil */
+        background-size: 15px 15px;
+        /* Menyesuaikan ukuran gambar menjadi lebih kecil */
         padding: 0 0 0 20px;
     }
 
@@ -703,7 +767,7 @@ form textarea:focus::placeholder {
         padding: 64px 16px 0;
     }
 
-    .title-about{
+    .title-about {
         padding: 16px;
         width: 100%;
         height: auto;
@@ -713,13 +777,13 @@ form textarea:focus::placeholder {
         width: 100%;
         height: auto;
     }
-    
+
     .our-works {
         padding: 16px;
         width: 100%;
         height: auto;
     }
-    
+
     .works {
         align-content: center;
         align-items: center;
@@ -731,26 +795,26 @@ form textarea:focus::placeholder {
         padding: 80px 16px;
     }
 
-    .title-works-characterdesign{
+    .title-works-characterdesign {
         width: 100%;
         height: auto;
     }
 
-    .title-works-characterdesign h1{
+    .title-works-characterdesign h1 {
         font-size: 40px;
         margin: 0;
     }
-    
-    .title-works-characterdesign ul{
+
+    .title-works-characterdesign ul {
         margin: 0;
     }
 
-    .title-works-characterdesign ul li{
+    .title-works-characterdesign ul li {
         font-size: 16px;
         margin: 0;
     }
 
-    .title-works-characterdesign p{
+    .title-works-characterdesign p {
         font-size: 12px;
         margin: 0;
     }
@@ -759,63 +823,64 @@ form textarea:focus::placeholder {
         width: 100%;
         height: auto;
     }
+
     /*script writing*/
-    .title-works-scriptwriting{
+    .title-works-scriptwriting {
         width: 100%;
         height: auto;
     }
 
-    .title-works-scriptwriting h1{
+    .title-works-scriptwriting h1 {
         font-size: 40px;
         margin: 0;
     }
-    
-    .title-works-scriptwriting ul{
+
+    .title-works-scriptwriting ul {
         margin: 0;
     }
 
-    .title-works-scriptwriting ul li{
+    .title-works-scriptwriting ul li {
         font-size: 16px;
         margin: 0;
     }
 
-    .title-works-scriptwriting p{
+    .title-works-scriptwriting p {
         font-size: 12px;
         margin: 0;
     }
 
-    .img-container-scriptwriting{
+    .img-container-scriptwriting {
         width: 100%;
         height: auto;
         padding-bottom: 50px;
     }
-    
+
     /*manga*/
-    .title-works-manga{
+    .title-works-manga {
         width: 100%;
         height: auto;
     }
 
-    .title-works-manga h1{
+    .title-works-manga h1 {
         font-size: 40px;
         margin: 0;
     }
-    
-    .title-works-manga ul{
+
+    .title-works-manga ul {
         margin: 0;
     }
 
-    .title-works-manga ul li{
+    .title-works-manga ul li {
         font-size: 16px;
         margin: 0;
     }
 
-    .title-works-manga p{
+    .title-works-manga p {
         font-size: 12px;
         margin: 0;
     }
 
-    .img-container-manga{
+    .img-container-manga {
         width: 100%;
         height: auto;
     }
@@ -823,16 +888,17 @@ form textarea:focus::placeholder {
     .img-container-webcomic {
         width: 100%;
     }
-    
-    .img-container-webcomic img{
+
+    .img-container-webcomic img {
         width: 100%;
         height: auto;
         object-fit: cover;
-        max-height: 100vh; /* Prevents image from exceeding viewport height */
+        max-height: 100vh;
+        /* Prevents image from exceeding viewport height */
         padding: 0;
     }
 
-    .contact{
+    .contact {
         flex-direction: column;
         gap: 120px;
         justify-content: center;
@@ -840,23 +906,23 @@ form textarea:focus::placeholder {
         padding: 80px 16px;
     }
 
-    .title-cta p{
+    .title-cta p {
         line-height: 95%;
     }
 
-    .form{
+    .form {
         width: 100%;
     }
 
-    .join{
+    .join {
         width: 100%;
     }
 
-    .form-h1{
+    .form-h1 {
         font-size: 40px;
     }
 
-    .container-footer{
+    .container-footer {
         align-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
@@ -866,17 +932,17 @@ form textarea:focus::placeholder {
         padding: 80px 16px;
     }
 
-    .footer-logo-container{
+    .footer-logo-container {
         gap: 4px;
         order: 1;
     }
 
-    .bringmetotop{
+    .bringmetotop {
         order: 0;
         width: 100%;
     }
 
-    .info{
+    .info {
         align-content: flex-start;
         align-items: flex-start;
         gap: 4px;
@@ -892,15 +958,18 @@ form textarea:focus::placeholder {
 
     .img2 {
         position: absolute;
-        top: -50px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
-        left: 160px; /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        top: -50px;
+        /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
+        left: 160px;
+        /* Sesuaikan dengan kebutuhan untuk mengatur tumpukan */
         z-index: 2;
-        width: 50%; /* Sesuaikan ukuran sesuai kebutuhan */
+        width: 50%;
+        /* Sesuaikan ukuran sesuai kebutuhan */
         height: auto;
     }
 
 }
 
-.text-broken-white{
+.text-broken-white {
     color: #F8EFE0;
-  }
+}
