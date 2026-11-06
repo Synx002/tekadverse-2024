@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" class="!scroll-smooth">
+<html lang="en" class="scroll-smooth">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tekadverse</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@0.7.2"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekadverse</title>
 
-  <!-- Google Font: Bricolage Grotesque -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Syne:wght@400..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Favicon untuk browser -->
-  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@0.7.2"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Favicon untuk iOS (Apple) -->
-  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+    <!-- Google Font: Bricolage Grotesque -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon untuk browser -->
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
 
-  <!-- Favicon untuk Android/Windows -->
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-  <link rel="stylesheet" href="styles/style.css">
+    <!-- Favicon untuk iOS (Apple) -->
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+
+    <!-- Favicon untuk Android/Windows -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <!-- <div class="cursor-wrapper">
         <div class="absolute text-center curved-text">
@@ -60,18 +66,18 @@
     <!-- Header -->
     <header class="flex justify-end py-4 bg-transparent px-5 md:px-20">
         <div class="flex">
-        <button id="menuButton" class="flex flex-row text-xl focus:outline-none">
-            <!-- Menu Button (Hamburger) -->
-            <span id="menuText" class="text-[#DAF7A6] hidden md:block">Menu</span>
-            <div id="hamburgerIcon" class="hamburger-icon">
-            <div class="line line-1"></div>
-            <div class="line line-2"></div>
-            <div class="line line-3"></div>
-            </div>
-        </button>
+            <button id="menuButton" class="flex flex-row text-xl focus:outline-none">
+                <!-- Menu Button (Hamburger) -->
+                <span id="menuText" class="text-[#DAF7A6] hidden md:block">Menu</span>
+                <div id="hamburgerIcon" class="hamburger-icon">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+            </button>
         </div>
     </header>
-    
+
     <!-- Overlay Menu -->
     <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-100 hidden z-20 px-6 md:px-20 text-broken-white">
         <!-- Bagian Header Overlay dengan tombol Close -->
@@ -84,32 +90,34 @@
             </div>
         </button>
         </div> -->
-    
+
         <div class="flex md:justify-start md:items-start justify-center items-center flex-col gap-20">
-        <div class="flex flex-col gap-10 text-lg font-semibold mt-28">
-            <a href="#about" class="menu-link text-[56px] text-broken-white hover:text-[#DAF7A6]">About</a>
-            <a href="#artwork" class="menu-link text-[56px] text-broken-white hover:text-[#DAF7A6]">Artwork</a>
-            <a href="#service" class="menu-link text-[56px] text-broken-white hover:text-[#DAF7A6]">Service</a>
-            <a href="#contact" class="menu-link text-[56px] text-broken-white hover:text-[#DAF7A6]">Contact</a>
-        </div>
-    
-        <div class="flex space-x-12">
-            <a href="https://www.instagram.com/tekadverse?igsh=djR2Mmg5YmFjdW9i" class="hover:text-[#F8EFE0] text-[#DAF7A6] text-[26px]">
-            <i class="fab fa-instagram"></i>
-            </a>
-            <!-- <a href="#" class="hover:text-broken-white text-[#DAF7A6] text-[26px]">
+            <div class="flex flex-col gap-10 text-lg font-semibold mt-28">
+                <a href="#about" class="menu-link text-[56px] text-broken-white hover:text-[#DAF7A6]">About</a>
+                <a href="#artwork" class="menu-link text-[56px] text-broken-white hover:text-[#DAF7A6]">Artwork</a>
+                <a href="#service" class="menu-link text-[56px] text-broken-white hover:text-[#DAF7A6]">Service</a>
+                <a href="#contact" class="menu-link text-[56px] text-broken-white hover:text-[#DAF7A6]">Contact</a>
+            </div>
+
+            <div class="flex space-x-12">
+                <a href="https://www.instagram.com/tekadverse?igsh=djR2Mmg5YmFjdW9i"
+                    class="hover:text-[#F8EFE0] text-[#DAF7A6] text-[26px]">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- <a href="#" class="hover:text-broken-white text-[#DAF7A6] text-[26px]">
             <i class="fab fa-tiktok"></i> -->
-            </a>
-            <a href="https://youtube.com/@tekadverse3915?si=GuJVX-W8cEc50km-" class="hover:text-[#F8EFE0] text-[#DAF7A6] text-[26px]">
-            <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://wa.me/6285155353365" class="hover:text-[#F8EFE0] text-[#DAF7A6] text-[26px]">
-            <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
+                </a>
+                <a href="https://youtube.com/@tekadverse3915?si=GuJVX-W8cEc50km-"
+                    class="hover:text-[#F8EFE0] text-[#DAF7A6] text-[26px]">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/6285155353365" class="hover:text-[#F8EFE0] text-[#DAF7A6] text-[26px]">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
         </div>
     </div>
-  
+
 
     <section class="hero-section flex flex-col items-center justify-center bg-[#000]">
         <!-- Container untuk menumpuk gambar logo dan bayangan -->
@@ -140,87 +148,116 @@
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">DIGITAL ARTIST</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">DIGITAL ARTIST</h1>
+                    </span>
                 </li>
                 <li>
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">STORY WRITER</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">STORY WRITER</h1>
+                    </span>
                 </li>
                 <li>
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">COMIC LOVERS</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">COMIC LOVERS</h1>
+                    </span>
                 </li>
                 <li>
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">ILLUSTRATOR</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">ILLUSTRATOR</h1>
+                    </span>
                 </li>
                 <li>
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">MANGA ARTIST</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">MANGA ARTIST</h1>
+                    </span>
                 </li>
                 <li>
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">3D ARTIST</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">3D ARTIST</h1>
+                    </span>
                 </li>
-                
+
             </ul>
             <ul aria-hidden="true">
                 <li>
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">DIGITAL ARTIST</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">DIGITAL ARTIST</h1>
+                    </span>
                 </li>
                 <li>
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">STORY WRITER</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">STORY WRITER</h1>
+                    </span>
                 </li>
                 <li>
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">COMIC LOVERS</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">COMIC LOVERS</h1>
+                    </span>
                 </li>
                 <li>
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">ILLUSTRATOR</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">ILLUSTRATOR</h1>
+                    </span>
                 </li>
                 <li>
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">MANGA ARTIST</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">MANGA ARTIST</h1>
+                    </span>
                 </li>
                 <li>
                     <span><img src="assets/star.svg" alt="" class="w-[8px] md:w-[15px]"></span>
                 </li>
                 <li>
-                    <span><h1 class="bricolage-grotesque font-extrabold">3D ARTIST</h1></span>
+                    <span>
+                        <h1 class="bricolage-grotesque font-extrabold">3D ARTIST</h1>
+                    </span>
                 </li>
             </ul>
         </div>
     </section>
-    
+
     <!-- Wrapper div with center alignment -->
     <section id="about" class="flex items-center min-h-screen bricolage-grotesque bg-[#000] px-6 md:px-20">
         <div class="px-5">
             <!-- Paragraph -->
-            <p class="text-[20px] md:text-[40px] font-medium leading-[140%] tracking-[2%] mb-10 text-broken-white bricolage-grotesque">
-                We are a <span class="text-[#DAF7A6]">digital comic studio</span>, where imagination runs wild and every page bursts with color! Our talented team of quirky artists and storytellers crafts a delightful mix of action, humor, and heartwarming tales. With the latest digital tools, <span class="text-[#DAF7A6]">we bring fantastical worlds to life, inviting you to dive into a universe of fun and creativity on every page!</span>
+            <p
+                class="text-[20px] md:text-[40px] font-medium leading-[140%] tracking-[2%] mb-10 text-broken-white bricolage-grotesque">
+                We are a <span class="text-[#DAF7A6]">digital comic studio</span>, where imagination runs wild and every
+                page bursts with color! Our talented team of quirky artists and storytellers crafts a delightful mix of
+                action, humor, and heartwarming tales. With the latest digital tools, <span class="text-[#DAF7A6]">we
+                    bring fantastical worlds to life, inviting you to dive into a universe of fun and creativity on
+                    every page!</span>
             </p>
         </div>
     </section>
@@ -231,7 +268,7 @@
         <h2 class="text-[32px] text-black font-extrabold tracking-[-0.04em] mb-10">
             Services
         </h2>
-    
+
         <!-- Services List -->
         <div class="text-black w-full flex flex-col items-center">
             <!-- Service Item 1 -->
@@ -239,77 +276,85 @@
                 <h3 class="text-[30px] md:text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
                     Script Writing
                 </h3>
-                <span class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
+                <span
+                    class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
                     01
                 </span>
             </div>
-    
+
             <!-- Service Item 2 -->
             <div class="relative inline-block">
                 <h3 class="text-[30px] md:text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
                     Character Design
                 </h3>
-                <span class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
+                <span
+                    class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
                     02
                 </span>
             </div>
-    
+
             <!-- Service Item 3 -->
             <div class="relative inline-block">
                 <h3 class="text-[30px] md:text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
                     Story-boarding
                 </h3>
-                <span class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
+                <span
+                    class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
                     03
                 </span>
             </div>
-    
+
             <!-- Service Item 4 -->
             <div class="relative inline-block">
                 <h3 class="text-[30px] md:text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
                     Manga
                 </h3>
-                <span class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
+                <span
+                    class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
                     04
                 </span>
             </div>
-    
+
             <!-- Service Item 5 -->
             <div class="relative inline-block">
                 <h3 class="text-[30px] md:text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
                     Silent Manga
                 </h3>
-                <span class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
+                <span
+                    class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
                     05
                 </span>
             </div>
-    
+
             <!-- Service Item 6 -->
             <div class="relative inline-block">
                 <h3 class="text-[30px] md:text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
                     Web-comic
                 </h3>
-                <span class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
+                <span
+                    class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
                     06
                 </span>
             </div>
-    
+
             <!-- Service Item 7 -->
             <div class="relative inline-block">
                 <h3 class="text-[30px] md:text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
                     3D Assets
                 </h3>
-                <span class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
+                <span
+                    class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
                     07
                 </span>
             </div>
-    
+
             <!-- Service Item 8 -->
             <div class="relative inline-block">
                 <h3 class="text-[30px] md:text-[100px] font-extrabold tracking-[-0.04em] leading-[100%] text-center">
                     Video Story-boarding
                 </h3>
-                <span class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
+                <span
+                    class="absolute top-2 md:top-5 right-0 translate-x-full -translate-y-1/2 text-[8px] md:text-[32px] font-light tracking-[-0.04em]">
                     08
                 </span>
             </div>
@@ -331,7 +376,7 @@
                         <span>Learn more</span>
                         <img src="assets/arrow-powder.svg" alt="Icon" class="state-icon ml-[10px]">
                     </div>
-                </a>                      
+                </a>
             </div>
         </div>
     </section>
@@ -377,54 +422,71 @@
             </div>
         </div>
     </section> -->
-    
+
     <!-- parallax-->
     <section id="artwork">
         <div class="flex justify-center items-center h-screen bg-[#000]">
-            <h1 class="text-[72px] md:text-[240px] font-extrabold leading-[90%] tracking-[-4%] text-broken-white font-extrabold">Artworks</h1>
+            <h1
+                class="text-[72px] md:text-[240px] font-extrabold leading-[90%] tracking-[-4%] text-broken-white font-extrabold">
+                Artworks</h1>
         </div>
-        <!-- <a href="pages/melin.html">
-            <div class="parallax" style="background-image: url('assets/artwork.webp');">
-                <div class="content">
-                    <h1 class="parallax-section-text bricolage-grotesque leading-[100%] text-center font-extrabold">Webcomic Series <br> with MoSidik</h1>
+        <!-- <a href="pages/melin.html" class="block">
+            <div class="parallax-wrap">
+                <div class="parallax-img" style="background-image: url('assets/artwork.webp');"></div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 z-[1]"></div>
+                <div class="content relative z-10 flex items-center justify-center h-full px-4">
+                    <h1 class="parallax-section-text bricolage-grotesque leading-[100%] text-center font-extrabold md:text-[160px] text-broken-white">Webcomic Series <br> with MoSidik</h1>
                 </div>
             </div>
         </a> -->
-        <a href="pages/kabo.html">
-            <div class="parallax relative bg-cover" style="background-image: url('assets/kabo-header.webp');">
+        <a href="pages/kabo.html" class="block">
+            <div class="parallax-wrap">
+                <div class="parallax-img" style="background-image: url('assets/kabo-header.webp');"></div>
                 <!-- Overlay -->
-                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 z-[1]"></div>
                 <!-- Content -->
-                <div class="content relative z-10 flex items-center justify-center h-full">
-                    <h1 class="parallax-section-text bricolage-grotesque leading-[100%] text-center font-extrabold md:text-[160px] text-broken-white">
+                <div class="content relative z-10 flex items-center justify-center h-full px-4">
+                    <h1
+                        class="parallax-section-text bricolage-grotesque leading-[100%] text-center font-extrabold md:text-[160px] text-broken-white">
                         KABO Comic <br> Series
                     </h1>
                 </div>
             </div>
         </a>
-        
-        
-        <a href="pages/kitchen-lady.html">
-            <div class="parallax" style="background-image: url('assets/kitchen-lady-header.webp');">
-                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-                <div class="content relative z-10 flex items-center justify-center h-full">
-                    <h1 class="parallax-section-text bricolage-grotesque leading-[100%] text-center font-extrabold md:text-[160px] text-broken-white">One Shot Manga<br> Project <br>Compilation</h1>
+
+        <a href="pages/kitchen-lady.html" class="block">
+            <div class="parallax-wrap">
+                <div class="parallax-img" style="background-image: url('assets/kitchen-lady-header.webp');"></div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 z-[1]"></div>
+                <div class="content relative z-10 flex items-center justify-center h-full px-4">
+                    <h1
+                        class="parallax-section-text bricolage-grotesque leading-[100%] text-center font-extrabold md:text-[160px] text-broken-white">
+                        One Shot Manga<br> Project <br>Compilation</h1>
                 </div>
             </div>
         </a>
-        
-        <a href="pages/bravy.html">
-            <div class="parallax" style="background-image: url('assets/bravy-hero.webp');">
-                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-                <div class="content relative z-10 flex items-center justify-center h-full">
-                    <h1 class="parallax-section-text bricolage-grotesque leading-[100%] text-center font-extrabold md:text-[160px] text-broken-white">Barvy Comic Strip</h1>
+
+        <a href="pages/bravy.html" class="block">
+            <div class="parallax-wrap">
+                <div class="parallax-img" style="background-image: url('assets/bravy-hero.webp');"></div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 z-[1]"></div>
+                <div class="content relative z-10 flex items-center justify-center h-full px-4">
+                    <h1
+                        class="parallax-section-text bricolage-grotesque leading-[100%] text-center font-extrabold md:text-[160px] text-broken-white">
+                        Barvy Comic Strip</h1>
                 </div>
             </div>
         </a>
-        <div class="parallax" style="background-image: url('assets/tkd.webp');">
-            <div class="content">
-                <h4 class="parallax-section-text bricolage-grotesque leading-[100%] text-center font-normal text-[32px] mb-10 text-broken-white">and more~</h4>
-                <h1 class="parallax-section-text bricolage-grotesque leading-[100%] text-center font-extrabold text-broken-white">want to be the next <br>
+        <div class="parallax-wrap">
+            <div class="parallax-img" style="background-image: url('assets/tkd.webp');"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-40 z-[1]"></div>
+            <div class="content relative z-10 flex flex-col items-center justify-center h-full px-4">
+                <h4
+                    class="bricolage-grotesque leading-[100%] text-center font-normal text-[24px] md:text-[32px] mb-6 md:mb-10 text-broken-white">
+                    and more~</h4>
+                <h1
+                    class="parallax-section-text bricolage-grotesque leading-[100%] text-center font-extrabold text-[36px] md:text-[120px] text-broken-white">
+                    want to be the next <br>
                     on our works?</h1>
             </div>
         </div>
@@ -433,37 +495,46 @@
     <section id="contact" class="flex items-center justify-center min-h-screen bg-[#000] pt-32 px-6 md:px-20">
         <!-- Container Let's Chat -->
         <div class="flex flex-col gap-[31px] w-full px-5">
-            <h1 class="bricolage-grotesque text-broken-white text-[40px] font-extrabold text-[30px] md:text-[100px] text-center leading-[90%] tracking-[-4%]">
+            <h1
+                class="bricolage-grotesque text-broken-white text-[40px] font-extrabold text-[30px] md:text-[100px] text-center leading-[90%] tracking-[-4%]">
                 Let’s Create Comic <br> with Us!
             </h1>
-            
+
             <!-- Container Form -->
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="flex flex-col justify-center gap-4 md:gap-8 items-center">
-                
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST"
+                class="flex flex-col justify-center gap-4 md:gap-8 items-center">
+
                 <!-- Replace with your Access Key -->
                 <input type="hidden" name="access_key" value="b3fd3c41-e32a-414f-96a2-450fe287dacf">
-                
+
                 <div class="input w-[320px] md:w-[724px]">
                     <label for="name" class="bricolage-grotesque text-xl text-broken-white">your name please *</label>
                     <input id="name" name="name" type="text" placeholder="type here" class="p-3 mt-2">
                     <small id="nameError" class="text-[#FF5733] bricolage-grotesque hidden">Please fill this out</small>
                 </div>
-                
+
                 <div class="input w-[320px] md:w-[724px]">
-                    <label for="email" class="bricolage-grotesque text-xl text-broken-white">your email of course :)*</label>
+                    <label for="email" class="bricolage-grotesque text-xl text-broken-white">your email of course
+                        :)*</label>
                     <input id="email" name="email" type="email" placeholder="type here" class="p-3 mt-2">
-                    <small id="emailError" class="text-[#FF5733] bricolage-grotesque hidden">Please fill this out</small>
+                    <small id="emailError" class="text-[#FF5733] bricolage-grotesque hidden">Please fill this
+                        out</small>
                 </div>
-                
+
                 <div class="input w-[320px] md:w-[724px]">
-                    <label for="project" class="bricolage-grotesque text-xl text-broken-white">the cool comic title *</label>
+                    <label for="project" class="bricolage-grotesque text-xl text-broken-white">the cool comic title
+                        *</label>
                     <input id="project" name="project" type="text" placeholder="type here" class="p-3 mt-2">
-                    <small id="projectError" class="text-[#FF5733] bricolage-grotesque hidden">Please fill this out</small>
+                    <small id="projectError" class="text-[#FF5733] bricolage-grotesque hidden">Please fill this
+                        out</small>
                 </div>
-            
+
                 <div class="relative w-[320px] md:w-[724px]">
-                    <label for="budget" class="bricolage-grotesque text-xl text-broken-white">your best budget *</label><br>
-                    <label for="budget" class="label-2 bricolage-grotesque text-xl text-[#DAF7A6] opacity-50">yea.... we know, comic projects start at a minimum of $1500 <br> but if you have another interesting budget just let us know</label>
+                    <label for="budget" class="bricolage-grotesque text-xl text-broken-white">your best budget
+                        *</label><br>
+                    <label for="budget" class="label-2 bricolage-grotesque text-xl text-[#DAF7A6] opacity-50">yea.... we
+                        know, comic projects start at a minimum of $1500 <br> but if you have another interesting budget
+                        just let us know</label>
                     <select id="budget" name="budget" class="custom-dropdown p-3 w-full appearance-none mt-2">
                         <option value="">choose the range</option>
                         <option value="500-1000">$700 - $1,000</option>
@@ -471,22 +542,26 @@
                         <option value="5000-10000">$5,000 - $10,000</option>
                         <option value="10000+">Above $10,000</option>
                     </select>
-                    <small id="budgetError" class="text-[#FF5733] bricolage-grotesque hidden">Please fill this out</small>
+                    <small id="budgetError" class="text-[#FF5733] bricolage-grotesque hidden">Please fill this
+                        out</small>
                 </div>
-            
+
                 <div class="relative w-[320px] md:w-[724px]">
-                    <label for="date" class="bricolage-grotesque text-xl text-broken-white">preferred date to start project *</label>
+                    <label for="date" class="bricolage-grotesque text-xl text-broken-white">preferred date to start
+                        project *</label>
                     <input id="date" name="date" type="date" class="custom-date p-3 w-full mt-2">
                     <small id="dateError" class="text-[#FF5733] bricolage-grotesque hidden">Please fill this out</small>
                 </div>
-            
+
                 <div class="input w-[320px] md:w-[724px]">
-                    <label for="comment" class="bricolage-grotesque text-xl text-broken-white">why do you want work together?</label>
+                    <label for="comment" class="bricolage-grotesque text-xl text-broken-white">why do you want work
+                        together?</label>
                     <textarea id="comment" name="comment" placeholder="type here" class="p-3 h-32 mt-2"></textarea>
-                </div>              
-            
+                </div>
+
                 <div class="btn-send flex justify-center items-center bg-[#DAF7A6] w-[200px] md:w-[369px]">
-                    <button type="submit" class="py-3 px-6 text-black font-bold bricolage-grotesque text-[20px]">Send</button>
+                    <button type="submit"
+                        class="py-3 px-6 text-black font-bold bricolage-grotesque text-[20px]">Send</button>
                 </div>
             </form>
         </div>
@@ -559,8 +634,8 @@
     </section>
 
 
-        
-          
+
+
     <!-- Footer Section -->
     <footer class="bg-[#DAF7A6] pt-10 md:pt-40 px-6 md:px-20">
         <div class="flex flex-col md:flex-row md:justify-between items-center max-w-[1376px] mx-auto h-full">
@@ -571,15 +646,18 @@
 
             <!-- Social Media Icons -->
             <div class="flex space-x-6 text-2xl">
-                <a href="https://www.upwork.com/freelancers/~01d16336a235fccdab?companyReference=1377753912803733505&mp_source=share" class="relative group text-[#000000]">
+                <a href="https://www.upwork.com/freelancers/~01d16336a235fccdab?companyReference=1377753912803733505&mp_source=share"
+                    class="relative group text-[#000000]">
                     <i class="fa-brands fa-upwork align-middle"></i>
                     <span class="tooltip bricolage-grotesque text-[#DAF7A6]">Upwork</span>
                 </a>
-                <a href="https://www.fiverr.com/fanmud?source=gig_page" class="relative group text-[#000000]" style="display: flex; align-items: center;">
+                <a href="https://www.fiverr.com/fanmud?source=gig_page" class="relative group text-[#000000]"
+                    style="display: flex; align-items: center;">
                     <img src="./assets/fiverr-icon.svg">
                     <span class="tooltip bricolage-grotesque text-[#DAF7A6]">Fiverr</span>
                 </a>
-                <a href="https://www.instagram.com/tekadverse?igsh=djR2Mmg5YmFjdW9i" class="relative group text-[#000000]">
+                <a href="https://www.instagram.com/tekadverse?igsh=djR2Mmg5YmFjdW9i"
+                    class="relative group text-[#000000]">
                     <i class="fab fa-instagram"></i>
                     <span class="tooltip bricolage-grotesque text-[#DAF7A6]">Instagram</span>
                 </a>
@@ -591,22 +669,23 @@
                     <i class="fab fa-whatsapp"></i>
                     <span class="tooltip bricolage-grotesque text-[#DAF7A6]">WhatsApp</span>
                 </a>
-            </div>                
+            </div>
         </div>
 
         <!-- Image Below -->
         <div class="flex justify-center mt-10">
-        <img src="assets/footer.webp" alt="Footer Image" class="w-[1376px] h-auto">
+            <img src="assets/footer.webp" alt="Footer Image" class="w-[1376px] h-auto">
         </div>
     </footer>
 
-        
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/loader.js"></script>
     <script src="js/wa.js"></script>
-  
-  </body>
+
+</body>
+
 </html>

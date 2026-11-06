@@ -1,33 +1,61 @@
-
 gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.config({ ignoreMobileResize: true });
 
-  document.querySelectorAll('.parallax').forEach((section) => {
-    gsap.to(section, {
-      backgroundPosition: "10% 100%", // Menggerakkan latar belakang dari atas ke bawah
-      ease: "none", // Linear movement
+document.querySelectorAll('.parallax-wrap').forEach((wrap) => {
+  const img = wrap.querySelector('.parallax-img');
+  if (!img) return;
+
+  gsap.fromTo(
+    img,
+    { yPercent: -12 },
+    {
+      yPercent: 12,
+      ease: 'none',
+      force3D: true,
       scrollTrigger: {
-        trigger: section,
-        start: "top bottom", // Mulai saat bagian atas elemen mencapai bagian bawah viewport
-        end: "bottom top", // Selesai saat bagian bawah elemen mencapai bagian atas viewport
-        scrub: true, // Sinkronisasi animasi dengan scroll
+        trigger: wrap,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+        invalidateOnRefresh: true,
       },
-    });
-  });
+    }
+  );
+});
 
-// Select the cursor wrapper
+// Hitung ulang posisi setelah gambar & font selesai dimuat
+window.addEventListener('load', () => ScrollTrigger.refresh());
+
+// Fallback untuk elemen .parallax (jika ada)
+document.querySelectorAll('.parallax').forEach((section) => {
+  gsap.to(section, {
+    backgroundPosition: "50% 100%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: section,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+});
+
+// Select the cursor wrapper (jika ada)
 const cursorWrapper = document.querySelector('.cursor-wrapper');
 
 // Track mouse movement and update cursor position
-document.addEventListener('mousemove', (e) => {
+if (cursorWrapper) {
+  document.addEventListener('mousemove', (e) => {
     cursorWrapper.style.left = `${e.clientX}px`;
     cursorWrapper.style.top = `${e.clientY}px`;
-});
-
+  });
+}
 
 const heroSection = document.querySelector('.hero-section');
 const shadow = document.querySelector('.shadow');
 
-heroSection.addEventListener('mousemove', (e) => {
+if (heroSection && shadow) {
+  heroSection.addEventListener('mousemove', (e) => {
     // Dapatkan posisi pusat elemen image-container
     const rect = heroSection.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
@@ -39,7 +67,8 @@ heroSection.addEventListener('mousemove', (e) => {
 
     // Terapkan transformasi pada bayangan
     shadow.style.transform = `translate3d(${-offsetX / 15}px, ${-offsetY / 15}px, 0)`;
-});
+  });
+}
 
 // heroSection.addEventListener('mouseleave', () => {
 //     // Reset transformasi saat kursor keluar dari hero-section
@@ -84,13 +113,13 @@ function toggleMenu() {
   // Toggle visibility of the overlay menu
   menuOverlay.classList.toggle('hidden');
   menuOverlay.classList.toggle('show'); // Show the overlay when active
-  
+
   // Toggle the menu text between "Menu" and "Close"
   menuText.textContent = menuOverlay.classList.contains('show') ? 'Close' : 'Menu';
 
   // Toggle active class for the hamburger icon (to trigger animation)
   menuButton.classList.toggle('active');
-  
+
   // Adjust z-index of the hamburger icon based on the menu overlay visibility
   if (menuOverlay.classList.contains('show')) {
     menuButton.style.zIndex = '30'; // Hamburger icon above the overlay
@@ -121,11 +150,11 @@ menuLinks.forEach(link => {
 });
 
 // Animasi flipping menggunakan jQuery
-$('#flipto').on("click", function(event) {
+$('#flipto').on("click", function (event) {
   event.preventDefault();
-  
+
   var face = $(this).data("face");
-  
+
   if (face == "bottom") {
     $(".cube").removeClass("flip-to-top").addClass("flip-to-bottom");
     $(this).data("face", "top").text("Flip: to top");
@@ -133,5 +162,78 @@ $('#flipto').on("click", function(event) {
     $(".cube").removeClass("flip-to-bottom").addClass("flip-to-top");
     $(this).data("face", "bottom").text("Flip: to bottom");
   }
+});
+
+document.fonts.ready.then(() => {
+  document.querySelectorAll(".particle-text").forEach((element) => {
+    const text = element.dataset.text;
+    const fontSize = 16;
+    const fontFamily = '"Bricolage Grotesque", sans-serif';
+
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    ctx.font = `${fontSize}px ${fontFamily} `;
+
+    const textWidth = Math.ceil(ctx.measureText(text).width);
+    const textHeight = Math.ceil(fontSize * 1.8);
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width = textWidth * dpr;
+    canvas.height = textHeight * dpr;
+    canvas.style.width = `${textWidth} px`;
+    canvas.style.height = `${textHeight} px`;
+
+    ctx.scale(dpr, dpr);
+    ctx.font = `${fontSize}px ${fontFamily} `;
+    ctx.textBaseline = "middle";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillText(text, 0, textHeight / 2);
+
+    const image = ctx.getImageData(
+      0, 0, canvas.width, canvas.height
+    );
+
+    // Simpan posisi piksel teks
+    const points = [];
+
+    for (let y = 0; y < canvas.height; y += 2) {
+      for (let x = 0; x < canvas.width; x += 2) {
+        const index = (y * canvas.width + x) * 4;
+
+        if (image.data[index + 3] > 100) {
+          points.push({
+            x: x / dpr,
+            y: y / dpr
+          });
+        }
+      }
+    }
+
+    // Bersihkan teks asli
+    ctx.clearRect(0, 0, textWidth, textHeight);
+
+    // Sebarkan piksel menjadi partikel
+    points.forEach((point) => {
+      const spreadX = (Math.random() - 0.5) * 5;
+      const spreadY = (Math.random() - 0.5) * 5;
+      const radius = Math.random() * 0.9 + 0.3;
+      const opacity = Math.random() * 0.65 + 0.35;
+
+      ctx.beginPath();
+      ctx.arc(
+        point.x + spreadX,
+        point.y + spreadY,
+        radius,
+        0,
+        Math.PI * 2
+      );
+
+      ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
+      ctx.fill();
+    });
+
+    element.replaceChildren(canvas);
+  });
 });
 

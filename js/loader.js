@@ -68,24 +68,38 @@ gsap.from("nav", 1, {  // Durasi lebih cepat
     ease: "power4.inOut",
 });
 
+// Cegah browser memulihkan posisi scroll lama, dan hapus window.onbeforeunload
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+    const counter = document.querySelector('.counter');
     const overlay = document.querySelector('.overlay');
 
-    gsap.to(overlay, {
-        delay: 3,  // Lebih cepat
-        duration: 0.2,  // Durasi lebih pendek
+    // 'instant' wajib karena html memakai scroll-smooth
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
+    // Kunci scroll selama loader berjalan
+    document.documentElement.style.overflow = 'hidden';
+
+    gsap.to(counter, {
+        delay: 1.5,
+        duration: 0.2,
         opacity: 0,
-        onComplete: function () {
-            overlay.style.visibility = 'hidden';
+        onComplete: () => { counter.style.display = 'none'; }
+    });
+
+    gsap.to(overlay, {
+        delay: 3,
+        duration: 0.2,
+        opacity: 0,
+        onComplete: () => {
+            overlay.style.display = 'none';
+            document.documentElement.style.overflow = ''; // buka kunci scroll
+            ScrollTrigger.refresh();                      // hitung ulang sekali saja
         }
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    AOS.init();
-    window.scrollTo(0, 0);
+    if (window.AOS) AOS.init(); // aman kalau AOS tidak dimuat
 });
-
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-};
