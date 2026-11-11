@@ -162,8 +162,7 @@ header.sticky {
   align-items: center;
   justify-content: center;
   background-color: #000;
-  height: 100vh;
-  /* Menyesuaikan tinggi area */
+  min-height: 100vh;
   position: relative;
 }
 
@@ -330,7 +329,13 @@ header.sticky {
 }
 
 .hero-section {
-  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  min-height: 100vh;
+  /* use full viewport height */
+  position: relative;
 }
 
 .bricolage-grotesque {
@@ -361,7 +366,7 @@ header.sticky {
 
 /* Dropdown Styling */
 .custom-dropdown {
-  background-image: url('../assets/allow.svg');
+  background-image: url('/assets/allow.svg');
   /* Custom icon for dropdown */
   background-repeat: no-repeat;
   background-position: right 1rem center;
@@ -375,7 +380,7 @@ header.sticky {
 }
 
 .custom-dropdown:focus {
-  background-image: url('../assets/arrow-down-active.svg');
+  background-image: url('/assets/arrow-down-active.svg');
   /* Icon changes when focused */
 }
 
@@ -386,7 +391,7 @@ header.sticky {
 
 /* Date Picker Styling */
 .custom-date {
-  background-image: url('../assets/plhus.svg');
+  background-image: url('/assets/plhus.svg');
   /* Custom icon for date picker */
   background-repeat: no-repeat;
   background-position: right 1rem center;
@@ -401,7 +406,7 @@ header.sticky {
 }
 
 .custom-date:focus {
-  background-image: url('../assets/plus-active.svg');
+  background-image: url('/assets/plus-active.svg');
   /* Icon changes when focused */
 
 }
@@ -638,15 +643,43 @@ form textarea:focus::placeholder {
   color: #ccc;
 }
 
+.parallax-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  height: 100svh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.parallax-img {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+  pointer-events: none;
+}
+
 .parallax {
   position: relative;
   height: 100vh;
-  /* Mengambil tinggi layar penuh */
   background-size: cover;
   background-attachment: fixed;
-  /* Membantu efek parallax */
   background-position: center;
-  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -656,18 +689,15 @@ form textarea:focus::placeholder {
   position: relative;
   z-index: 2;
   color: white;
-  text-align: center
+  text-align: center;
 }
 
 .parallax-section-text {
-  font-size: 4rem;
+  font-size: clamp(2.25rem, 8vw, 4rem);
   color: white;
   font-weight: bold;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transform: translateY(0);
-  /* Default position */
-  will-change: transform;
-  /* Optimizes rendering for animations */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  word-break: break-word;
 }
 
 @media only screen and (max-width: 768px) {
@@ -823,5 +853,22 @@ form textarea:focus::placeholder {
   .hero {
     height: 30vh;
     /* Smaller height for smaller screens while maintaining ratio */
+  }
+}
+
+@media (max-width: 1024px) {
+  .parallax-wrap {
+    height: 100vh;
+    height: 100svh;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    scroll-behavior: smooth;
   }
 }

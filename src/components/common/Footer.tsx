@@ -29,7 +29,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="flex justify-center mt-10">
-                <img src="/assets/footer.png" alt="Footer" className="w-[1376px] h-auto" />
+                <img src="/assets/footer.png" alt="Footer" className="w-full max-w-[1376px] h-auto mx-auto" />
             </div>
         </footer>
     );

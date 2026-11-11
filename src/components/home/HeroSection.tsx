@@ -1,33 +1,90 @@
+import { useEffect, useRef } from "react";
 import logo from "../../assets/logo.svg";
 import logoShadow from "../../assets/logo-shadow.svg";
 
+const TICKER_ITEMS = [
+    "DIGITAL ARTIST",
+    "STORY WRITER",
+    "COMIC LOVERS",
+    "ILLUSTRATOR",
+    "MANGA ARTIST",
+    "3D ARTIST",
+];
+
 const HeroSection = () => {
+    const heroRef = useRef<HTMLElement>(null);
+    const shadowRef = useRef<HTMLImageElement>(null);
+
+    useEffect(() => {
+        const hero = heroRef.current;
+        const shadow = shadowRef.current;
+        if (!hero || !shadow) return;
+
+        const handleMouseMove = (e: MouseEvent) => {
+            const rect = hero.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const offsetX = e.clientX - centerX;
+            const offsetY = e.clientY - centerY;
+            shadow.style.transform = `translate3d(${-offsetX / 15}px, ${-offsetY / 15}px, 0)`;
+        };
+
+        hero.addEventListener("mousemove", handleMouseMove);
+        return () => {
+            hero.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, []);
+
     return (
-        <section className="hero-section flex flex-col items-center justify-center bg-black">
-            <div className="image-container">
-                <img src={logo} alt="Logo" className="main-logo h-auto max-w-full" />
-                <img src={logoShadow} className="shadow h-auto max-w-full" alt="Logo shadow" />
+        <section
+            ref={heroRef}
+            className="hero-section flex flex-col items-center justify-center bg-black"
+        >
+            <div className="image-container w-full max-w-[661px] aspect-[661/376]">
+                <img src={logo} alt="Logo" className="main-logo absolute inset-0 w-full h-full object-contain" />
+                <img
+                    ref={shadowRef}
+                    src={logoShadow}
+                    className="shadow absolute inset-0 w-full h-full object-contain"
+                    alt="Logo shadow"
+                />
             </div>
             <div className="stock-ticker mt-10 w-full text-[16px] md:text-[2rem]">
                 <ul>
-                    <li><span><img src="/assets/star.svg" alt="" className="w-[8px] md:w-[15px]" /></span></li>
-                    <li><span><h1 className="font-bricolage font-extrabold">DIGITAL ARTIST</h1></span></li>
-                    <li><span><img src="/assets/star.svg" alt="" className="w-[8px] md:w-[15px]" /></span></li>
-                    <li><span><h1 className="font-bricolage font-extrabold">STORY WRITER</h1></span></li>
-                    <li><span><img src="/assets/star.svg" alt="" className="w-[8px] md:w-[15px]" /></span></li>
-                    <li><span><h1 className="font-bricolage font-extrabold">COMIC LOVERS</h1></span></li>
-                    <li><span><img src="/assets/star.svg" alt="" className="w-[8px] md:w-[15px]" /></span></li>
-                    <li><span><h1 className="font-bricolage font-extrabold">ILLUSTRATOR</h1></span></li>
-                    <li><span><img src="/assets/star.svg" alt="" className="w-[8px] md:w-[15px]" /></span></li>
-                    <li><span><h1 className="font-bricolage font-extrabold">MANGA ARTIST</h1></span></li>
-                    <li><span><img src="/assets/star.svg" alt="" className="w-[8px] md:w-[15px]" /></span></li>
-                    <li><span><h1 className="font-bricolage font-extrabold">3D ARTIST</h1></span></li>
+                    {TICKER_ITEMS.map((item, idx) => (
+                        <li key={`ticker-1-${idx}`}>
+                            <span>
+                                <img
+                                    src="/assets/star.svg"
+                                    alt=""
+                                    className="w-[8px] md:w-[15px]"
+                                />
+                            </span>
+                            <span>
+                                <h1 className="bricolage-grotesque font-extrabold">{item}</h1>
+                            </span>
+                        </li>
+                    ))}
                 </ul>
                 <ul aria-hidden="true">
-                    {/* Duplicate for infinite scroll effect */}
+                    {TICKER_ITEMS.map((item, idx) => (
+                        <li key={`ticker-2-${idx}`}>
+                            <span>
+                                <img
+                                    src="/assets/star.svg"
+                                    alt=""
+                                    className="w-[8px] md:w-[15px]"
+                                />
+                            </span>
+                            <span>
+                                <h1 className="bricolage-grotesque font-extrabold">{item}</h1>
+                            </span>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </section>
     );
 };
+
 export default HeroSection;

@@ -5,7 +5,11 @@ import AboutSection from '../components/home/AboutSection';
 import ServiceSection from '../components/home/ServiceSection';
 import ArtworkSection from '../components/home/ArtworkSection';
 import ContactSection from '../components/home/ContactSection';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
 const Home = () => {
+    useScrollAnimation();
+
     return (
         <>
             <Header />
@@ -18,4 +22,5 @@ const Home = () => {
         </>
     );
 };
+
 export default Home;
